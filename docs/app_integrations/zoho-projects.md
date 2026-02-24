@@ -44,7 +44,11 @@ Or create an account if you don't have one:
 <img src="\img\credentials\zoho-projects\fill_in_your_details.png" alt="fill in your details" width="700"/>
 
 ### Step 2: Complete Setup
-After signing in, complete your Zoho Projects setup with your organization details:
+After signing in, complete your Zoho Projects setup by entering your organization details in the Zoho Projects onboarding screen. Typically, you will need to provide:
+- **Organization Name** (for example, your company or team name)
+- **Organization URL/Domain** (if requested)
+- **Time Zone and Locale** so project dates and times are accurate
+- Any additional basic profile information Zoho requires to create your workspace
 
 ### Step 3: Access Developer Console
 Click on the [link](https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2F) to access the Zoho Developer's Console:
