@@ -1,7 +1,7 @@
 ---
 title: "Zoho Projects"
 description: Step-by-step guide to set up Zoho Projects credentials for appse.ai integration
-slug : /app-integrations/zoho-projects/
+slug: /app-integrations/zoho-projects/
 ---
 Zoho Projects is a cloud-based project management software that helps teams plan, track, and collaborate on projects. It enables organizations to manage tasks, milestones, resources, and timesheets in a unified platform with powerful collaboration tools.
 
