@@ -26,7 +26,7 @@ The credential popup will open with various options.
 **Select Authorization URL, Token URL and Base URL based on your Zoho Account region:**
 <img src="\img\credentials\zoho-projects\authorization_url.png" alt="authorize url" width="700"/>
  
-Choose all Authorization URLs from the same Region, to ensure the API works perfectly. 
+Choose all URLs (Authorization URL, Token URL, and Base URL) from the same Region, to ensure the API works perfectly. 
 
 After you choose these URLs using dropdowns, you can finally go to find the Client ID and Client Secret. 
 
