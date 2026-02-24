@@ -36,7 +36,7 @@ After you choose these URLs using dropdowns, you can finally go to find the Clie
 ## How to Get Client ID and Client Secret
 
 ### Step 1: Access Zoho Projects
-Sign in to your [Zoho Projects account](https://accounts.zoho.in/signin?servicename=ZohoProjects)
+Sign in to your [Zoho Projects account](https://accounts.zoho.com/signin?servicename=ZohoProjects) (or use your region’s Zoho Accounts domain, such as `accounts.zoho.eu`, `accounts.zoho.in`, etc.).
 
 <img src="\img\credentials\zoho-projects\sign_in.png" alt="sign in" width="700"/>
 
