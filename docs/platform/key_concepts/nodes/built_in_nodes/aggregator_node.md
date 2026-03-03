@@ -3,114 +3,79 @@ slug: /platform/key-concepts/nodes/built-in/aggregator
 title: Aggregator Node
 ---
 
-The Aggregator Node in appse ai allows you to combine multiple incoming records into a single structured output.
+# Aggregator Node
 
-It helps you reshape, batch, and organize data before passing it to downstream nodes.
-
-This is useful when you want to:
-* Combine multiple records into one payload
-* Prepare batch API requests
-* Collect specific fields across all items
-* Transform item-wise data into grouped arrays
-* Build structured objects for integrations
+The **Aggregator Node** is used to consolidate multiple incoming records into a single structured output.  
+It enables flexible data reshaping, batching, and grouping before passing data to downstream nodes.
 
 ---
 
-## Aggregation Mode
+## When to Use Aggregator
 
-When configuring the Aggregator node, the first step is to select the **Aggregation Mode**.
+Use this node when you need to:
 
-You can choose between:
-
-1. **All Item Data**
-2. **Individual Fields**
-
----
-
-# All Item Data
-
-This mode aggregates complete records into a single array wrapped inside a field you define.
-
-It is commonly used when:
-* Sending bulk data to APIs
-* Creating batch database inserts
-* Packaging workflow results into a structured object
+- Combine multiple records into one payload  
+- Batch data for API requests  
+- Group specific fields into arrays  
+- Restructure workflow data  
+- Build custom output objects  
 
 ---
 
-## Configuration Fields
+## Aggregation Modes Overview
 
-### 1. Output Field Name
+The Aggregator Node supports two primary aggregation strategies:
 
-This defines the wrapper field that will contain the aggregated array of items.
-
-Example:
-
-If you enter:
-Orders
-
-
-The output structure becomes:
-
-```json
-{
-  "orders": [
-    { ... },
-    { ... },
-    { ... }
-  ]
-}
-```
-## 2. Fields to Include
-
-This determines which fields from each incoming record are included in the aggregated output.
-
-You can select one of the following options:
-
-### 2a. All Fields
-
-Includes every field from each input record.
+- **All Item Data**
+- **Select Individual Fields**
 
 ---
 
-### 2b. Specified Fields
+## 1. All Item Data
 
-Includes only selected fields that you explicitly define.
+This mode aggregates entire records into a single array wrapped inside a defined output field.
 
-When selected, an additional configuration field appears:
+### All Item Data – Configuration Breakdown
 
-**Specified Fields**  
-Enter comma-separated field names to include.
+| Configuration     | Description |
+|------------------|------------|
+| Output Field Name | Specifies the wrapper field that will contain the aggregated array |
+| Fields to Include | Determines how fields from each input record are included. The dropdown provides three options: `All Fields`, `Specified Fields`, and `All Fields Except` |
+| Specified Fields  | Enter the fields you want to include, separated by commas. This option appears only when Specified Fields is selected |
+| Fields to Exclude | Enter the fields you want to exclude, separated by commas. This option appears only when All Fields Except is selected |
 
-**Example:**
-name, email, amount
+### All Item Data – Example
 
-Only these fields will be present in each aggregated object.
-
----
-
-### 2c. All Fields Except
-
-Includes all fields except the ones you explicitly exclude.
-
-When selected, an additional configuration field appears:
-
-**Fields to Exclude**  
-Enter comma-separated field names to exclude.
-
-**Example:**
-internalId, debugInfo
-
-All other fields will be included in the aggregation.
 
 ---
 
-## Example (All Item Data Mode)
+## 2. Select Individual Fields
 
-### Input:
-```json
-[
-  { "name": "Alice", "amount": 500, "internalId": 101 },
-  { "name": "Bob", "amount": 700, "internalId": 102 }
-]
-```
+This mode allows you to aggregate specific fields across all incoming records instead of aggregating entire objects.
+
+Each selected field becomes an aggregated array in the final output.
+
+### Select Individual Fields – Configuration Breakdown
+
+Aggregate Fields (Array-Based Configuration). Each entry added to the array provides the following configuration fields:
+
+| Field | Description |
+|-------|------------|
+| Input Field Name | Specifies the field from the incoming records that will be aggregated |
+| Rename Field | Dropdown option that allows you to rename the aggregated output field. Available options are `Yes` and `No`. Select whether you want to rename the field |
+| Output Field Name | Enter the new name for the field. This field is displayed only when Rename Field is set to Yes |
+
+### Select Individual Fields – Example
+
+---
+
+## Output Behavior Summary
+
+- Produces a **single consolidated object**.
+- Output structure depends entirely on the selected aggregation mode.
+- Configuration fields dynamically appear based on user selections.
+- Designed for flexible data transformation before downstream processing.
+
+---
+
+The Aggregator Node provides structured flexibility, allowing you to choose between complete record aggregation or field-level grouping depending on your workflow needs.
