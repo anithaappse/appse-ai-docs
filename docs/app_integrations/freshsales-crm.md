@@ -33,13 +33,13 @@ You'll be asked to fill in the following details:
 
 Click **Select a Credential** and choose **Freshsales** from the application list.
 
-<img src="\img\credentials\freshsales\freshsales-create-new-connection.png" alt="APPSeAI Freshsales Select Credential" width="700"/>
+<img src="\img\credentials\freshsales-crm\freshsales-create-new-connection.png" alt="APPSeAI Freshsales Select Credential" width="700"/>
 
 <br/>
 
 This opens the Freshsales credential form. Add your **Connection Name**.
 
-<img src="\img\credentials\freshsales\freshsales-connection-name.png" alt="APPSeAI Freshsales Connection Name" width="700"/>
+<img src="\img\credentials\freshsales-crm\freshsales-connection-name.png" alt="APPSeAI Freshsales Connection Name" width="700"/>
 
 #### 2. Sign In / Create an account in Freshsales
 
@@ -51,10 +51,10 @@ Once logged in, follow these steps to find your API key:
 
 1. Click on your **profile avatar** in the top-right corner of the Freshsales dashboard.
 2. Select **Personal Settings** from the dropdown.
-<img src="\img\credentials\freshsales\dashboard.png" alt="APPSeAI Freshsales dashboard" width="700"/>
+<img src="\img\credentials\freshsales-crm\dashboard.png" alt="APPSeAI Freshsales dashboard" width="700"/>
 
 3. Scroll down to the **API Settings** section. 
-<img src="\img\credentials\freshsales\api-setting.png" alt="APPSeAI Freshsales api-setting" width="700"/>
+<img src="\img\credentials\freshsales-crm\api-setting.png" alt="APPSeAI Freshsales api-setting" width="700"/>
 
 And authenticate the captcha.
 
@@ -70,13 +70,13 @@ API keys in Freshsales are created at the user level. Your key can only access d
 
 Your Freshsales domain is the subdomain in your Freshsales URL. For example, if your Freshsales URL is `https://yourcompany.myfreshworks.com`, your domain is `yourcompany`.
 
-<img src="\img\credentials\freshsales\api-key.png" alt="APPSeAI Freshsales API Key" width="700"/>
+<img src="\img\credentials\freshsales-crm\api-key.png" alt="APPSeAI Freshsales API Key" width="700"/>
 
 #### 5. Paste Credentials in appse ai
 
 Return to the appse ai credential form. Paste the copied API key into the **API Key** field, enter your **Domain**, and click **"Save"** to store and validate your credential.
 
-<img src="\img\credentials\freshsales\credential-form.png" alt="APPSeAI Freshsales Credential Form" width="700"/>
+<img src="\img\credentials\freshsales-crm\credential-form.png" alt="APPSeAI Freshsales Credential Form" width="700"/>
 
 <br/>
 
