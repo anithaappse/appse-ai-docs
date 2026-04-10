@@ -67,7 +67,7 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
 
-- If successful, your Pipedrive credential will show a "✓" icon. Now you can use this application for your integrations.
+- If successful, your SAP B1 credential will show a "✓" icon. Now you can use this application for your integrations.
 - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
 
 ---
@@ -78,9 +78,2112 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 ### Triggers
 
-- on New Items Created
+### New Items Created
 
-### Actions
+The **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.  
+It captures the item details and passes them to the next step for further processing.
+
+> **Note:** This is a trigger node, so it does not take any input data.
+
+-----
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+-------
+
+#### Example Configuration
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+----------------
+
+#### Result
+   <img src="\img\credentials\sap-b1\SAP-TIC1.jpg" width="700" />
+   
+
+
+-------
+
+### Items updated
+
+The **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
+
+This trigger is commonly used to **sync inventory changes**, **update product catalogs**.
+
+> **Note:** The trigger executes only after the item update is successfully saved. All relevant details (such as item ID, updated fields, and timestamps) are included in the output payload.
+
+------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+-------
+
+#### Example Configuration
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Result
+   <img src="\img\credentials\sap-b1\SAP-TIU2.jpg" width="700" />
+
+------
+
+### New Order Created
+
+The **New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.
+
+This trigger is commonly used to **automate order processing**, **send notifications**, **update records**, or **initiate downstream actions** based on new order events.
+
+> **Note:** The trigger executes only after the order is fully created and confirmed in the system. All relevant order fields (such as order ID, customer details, and items) are included in the output payload.
+
+--------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+--------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TOC3.jpg" width="700" />
+
+-------
+
+### New Quotation Created
+
+The **New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
+
+This trigger is commonly used to **automate quotation processing**, **track sales opportunities**, or **trigger approval workflows**.
+
+> **Note:** The trigger executes only after the quotation is successfully created. All relevant quotation details (such as quotation ID, customer information, pricing, and items) are included in the output payload.
+
+------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Result
+   <img src="\img\credentials\sap-b1\SAP-TQC4.jpg" width="700" />
+
+-------
+
+### New Business Partner Created
+
+The **New Business Partner Created Trigger** initiates a workflow whenever a new business partner is added to the SAP Business One. It captures partner details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **automate onboarding processes**.
+
+> **Note:** The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TBC5.jpg" width="700" />
+
+### Business partners updated
+
+The **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **sync partner data across systems**, or **trigger validation processes**.
+
+> **Note:** The trigger executes only after the business partner update is successfully saved. All relevant details (such as partner ID, modified fields, contact information, and timestamps) are included in the output payload.
+
+-----
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------------
+
+##3# Result
+
+   <img src="\img\credentials\sap-b1\SAP-TBU7.jpg" width="700" />
+
+--------
+
+### New AR Invoices created
+
+The **New AR Invoices Created Trigger** initiates a workflow whenever a new Accounts Receivable (AR) invoice is created in the SAP Business One. It captures invoice details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **automate invoice processing**, **send payment notifications**, **update financial records**, or **trigger accounting workflows**.
+
+> **Note:** The trigger executes only after the AR invoice is successfully created. All relevant invoice details (such as invoice ID, customer information, amount, due date, and line items) are included in the output payload.
+
+--------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TARC6.jpg" width="700" />
+
+-------
+
+### New Credit Note Created
+
+The **New Credit Note Created Trigger** initiates a workflow whenever a new credit note is generated in the SAP Business One. It captures credit note details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **automate refund processing**, **adjust customer balances**, **notify stakeholders**, or **update financial records**.
+
+> **Note:** The trigger executes only after the credit note is successfully created. All relevant details (such as credit note ID, customer information, amount, and related invoice details) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TCNC8.jpg" width="700" />
+
+---------
+
+### New deliverynotes Created
+
+The **New Delivery Notes Created Trigger** initiates a workflow whenever a new delivery note is created in the SAP Business One. It captures delivery details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **track shipments**, **update order status**, **notify customers**, or **trigger logistics and fulfillment processes**.
+
+> **Note:** The trigger executes only after the delivery note is successfully created. All relevant details (such as delivery note ID, customer information, shipment details, and items) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuation
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TDNPC9.jpg" width="700" />
+
+--------
+
+### New incoming payments created
+
+The **New Incoming Payments Created Trigger** initiates a workflow whenever a new incoming payment is recorded in the SAP Business One. It captures payment details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **update payment status**, **reconcile invoices**, **notify stakeholders**, or **trigger accounting and financial workflows**.
+
+> **Note:** The trigger executes only after the incoming payment is successfully created. All relevant details (such as payment ID, customer information, amount, payment method, and associated invoices) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TICPC10.jpg" width="700" />
+
+---------
+
+### New service calls created
+
+The **New Service Calls Created Trigger** initiates a workflow whenever a new service call is logged in the SAP Business One. It captures service request details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **automate support workflows**, **assign tickets to agents**, **notify teams**, or **track service requests and resolutions**.
+
+> **Note:** The trigger executes only after the service call is successfully created. All relevant details (such as service call ID, customer information, issue description, and priority) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+---------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TSCC11.jpg" width="700" />
+
+--------------
+
+### New returs created
+
+The **New Returns Created Trigger** initiates a workflow whenever a new return request is created in the SAP Business One. It captures return details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **manage return processes**, **update inventory**, **initiate refunds or replacements**, or **notify relevant teams**.
+
+> **Note:** The trigger executes only after the return is successfully created. All relevant details (such as return ID, customer information, returned items, and reason for return) are included in the output payload.
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TNRU12.jpg" width="700" />
+
+---------------
+
+### New activities created
+
+The **New Activities Created Trigger** initiates a workflow whenever a new activity is logged in the SAP Business One. It captures activity details and passes them as structured data to subsequent workflow steps.
+
+This trigger is commonly used to **track user actions**, **log interactions**, **notify stakeholders**, or **trigger follow-up tasks and workflows**.
+
+> **Note:** The trigger executes only after the activity is successfully created. All relevant details (such as activity ID, type, associated entity, and timestamps) are included in the output payload.
+
+--------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
+| Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
+
+---------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-TAC13.jpg" width="700" />
+
+## Actions
+
+The **Actions** component represents a set of operations that are executed within a workflow after a trigger or condition is met. Actions perform specific tasks by processing input data and producing outputs that can be used in subsequent steps.
+
+Actions are commonly used to **create, update, retrieve, or delete records**, **send notifications**, **integrate with external systems**, or **transform data** within workflows.
+
+> **Note:** Each action requires proper configuration of inputs and may produce output data that can be referenced in later steps of the workflow.
+
+----
+## BusinessPartners Actions
+
+### Get a BusinessPartner by EmailAddress
+
+The **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
+
+This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
+
+> **Note:** If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+
+-------
+
+#### Select Credential and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GBPbyEM44.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Email Address | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record. |
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP-AC-GETBPbyEmail14.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-AR-GETbyEmail15.jpg" width="700" />
+
+----------------
+
+### Get CardCode by ContactEmployee email
+
+The **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
+
+This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
+
+> **Note:** If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+
+------
+
+#### Select Credential and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GCCbyCEmp45.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+----------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Email | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record (e.g., "example@domain.com"). |
+
+-------
+
+#### Example Configuration
+   <img src="\img\credentials\sap-b1\SAP-AC-GET CC by CE email16.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-----------------
+
+#### Result
+   <img src="\img\credentials\sap-b1\SAP-AR- GET CC by CE email17.jpg" width="700" />
+
+-----------
+
+### Create New BusinessPartner
+
+The **Create New Business Partner with CardCode** action creates a new business partner in the system using a unique CardCode. It allows you to configure mandatory and optional details, which are then stored and passed as structured data for further workflow steps.
+This action is commonly used to **onboard new customers or vendors**, **store contact and address information**, and **enable downstream business processes**.
+
+> **Note:** CardCode must be unique. Optional fields can be configured based on business requirements, and missing optional values will not block the creation process.
+
+------
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-CNBP46.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| CardCode | Enter a unique identifier for the business partner (e.g., "BP-001"). |
+
+#### Optional Fields
+
+#### 1. Customer Details
+
+| Field          | Description |
+|---------------|------------|
+| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
+| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
+| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
+
+#### 2. BP Addresses
+
+| Field          | Description |
+|---------------|------------|
+| Address Name | Enter Address Name (e.g., "ADD 001" )|
+| Address Type | Select either **Ship To** or **Bill To** |
+| Optional Address Fields  
+Street  
+Block or Sector  
+Zip Code  
+City  
+Country  
+State | Enter Required Address details |
+
+#### 3. Contact Employees
+
+| Field          | Description |
+|---------------|------------|
+| Name | (e.g., "CTP-002")|
+| Optional Contact Fields  
+First Name  
+Last Name  
+Phone1  
+Email Address  
+Job Title  
+Position | Enter Required Contact details |
+
+-----------------
+
+#### Configuration
+
+   <img src="\img\credentials\sap-b1\SAP-AC-CNBPD19.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NBPD20.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NBPD21.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NBPD22.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-----------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-AR-NBPD23.jpg" width="700" />
+
+-----------------
+
+### Create a new businesspartner witout CardCode
+
+The **Create New Business Partner (Without CardCode)** action creates a new business partner in the system without requiring a CardCode. The system automatically generates a unique CardCode upon successful creation.
+
+This action is commonly used to **quickly create business partners**, **reduce manual effort in assigning IDs**, and **support automated onboarding workflows**.
+
+> **Note:** The CardCode is auto-generated by the system. Optional fields can be configured as needed, and leaving them empty will not prevent the creation of the business partner.
+
+#### Select Credential and Action Event
+
+   <img src="\img\credentials\sap-b1\SAP-C-CNBWOUTCC24.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+#### Configuration Fields
+
+#### 1. Customer Name
+
+| Field          | Description |
+|---------------|------------|
+| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
+
+#### Optional Field
+| Field          | Description |
+|---------------|------------|
+| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
+| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
+
+#### 2. BP Addresses
+
+| Field          | Description |
+|---------------|------------|
+| Address Name | Enter Address Name (e.g., "ADD 001" )|
+| Address Type | Select either **Ship To** or **Bill To** |
+| Optional Address Fields  
+Street  
+Block or Sector  
+Zip Code  
+City  
+Country  
+State | Enter Required Address details |
+
+#### 3. Contact Employees
+
+| Field          | Description |
+|---------------|------------|
+| Name | (e.g., "CTP-002")|
+| Optional Contact Fields  
+First Name  
+Last Name  
+Phone1  
+Email Address  
+Job Title  
+Position | Enter Required Contact details |
+
+---------------
+
+#### Configuration
+
+   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC25.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC26.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC27.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NBPWOUTCC28.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Result
+
+   <img src="" width="700" />
+
+-----------------
+
+### Update a businesspartner
+
+The **Update Business Partner** action modifies the details of an existing business partner in the system. It allows updating specific fields while retaining unchanged information.
+
+This action is commonly used to **maintain accurate partner records**, **update contact and address information**, and **sync changes across systems**.
+
+> **Note:** Only the fields provided in the configuration will be updated. Fields left empty will remain unchanged in the existing business partner record.
+
+#### Select Credential and Action Event
+
+   <img src="\img\credentials\sap-b1\SAP-C-UBP29.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-----------------
+
+#### Configuration Fields
+
+#### 1. Customer Details
+
+| Field          | Description |
+|---------------|------------|
+| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
+| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
+| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
+
+#### 2. BP Addresses
+
+| Field          | Description |
+|---------------|------------|
+| Address Name | Enter Address Name (e.g., "ADD 001" )|
+| Address Type | Select either **Ship To** or **Bill To** |
+| Optional Address Fields  
+Street  
+Block or Sector  
+Zip Code  
+City  
+Country  
+State | Enter Required Address details |
+
+#### 3. Contact Employees
+
+| Field          | Description |
+|---------------|------------|
+| Name | (e.g., "CTP-002")|
+| Optional Contact Fields <br/> First Name  <br/> Last Name  <br/> Phone1  <br/> Email Address  <br/> Job Title  <br/> Position  | Enter Required Contact details |
+
+-----------------
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP-AC-UBP30.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-UBP31.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-UBP32.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-UBP33.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+-----------------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-AR-UBP34.jpg" width="700" />
+
+---------
+
+
+## Items Actions
+
+### Get a Item by ItemCode
+
+The **Get an Item by ItemCode** action retrieves the details of an item using its unique ItemCode. It returns the matching item record as a structured object.
+
+This action is commonly used to **lookup item information**, **validate product records**, **fetch inventory details**, or **use item data in workflows**.
+
+> **Note:** If the provided ItemCode does not exist, the output will be empty or null.
+
+#### Select Credentials and Action Event
+
+   <img src="\img\credentials\sap-b1\SAP-C-GIC35.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+--------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| ItemCode | Enter the unique identifier of the item to fetch its details. (e.g,. "AN005")|
+
+#### Example Configuration
+
+   <img src="\img\credentials\sap-b1\SAP-AC-GIC36.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+----------
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-AR-GIC37.jpg" width="700" />
+
+-------------
+
+### Create a new item
+
+The **Create New Item** action creates a new item in the system with the specified details. It captures item information and stores it as a structured record for use in workflows and inventory processes.
+
+This action is commonly used to **add new products**, **manage inventory**, **update product catalogs**, and **support sales and procurement workflows**.
+
+> **Note:** If ItemCode is not provided, the system may automatically generate one. Optional fields can be configured as needed without blocking item creation.
+
+#### Select Credential and Action Event
+
+   <img src="\img\credentials\sap-b1\SAP-C-CNI38.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+----------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| Item Code | Unique identifier for the item. |
+| Item Name | Enter the name of the item. |
+
+#### Optional Fields – Item Configuration
+
+Below are the optional fields available while creating an item, along with short descriptions:
+
+| Field          | Description |
+|---------------|------------|
+| Remarks | Additional notes or comments related to the item. (e.g., "High demand electronic accessory")|
+| Item Prices | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 → 500 INR, PriceList: 2 → 550 INR")|
+| Inventory Item | Indicates whether the item is managed in inventory. (e.g., "Yes or No")|
+| InventoryUOM | item’s stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters).| 
+| Location | Specifies the storage location of the item.(e.g., "Warehouse-1")|
+|Item Group Code | Categorizes the item into a specific group. (e.g., "100")|
+| Additional Identifier | Any extra reference ID for the item.|
+| Purchase Item | Marks the item as available for purchasing. (e.g., "Yes or No")|
+| Sales Item | Marks the item as available for sales. (e.g., "Yes or No")|
+| Ship Type | Defines the shipping method applicable to the item. (e.g., "5, 6")|
+| Tax Type | Specifies the tax category applicable to the item. (e.g., "tt_Yes")|
+| Manage Stock by Warehouse | Enables stock tracking per warehouse. (e.g., "Yes or No")|
+| WT Liable | Indicates if withholding tax is applicable. (e.g., "Yes or No")|
+| BaseUnitName | Defines the base unit of measurement for the item. (e.g., "Nos")|
+| ItemType | Specifies the type of item (e.g., product or service).(e.g., "Items, Labour, travel")|
+| ServiceGroup | Groups service-type items under a category. (e.g., "-1")|
+| ProductSource | Defines the origin/source of the product.(e.g., "Local")|
+| BarCode | Unique barcode identifier for the item.(e.g., "null")|
+| VatLiable | Indicates if VAT is applicable to the item.(e.g., "Yes or No")|
+
+> **Note:** These fields are optional and can be configured based on business requirements.
+
+#### Example configuration Fields
+
+   <img src="\img\credentials\sap-b1\SAP-AC-NIC39.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NIC40.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NIC41.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-ACNIC42.jpg" width="700" />
+   <img src="\img\credentials\sap-b1\SAP-AC-NIC43.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+#### Result
+
+   <img src="\img\credentials\sap-b1\SAP-AR-CI47.jpg" width="700" />
+
+-----------------
+
+### Update a item
+
+The **Update Item** action modifies the details of an existing item in the system using its ItemCode. It allows updating specific fields while keeping other data unchanged.
+
+This action is commonly used to **maintain accurate product data**, **update pricing and availability**, and **sync item details across systems**.
+
+> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
+
+#### Select Credential and Action Event
+
+   <img src="\img\credentials\sap-b1\SAP-AC-CNBPD19.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+------------
+
+#### Configuration Fields
+
+Below are the optional fields available while Updating an item, along with short descriptions:
+
+| Field          | Description |
+|---------------|------------|
+| Item Code | Unique identifier of the item to be updated.(e.g.,"ITM-1001")
+
+Below are the optional fields available while updating an item, along with short descriptions and examples:
+
+| Field          | Description |
+|---------------|------------|
+| Item Name | Name of the item. (e.g., "Laptop Pro 15") |
+| Remarks | Additional notes or comments related to the item. (e.g.,"Updated model with enhanced features") |
+| Additional Identifier | Any extra reference ID for the item.(e.g., "ALT-56789") |
+| Item Group Code | Categorizes the item into a specific group.  (e.g.,"Electronics") |
+| Purchase Item | Marks the item as available for purchasing (True/False).  (e.g., "True") |
+| Sales Item | Marks the item as available for sales (e.g., "True/False"). |
+| Inventory Item | Indicates whether the item is managed in inventory (e.g., "True/False"). |
+| Manufacturer | Specifies the manufacturer of the item. (e.g.,"HP") |
+| Default Warehouse | Defines the default warehouse for the item. (e.g., "WH-01") |
+| Item Price | Defines the price of the item. (e.g., "65000") |
+
+> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-UI48.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UI49.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AC-UI50.jpg" width="700" />
+
+---------------
+
+
+## Quotations Actions
+
+### Get a quotation by customer reference no
+
+The **Get a Quotation by Customer Reference Number** action retrieves quotation details using the customer reference number (`NumAtCard`). It returns the matching quotation record as a structured object.
+
+This action is commonly used to **lookup quotation details**, **track customer-specific references**, **validate records**, or **fetch quotation data for further processing**.
+
+> **Note:** If multiple quotations match the provided reference number, the system may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+
+#### Select Credential and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GETQTbyNumAtCard51.jpg" width="700" />
+
+-------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|------------|
+| NumAtCard | Enter the customer reference number associated with the quotation. (e.g., "664111000000373064") |
+
+----------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETQbyNumAtCard52.jpg" width="700" />
+
+Click on **Continute** button to Proceed
+
+----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETQbyNumAtCard53.jpg" width="700" />
+
+--------------
+
+
+### Create a new quotation
+
+The **Create New Quotation** action creates a new sales quotation in the system using customer and item details. It captures all configured data and stores it as a structured document for further processing.
+
+This action is commonly used to **generate sales quotations**, **share pricing details with customers**, and **initiate sales processes**.
+
+> **Note:** Mandatory fields must be provided to create a quotation. Optional fields can be configured as needed without blocking the process.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-NQTC54.jpg" wdith="700" />
+
+Click on **Continue** button to Proceed.
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocDueDate | Specify the due date of the quotation. (e.g., "2026-08-04") |
+| CardCode | Enter the customer code. (e.g., "BC6129916") |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
+| Quantity | Quantity of the item. (e.g., "3") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "100") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
+| Vat Group | VAT group classification. (e.g., "VAT1") |
+| Discount Percentage | Discount applied to the item. (e.g., "10%, 10.5%") |
+| Optional Fields
+DocDate | Date of the quotation. (e.g., "2026-03-13") |
+| NumAtCard | Customer reference number. (e.g., "null, Ref-145 etc..,") |
+| Address Extension 
+ShipToStreet
+ShipToBlock
+ShipToCity
+ShipToCountry
+ShipToZipCode
+ShipToState | Enter ShipTo details as per the requirement |
+| Address Extension 
+BillToStreet
+BillToBlock
+BillToCity
+BillToCountry
+BillToZipCode
+BillToState | Enter BillTo details as per the requirement |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
+
+--------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-NQTC55.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-NQTC56.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-NQTC57.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-NQTC58.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-NQTC59.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-NQTC60.jpg" width="700" />
+
+-----------------
+
+### Update quotation
+
+The **Update Quotation** action modifies an existing quotation in the system using the document number (DocNum). It allows updating header details, address information, document lines, and additional expenses.
+
+This action is commonly used to **modify quotation details**, **update pricing or items**, and **maintain accurate sales records**.
+
+> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged in the quotation.
+
+#### Select Credential and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-UQT61.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocNum | Enter the quotation document number to be updated. (e.g., "503") |
+| Optional Document Fields  
+| DocDueDate | pdate the due date of the quotation. (e.g., "2026-08-09") | 
+| CardCode |  CardCode will unique. (e.g., "BC6129916") |
+| NumAtCard | Update the customer reference number. (e.g., "null, Ref-1122")|
+| Address Extension 
+ShipToStreet
+ShipToBlock
+ShipToCity
+ShipToCountry
+ShipToZipCode
+ShipToState | Enter ShipTo details as per the requirement |
+| Address Extension 
+BillToStreet
+BillToBlock
+BillToCity
+BillToCountry
+BillToZipCode
+BillToState | Enter BillTo details as per the requirement |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
+| Quantity | Quantity of the item. (e.g., "5") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "123") |
+| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| Vat Group | VAT group classification. (e.g., "VAT1") |
+| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
+
+#### Example Configuration 
+
+<img src="\img\credentials\sap-b1\SAP-AC-UQT62.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UQT63.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UQT64.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UQT65.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UQT66.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-UQT67.jpg" width="700" />
+
+-----------
+
+### Update quotation customer reference no
+
+The **Update Quotation Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing quotation in the system.
+
+This action is commonly used to **update customer-specific references**, **align documents with external systems**, or **correct quotation details**.
+
+> **Note:** Only the `NumAtCard` field will be updated for the specified quotation. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-UQTbyNumAtCard68.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+---------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the quotation. (e.g., "503") |
+| NumAtCard | Enter the updated customer reference number. (e.g., "Old data - Ref-100 and updated data Ref-104") |
+
+---------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-UQTbyNumAtCard69.jpg" width="700" />
+
+Click on **Continue** button to proceed
+
+------------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-UQTbyNumAtCard70.jpg" width="700" />
+
+------------------
+
+## Orders Actions
+
+### Get an sales order by customer reference no
+
+The **Get a Sales Order by Customer Reference Number** action retrieves sales order details using the customer reference number (`NumAtCard`). It returns the matching sales order record as a structured object.
+
+This action is commonly used to **lookup sales order details**, **track customer-specific references**, **validate records**, or **fetch order data for further processing**.
+
+> **Note:** If multiple sales orders match the provided reference number, the system may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GETSObyCRno71.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| NumAtCard | Enter the customer reference number associated with the sales order. (e.g"Ref-104, 222, 664111000000375101 etc..,") |
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETSObyNumAtCard72.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETSObyCRno73.jpg" width="700" />
+
+### Get order list by item code
+
+The **Get Order List by Item Code** action retrieves a list of sales orders that contain a specific item. It returns the matching orders as a structured collection of records.
+
+This action is commonly used to **track item demand**, **analyze order history**, **monitor sales activity**, or **fetch related orders for processing**.
+
+> **Note:** The result will include only up to the specified size limit. If no matching records are found, the output will be empty.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GETSOLbyIC74.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+----------
+
+#### Configuration Fields
+| Field          | Description |
+|---------------|---------------|
+| Size Limit | Specify the maximum number of records to retrieve. (e.g., "100") |
+| Item Code | Enter the unique identifier of the item to search for in orders. (e.g., "") |
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETSOLbyIC75.jpg" width="700" />
+
+Click on **Continue** buttonn to Proceed
+
+----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETSOLbyIC76.jpg" width="700" />
+
+---------
+
+### Create a new sales order
+
+The **Create New Sales Order** action creates a new sales order in the system using customer, item, and delivery details. It captures all configured data and stores it as a structured document for further processing.
+
+This action is commonly used to **create customer orders**, **manage sales transactions**, and **initiate delivery and billing processes**.
+
+> **Note:** Mandatory fields must be provided to create a sales order. Optional fields can be configured as needed without blocking the process.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-CNO77.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Example Configuration
+
+| Field          | Description |
+|---------------|---------------|
+| Document Date | Specify the date of the sales order. (e.g., "") |
+| Document Due Date | Specify the due/delivery date. (e.g., "") |
+| Card Code | Enter the customer code. (e.g., "") |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
+| Quantity | Quantity of the item. (e.g., "5") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "123") |
+| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| Vat Group | VAT group classification. (e.g., "VAT1") |
+| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+| Additional Fields 
+Contact Person Code | Identifier for the contact person. (e.g., "") |
+| NumAtCard | Customer reference number. (e.g., "") |
+| Address Extension 
+ShipToStreet
+ShipToBlock
+ShipToCity
+ShipToCountry
+ShipToZipCode
+ShipToState | Enter ShipTo details as per the requirement |
+| Address Extension 
+BillToStreet
+BillToBlock
+BillToCity
+BillToCountry
+BillToZipCode
+BillToState | Enter BillTo details as per the requirement |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
+
+-------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CNO78.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNO79.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNO80.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNO81.jpg" width="700" />
+
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AC-CNO82.jpg" width="700" />
+
+------------------
+
+### Create a Service
+
+The **Create Service** action creates a service-type document (Order or Quotation) in the system using customer and service details. It captures all configured data and stores it as a structured document for further processing.
+
+This action is commonly used to **create service orders or quotations**, **manage service-based transactions**, and **track customer service activities**.
+
+> **Note:** Mandatory fields must be provided to create the service document. Optional fields can be configured as needed.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-CS83.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| Object Type | Select the document type (**Orders** or **Quotation**). (e.g., "orders") |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
+| Document Date | Specify the document date. (e.g., "2026-04-01") |
+| Document Due Date | Specify the due date. (e.g., "2026-05-09") |
+| Item Descritpion | Description of the service provided. (e.g., "Installation service") |
+| Unit Price | Price per unit of service. (e.g., "200") |
+| Quantity | Number of service units. (e.g., "3") |
+| Optionals 
+TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+| Additional Field
+Comments | Add any remarks or notes related to the service document. (e.g., "Urgent service request") |
+
+----------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CS84.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CS85.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CS86.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+---------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CS87.jpg" width="700" />
+
+---------------------
+
+### Update Order
+
+The **Update Order** action modifies an existing sales order in the system using the document entry (DocEntry). It allows updating header details, document lines, address information, and additional expenses.
+
+This action is commonly used to **update order details**, **modify pricing or items**, and **maintain accurate sales records**.
+
+> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged in the existing order.
+
+------
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-UO88.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Configuration Fields
+
+| Field         | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the order. (e.g., "11464") |
+| Doc Due Date | Update the due/delivery date. (e.g., "2026-08-11") |
+| NumAtCard | Update the customer reference number. (e.g., "Ref-111") |
+| Rounding | Enable or disable rounding (**tYes** or **tNo**). (e.g., "tYes") |
+| Rounding Difference Amount | Specify the rounding adjustment value. (e.g., "2.50") |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
+| Quantity | Quantity of the item. (e.g., "8") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "160") |
+| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| Vat Group | VAT group classification. (e.g., "VAT1") |
+| Discount Percentage | Discount applied to the item. (e.g., "13%") |
+| Address Extension 
+ShipToStreet
+ShipToBlock
+ShipToCity
+ShipToCountry
+ShipToZipCode
+ShipToState | Enter ShipTo details as per the requirement |
+| Address Extension 
+BillToStreet
+BillToBlock
+BillToCity
+BillToCountry
+BillToZipCode
+BillToState | Enter BillTo details as per the requirement |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
+
+--------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-UO89.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UO90.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UO91.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UO92.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-UO93.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-UO94.jpg" width="700" />
+
+------------------
+
+### Update salesorder customer reference no
+
+The **Update Sales Order Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing sales order in the system.
+
+This action is commonly used to **update customer-specific references**, **align orders with external systems**, or **correct sales order details**.
+
+> **Note:** Only the `NumAtCard` field will be updated for the specified sales order. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-USOCRno95.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+----------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the sales order. (e.g., ("11464")) |
+| NumAtCard | Enter the updated customer reference number. . (e.g., "Ref-1AAA") |
+
+-------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-USOCRno96.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-USOCRno97.jpg" width="700" />
+
+---------------
+
+### Cancel a Sales Order
+
+The **Cancel Sales Order** action cancels an existing sales order in the system using the document entry (DocEntry). Once cancelled, the order is marked as inactive and cannot be processed further.
+
+This action is commonly used to **void incorrect orders**, **handle order cancellations**, or **stop further processing of an order**.
+
+> **Note:** Once a sales order is cancelled, it cannot be reactivated. Ensure the correct DocEntry is provided before performing this action.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-CSO98.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+---------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the sales order to be cancelled. (e.g., "11464") |
+
+----------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CSO99.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CSO100.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-CSO101.jpg" width="700" />
+
+--------------
+
+## Invoices Actions
+
+### Get invoice by DocEntry 
+
+The **Get Invoice by DocEntry** action retrieves invoice details using the internal document entry number (`DocEntry`). It returns the matching invoice record as a structured object.
+
+This action is commonly used to **lookup invoice details**, **validate financial records**, **track billing information**, or **fetch invoice data for further processing**.
+
+> **Note:** If the provided DocEntry does not exist, the output will be empty or null.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-GETbyDocEntry113.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the invoice. (e.g., "11462") |
+
+
+-----------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETbyDocEntry114.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-------------
+
+#### Result
+
+<img src="" width="700" />
+
+--------------
+
+### Get invoice by order DocEntry
+
+The **Get Invoice by Order DocEntry** action retrieves invoice details associated with a specific sales order using the order's document entry number. It returns the related invoice record(s) as structured data.
+
+This action is commonly used to **track invoices generated from orders**, **validate billing against sales orders**, or **fetch related financial documents for processing**.
+
+> **Note:** If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the system may return one or a list based on configuration.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GETbyODRDocEntry110.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocEntry | Enter the internal document entry number of the sales order. (e.g., "") |
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETbyODRDocEntry111.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETbyODRDocEntry112.jpg" width="700" />
+
+-------------
+
+### Get invoice by NumAtCard
+
+The **Get Invoice by Customer Reference Number** action retrieves invoice details using the customer reference number (`NumAtCard`). It returns the matching invoice record(s) as structured data.
+
+This action is commonly used to **lookup invoice details**, **track customer-specific references**, **validate billing records**, or **fetch invoice data for further processing**.
+
+> **Note:** If multiple invoices match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-GETINVbyNumAtCard107.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| NumAtCard | Enter the customer reference number associated with the invoice. (e.g., "REF-INV01") |
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETINVbyNumAtCard108.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETINVbyNumAtCard-109.jpg" width="700" />
+
+-------------
+
+### Create a new AR invoice
+
+The **Create New AR Invoice** action creates a new Accounts Receivable invoice in the system using customer and item details. It supports both standard AR invoices and reserve invoices.
+
+This action is commonly used to **generate invoices**, **bill customers**, and **manage financial transactions**.
+
+> **Note:** Mandatory fields must be provided to create an invoice. Optional fields can be configured as needed without blocking the process.
+
+#### Select Credentials and Action Event
+
+<img src="/img/credentials/sap-b1/SAP-C-CNINV102.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-------------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocDate | Specify the invoice date. (e.g., "2026-04-01") |
+| DocDueDate | Specify the due date of the invoice. (e.g., "2026-05-19") |
+| CardCode | Enter the customer code. (e.g., "BC6129916") |
+| Reserve Invoice | Select the invoice type (**AR Invoice** or **Reserve Invoice**). (e.g., "AR Invoice") |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "BCB2B0001 or WOOCOM101")
+| Quantity | Quantity of the item. (e.g., "7") |
+| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "500") |
+| Vat Group | VAT group classification. (e.g., "VAT1") |
+| Discount Percentage | Discount applied to the item. (e.g., "13%") |
+| BaseLine | Base document line reference. (e.g., "0") |
+| BaseType | Base document type. (e.g., "-1") |
+| BaseEntry | Base document entry reference. (e.g., "null or 1455") |
+| NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
+| ContactPerson | Identifier of the contact person. (e.g., "134") |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
+
+------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CNINV103.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNINV104.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNINV105.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CNINV106.jpg" width="700" />
+
+----------------
+
+
+## Returns Actions
+
+### Create Returns
+
+The **Create Returns** action creates a return document in the system for items returned by a customer. It captures return details and stores them as a structured document for further processing.
+
+This action is commonly used to **process product returns**, **adjust inventory**, and **manage refund or replacement workflows**.
+
+> **Note:** Mandatory fields must be provided to create a return document. Optional fields can be configured as needed.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-CRETURN107.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+----------
+
+#### Configuration Fields
+
+| Field          | Description |
+|---------------|---------------|
+| DocDate | Specify the invoice date. (e.g., "2026-04-01") |
+| DocDueDate | Specify the due date of the invoice. (e.g., "2026-05-19") |
+| CardCode | Enter the customer code. (e.g., "ZC0001") |
+| DocumentLines
+ItemCode | Unique identifier of the item. (e.g., "DIET001")
+| Quantity | Quantity of the item. (e.g., "1") |
+| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, DEFAULT, Exempt ect..,") |
+| Optional Fields (Document Lines)
+UnitPrice | Price per unit of the item. (e.g., "20") |
+| Vat Group | VAT group classification. (e.g., "tNO") |
+| Discount Percentage | Discount applied to the item. (e.g., "0") |
+| Warehouse | Warehouse where the return is processed. (e.g., "01") |
+| BaseLine | Base document line reference. (e.g., "0") |
+| BaseType | Base document type. (e.g., "-1") |
+| BaseEntry | Base document entry reference. (e.g., "null or 1455") |
+| NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
+| ContactPerson | Identifier of the contact person. (e.g., "134") |
+| Document Additional Expenses (Optional) 
+Freight or Expenses Code | Additional costs such as handling or return charges. (e.g., "300") |
+| Comments | Add remarks related to the return. (e.g., "Damaged item returned") |
+
+--------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CRETURN108.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CRETURN109.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CRETURN110.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CRETURN111.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-CRETURN112.jpg" width="700" />
+
+--------------------
+
+## ServiceCall Actions
+
+### Create Service Call
+
+The **Create Service Call** action creates a new service request in the system with customer, item, and issue details. It helps in tracking service activities and managing support processes.
+
+**Note:** Mandatory fields must be provided to create a service call. Optional fields can be configured based on business requirements.
+
+#### Select Credentials and Action Event
+
+<img src="\img\credentials\sap-b1\SAP-C-CSRVCCL121.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+-----------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "CUST-001") |
+| Subject | Provide the subject of the service call. (e.g., "System Installation Issue") |
+| Status | Define the current status of the service call. (e.g., "Open") |
+| Customer Name | Enter the name of the customer. (e.g., "ABC Pvt Ltd") |
+| Contact Person Code | Identifier of the contact person. (e.g., "101") |
+| Description | Detailed description of the issue/request. (e.g., "Installation not completed successfully") |
+| Priority | Set the priority level. (e.g., "High") |
+| Start Date | Specify the start date of the service. (e.g., "2026-04-01") |
+| Start Time | Specify the start time. (e.g., "10:00") |
+| End Due Date | Specify the expected completion date. (e.g., "2026-04-02") |
+| End Time | Specify the expected completion time. (e.g., "18:00") |
+| Assigned Date | Date when the service is assigned. (e.g., "2026-04-01") |
+| Item Code | Unique identifier of the item. (e.g., "ITEM-001") |
+| Item Description | Description of the item. (e.g., "Laptop Installation") |
+| Item Group Code | Categorizes the item. (e.g., "Electronics") |
+| Optionals
+| Ship To Address Type | Type of shipping address. (e.g., "Customer") |
+| ShipToStreet | Shipping street address. (e.g., "Street 1") |
+| Ship To Address 2 | Additional shipping address line. (e.g., "Area 51") |
+| Ship To Address 3 | Additional shipping address line. (e.g., "Near Park") |
+| ShipToBlock | Shipping block/area. (e.g., "Block A") |
+| ShipToCity | Shipping city. (e.g., "Hyderabad") |
+| ShipToCountry | Shipping country. (e.g., "India") |
+| ShipToZipCode | Shipping postal code. (e.g., "500001") |
+| ShipToState | Shipping state. (e.g., "Telangana") |
+| Bill To Address Type | Type of billing address. (e.g., "Customer") |
+| BillToStreet | Billing street address. (e.g., "Street 2") |
+| Bill To Address 2 | Additional billing address line. (e.g., "Area 52") |
+| Bill To Address 3 | Additional billing address line. (e.g., "Near Mall") |
+| BillToBlock | Billing block/area. (e.g., "Block B") |
+| BillToCity | Billing city. (e.g., "Hyderabad") |
+| BillToCountry | Billing country. (e.g., "India") |
+| BillToZipCode | Billing postal code. (e.g., "500002") |
+| BillToState | Billing state. (e.g., "Telangana") |
+
+-----------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL122.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL123.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL124.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL125.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL126.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL127.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+---------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CSRVCCL128.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-CSRVCCL129.jpg" width="700" />
+
+--------------
+
+
+### Update Service Call
+
+The **Update Service Call** action is used to modify an existing service request with updated customer, item, status, and resolution details. It helps in tracking progress, updating issue status, and maintaining service history.
+
+**Note:** Ensure valid status and priority values are selected based on business rules. Optional address fields can be updated if required.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-USVCL130.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "BC6129916") |
+| Customer Name | Enter the name of the customer. (e.g., "MAX WELL") |
+| Contact Person Code | Identifier of the contact person. (e.g., "134") |
+| Subject | Provide the subject of the service call. (e.g., "DemoCall - updated") |
+| Description | Updated description of the issue. (e.g., "This call is regarding testing purposes.") |
+| Priority | Select priority based on requirement. (e.g., "Low", "Medium", "High") |
+| Status | Select current status. (e.g., "Open", "On_Hold", "Pending", "Escalated", "Closed") |
+| Start Date | Specify the start date. (e.g., "2026-04-06") |
+| Start Time | Specify the start time. (e.g., "17:32:00") |
+| End Due Date | Specify the expected completion date. (e.g., "2026-04-20") |
+| End Time | Specify the expected completion time. (e.g., "23:32:00") |
+| Assigned Date | Date when the service is assigned. (e.g., "2026-04-01") |
+| Item Code | Unique identifier of the item. (e.g., "BCB2B0001") |
+| Item Description | Description of the item. (e.g., "Hyderated Water Bottle1") |
+| Item Group Code | Categorizes the item. (e.g., "100") |
+| Resolution | Final resolution or action taken. (e.g., "Test") |
+| Optional Fields
+Ship To Address Type | Type of shipping address. (e.g., "null") |
+| ShipToStreet | Shipping street address. (e.g., "Domin Street") |
+| Ship To Address 2 | Additional shipping address line. (e.g., "District Complex") |
+| Ship To Address 3 | Additional shipping address line. (e.g., "Old Star Build") |
+| Ship To Number | Shipping Number. (e.g., "1/33 Valley")
+| ShipToBlock | Shipping block/area. (e.g., "Omega Block") |
+| ShipToCity | Shipping city. (e.g., "Hyderabad") |
+| ShipToCountry | Shipping country. (e.g., "India or IN") |
+| ShipToZipCode | Shipping postal code. (e.g., "500033") |
+| ShipToState | Shipping state. (e.g., "Telangana or TS") |
+| Bill To Address Type | Type of billing address. (e.g., "TEST CHECk123") |
+| BillToStreet | Billing street address. (e.g., "Zing Street") |
+| Billing to Street Number | Billing Street Number (e.g., "1-987") |
+| Bill To Address 2 | Additional billing address line. (e.g., "Domestic Resort") |
+| Bill To Address 3 | Additional billing address line. (e.g., "Merchant street") |
+| BillToBlock | Billing block/area. (e.g., "d block valley") |
+| BillToCity | Billing city. (e.g., "Hyderabad") |
+| BillToCountry | Billing country. (e.g., "India or IN") |
+| BillToZipCode | Billing postal code. (e.g., "500002") |
+| BillToState | Billing state. (e.g., "Telangana or TS") |
+
+-------------
+
+#### Example Configuration
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL131.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL132.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL133.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL134.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL135.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL136.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL137.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+-----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL138.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL139.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL140.jpg" width="700" />
+
+--------------------
+
+
+## SalesOpportunities Actions
+
+### Create a new Sales Opportunity
+
+The **Create a New Sales Opportunity** action is used to record potential sales deals in the system. It helps track leads, monitor progress through different stages, and estimate revenue.
+
+**Note:** Sales Opportunity Lines are mandatory to track stages and progress of the opportunity. Optional fields can be configured based on business requirements.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-CNSOPPR141.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+----------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| BusinessPartner Code | Enter the customer/business partner code. (e.g., "CUST-001") |
+| Opportunity Name | Provide the name of the opportunity. (e.g., "New ERP Implementation") |
+| Start Date | Specify the opportunity start date. (e.g., "2026-04-01") |
+|Sales Opportunity Lines
+Start Date | Specify the start date of the stage. (e.g., "2026-04-01") |
+| Closing Date | Expected closing date of the opportunity. (e.g., "2026-04-30") |
+| Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "50000") |
+| Stage Key | Define the stage of the opportunity. (e.g., "1 - Qualification") |
+|Optional Fields
+Contact Person Code | Identifier of the contact person. (e.g., "101") |
+| Total Amount | Total estimated value of the opportunity. (e.g., "45000") |
+| Remarks | Additional notes or comments. (e.g., "High priority client") |
+
+----------------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP142.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP143.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP144.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-CNSOPP145.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AR-CNSOPP146.jpg" width="700" />
+
+-------------
+
+
+## Exchange Rate Actions
+
+### Get Currency Exchange Rate
+
+The **Get Currency Exchange Rate** action retrieves the exchange rate between two currencies for a specific date. It helps in financial calculations, reporting, and currency conversions.
+
+This action is commonly used to **convert currencies**, **calculate financial values**, or **fetch historical exchange rates**.
+
+> **Note:** If no date is provided, the system may return the latest available exchange rate.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-GCRNCYRATE147.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+-------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Currency Code | Enter the currency code for which the exchange rate is required. (e.g., "USD", "INR", "EUR") |
+| Date | Specify the date to fetch the exchange rate. (e.g., "2026-04-06") |
+
+------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GCRNCYRATE148.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GCRNCYRATE149.jpg" width="700" />
+
+------------
+
+
+### Set Currency Rate
+
+The **Set Currency Rate** action is used to define or update the exchange rate for a specific currency on a given date. This is useful for maintaining accurate financial records and currency conversions.
+
+> **Note:** Ensure the exchange rate is accurate, as it impacts financial transactions and reporting.
+
+--------------
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-STCRNCYRATE150.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+------------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Currency Code | Enter the currency code for which the rate is being set. (e.g., "USD", "INR", "EUR") |
+| Rate Date | Specify the date for the exchange rate. (e.g., "2026-04-061") |
+| Exchange Rate | Enter the exchange rate value. (e.g., "3.9") |
+
+-------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-SCRNCYRATE151.jpg" width="700" />
+
+Click on **Continue** button to Proceed.
+
+-----------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-SCRNCYRATE152.jpg" width="700" />
+
+--------------------
+
+
+## Sales Tax Codes Actions
+
+### Create Sales Tax Code
+
+The **Create Sales Tax Code** action is used to define a new tax code in the system. It helps manage taxation rules for sales and purchasing transactions.
+
+> **Note:** Tax configurations should be set carefully as they directly impact financial calculations and compliance.
+
+#### Select Credentials and Action Events
+
+<img src="" width="700" />
+
+Click on **Continue** button to Proceed.
+
+------------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Tax Code | Unique identifier for the tax. (e.g., "GST18") |
+| Tax Name | Name of the tax. (e.g., "GST 18%") |
+| Tax Rate (%) | Percentage of the tax rate. (e.g., "18") |
+|Sales Tax Code Lines
+Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "GST") |
+| Tax Authority Type (STAType) | Type of tax authority. (e.g., "Output Tax") |
+|Optional Fields
+Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
+| Effective Rate | Effective tax rate after adjustments. (e.g., "18") |
+| Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS") |
+| Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive") |
+|Additional Optional Settings
+Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
+| Valid for AP (Accounts Payable) | Indicates if applicable for purchase transactions. (e.g., "Yes") |
+| Freight | Specifies if tax applies to freight charges. (e.g., "Yes") |
+| Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
+| FA Debit | Indicates if applicable for fixed asset debit. (e.g., "No") |
+| Inactive | Marks the tax code as inactive if not in use. (e.g., "No") |
+
+-------------------
+
+#### Example Configuration
+
+<img src="" width="700" />
+<img src="" width="700" />
+<img src="" width="700" />
+<img src="" width="700" />
+
+Click on **Continue** button to Proceed.
+
+-------------
+
+#### Result
+
+<img src="" width="700" />
+
+--------------------
+
+### Update Sales Tax Code
+
+
+## Special Prices Action
+
+### Get Special Prices by Card Code
+
+The **Get Special Prices by Card Code** action retrieves all special pricing details configured for a specific business partner. It helps in identifying customer-specific pricing agreements and discounts.
+
+> **Note:** This action returns all special prices associated with the given Card Code, including item-level pricing and discounts if configured.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-GSPRCbyCRDCDE153.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+----------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|--------------|
+| Card Code | Enter the business partner (customer/vendor) code. (e.g., "BC6129916") |
+
+------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700" />
+
+Click on **Continue** button to Proceed
+
+--------------
+
+#### Result
+
+<img src="\img\credentials\sap-b1\SAP-AR-GETSPRCbyCRDCDE155.jpg" width="700" />
+
+--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 > Quotations Actions
 
