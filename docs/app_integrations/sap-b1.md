@@ -1,4 +1,4 @@
----
+﻿---
 title: "SAP Business One"
 slug : /app-integrations/sap-b1
 ---
@@ -13,7 +13,7 @@ Follow the steps below to quickly set up your credential.
 
 ### Required Fields
 
-You’ll be asked to fill in the following details:
+Youâ€™ll be asked to fill in the following details:
 
 | Field       | Description                                  |
 |-------------|----------------------------------------------|
@@ -38,7 +38,7 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 - Login to the platform using your **System Landscape Directory Credentials**.
 <img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="APPSeAI SAP Business One Credentials System Landscape Directory Login" />
 
-- Locate the base URL used to access the Service Layer API. Go to _Services_ → _Service Layer_
+- Locate the base URL used to access the Service Layer API. Go to _Services_ â†’ _Service Layer_
 <img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="APPSeAI SAP Business One Credentials Url and Port" />
 
 - Add your Host URL and Port. With respect to the image you will be adding:
@@ -48,7 +48,7 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 #### 3. Find Your Company DB Name
 
 - In the same **System Landscape Directory**
-- Go to _DB Instances and Companies_ → Click on Your Server Name
+- Go to _DB Instances and Companies_ â†’ Click on Your Server Name
 <img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="APPSeAI SAP Business One Credentials DB Instances and Companies" />
 
 - Copy the **Schema Name**, this is your `Database Name`
@@ -67,7 +67,7 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
 
-- If successful, your SAP B1 credential will show a "✓" icon. Now you can use this application for your integrations.
+- If successful, your Pipedrive credential will show a "âœ“" icon. Now you can use this application for your integrations.
 - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
 
 ---
@@ -78,6 +78,7 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 ### Triggers
 
+- on New Items Created
 ### New Items Created
 
 The **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.  
@@ -97,14 +98,14 @@ It captures the item details and passes them to the next step for further proces
 -------
 
 #### Example Configuration
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 ----------------
 
 #### Result
-   <img src="\img\credentials\sap-b1\SAP-TIC1.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TIC1.jpg" width="700" />
    
 
 
@@ -130,14 +131,14 @@ This trigger is commonly used to **sync inventory changes**, **update product ca
 -------
 
 #### Example Configuration
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 --------------
 
 #### Result
-   <img src="\img\credentials\sap-b1\SAP-TIU2.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TIU2.jpg" width="700" />
 
 ------
 
@@ -162,7 +163,7 @@ This trigger is commonly used to **automate order processing**, **send notificat
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -170,7 +171,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TOC3.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TOC3.jpg" width="700" />
 
 -------
 
@@ -194,14 +195,14 @@ This trigger is commonly used to **automate quotation processing**, **track sale
 ---------
 
 #### Example Configuration
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 --------------
 
 #### Result
-   <img src="\img\credentials\sap-b1\SAP-TQC4.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TQC4.jpg" width="700" />
 
 -------
 
@@ -226,7 +227,7 @@ This trigger is commonly used to **automate onboarding processes**.
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -234,7 +235,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TBC5.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TBC5.jpg" width="700" />
 
 ### Business partners updated
 
@@ -257,7 +258,7 @@ This trigger is commonly used to **sync partner data across systems**, or **trig
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg " width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -265,7 +266,7 @@ Click on **Continute** button to Proceed
 
 ##3# Result
 
-   <img src="\img\credentials\sap-b1\SAP-TBU7.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TBU7.jpg" width="700" />
 
 --------
 
@@ -290,7 +291,7 @@ This trigger is commonly used to **automate invoice processing**, **send payment
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -298,7 +299,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TARC6.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TARC6.jpg" width="700" />
 
 -------
 
@@ -323,7 +324,7 @@ This trigger is commonly used to **automate refund processing**, **adjust custom
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -331,7 +332,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TCNC8.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TCNC8.jpg" width="700" />
 
 ---------
 
@@ -356,7 +357,7 @@ This trigger is commonly used to **track shipments**, **update order status**, *
 
 #### Example Configuation
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -364,7 +365,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TDNPC9.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TDNPC9.jpg" width="700" />
 
 --------
 
@@ -389,7 +390,7 @@ This trigger is commonly used to **update payment status**, **reconcile invoices
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -397,7 +398,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TICPC10.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TICPC10.jpg" width="700" />
 
 ---------
 
@@ -422,7 +423,7 @@ This trigger is commonly used to **automate support workflows**, **assign ticket
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -430,7 +431,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TSCC11.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TSCC11.jpg" width="700" />
 
 --------------
 
@@ -455,7 +456,7 @@ This trigger is commonly used to **manage return processes**, **update inventory
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -463,7 +464,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TNRU12.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TNRU12.jpg" width="700" />
 
 ---------------
 
@@ -488,7 +489,7 @@ This trigger is commonly used to **track user actions**, **log interactions**, *
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP_Trigger Configure.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP_Trigger Configure.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -496,7 +497,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-TAC13.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-TAC13.jpg" width="700" />
 
 ## Actions
 
@@ -521,7 +522,7 @@ This action is commonly used to **lookup partner information**, **validate exist
 
 #### Select Credential and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GBPbyEM44.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GBPbyEM44.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -535,7 +536,7 @@ Click on **Continute** button to Proceed
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP-AC-GETBPbyEmail14.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-GETBPbyEmail14.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -543,7 +544,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-AR-GETbyEmail15.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR-GETbyEmail15.jpg" width="700" />
 
 ----------------
 
@@ -559,7 +560,7 @@ This action is commonly used to **lookup partner information**, **validate exist
 
 #### Select Credential and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GCCbyCEmp45.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GCCbyCEmp45.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -574,14 +575,14 @@ Click on **Continute** button to Proceed
 -------
 
 #### Example Configuration
-   <img src="\img\credentials\sap-b1\SAP-AC-GET CC by CE email16.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-GET CC by CE email16.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 -----------------
 
 #### Result
-   <img src="\img\credentials\sap-b1\SAP-AR- GET CC by CE email17.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR- GET CC by CE email17.jpg" width="700" />
 
 -----------
 
@@ -596,7 +597,7 @@ This action is commonly used to **onboard new customers or vendors**, **store co
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CNBP46.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CNBP46.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -649,10 +650,10 @@ Position | Enter Required Contact details |
 
 #### Configuration
 
-   <img src="\img\credentials\sap-b1\SAP-AC-CNBPD19.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NBPD20.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NBPD21.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NBPD22.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPD19.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD20.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD21.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD22.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -660,7 +661,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-AR-NBPD23.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR-NBPD23.jpg" width="700" />
 
 -----------------
 
@@ -674,7 +675,7 @@ This action is commonly used to **quickly create business partners**, **reduce m
 
 #### Select Credential and Action Event
 
-   <img src="\img\credentials\sap-b1\SAP-C-CNBWOUTCC24.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-C-CNBWOUTCC24.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -723,10 +724,10 @@ Position | Enter Required Contact details |
 
 #### Configuration
 
-   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC25.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC26.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-CNBPWOUTCC27.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NBPWOUTCC28.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC25.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC26.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC27.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPWOUTCC28.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -748,7 +749,7 @@ This action is commonly used to **maintain accurate partner records**, **update 
 
 #### Select Credential and Action Event
 
-   <img src="\img\credentials\sap-b1\SAP-C-UBP29.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-C-UBP29.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -789,10 +790,10 @@ State | Enter Required Address details |
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP-AC-UBP30.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-UBP31.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-UBP32.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-UBP33.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP30.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP31.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP32.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP33.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -800,7 +801,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-AR-UBP34.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR-UBP34.jpg" width="700" />
 
 ---------
 
@@ -817,7 +818,7 @@ This action is commonly used to **lookup item information**, **validate product 
 
 #### Select Credentials and Action Event
 
-   <img src="\img\credentials\sap-b1\SAP-C-GIC35.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-C-GIC35.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -831,7 +832,7 @@ Click on **Continute** button to Proceed
 
 #### Example Configuration
 
-   <img src="\img\credentials\sap-b1\SAP-AC-GIC36.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-GIC36.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -839,7 +840,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-AR-GIC37.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR-GIC37.jpg" width="700" />
 
 -------------
 
@@ -853,7 +854,7 @@ This action is commonly used to **add new products**, **manage inventory**, **up
 
 #### Select Credential and Action Event
 
-   <img src="\img\credentials\sap-b1\SAP-C-CNI38.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-C-CNI38.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -866,16 +867,16 @@ Click on **Continute** button to Proceed
 | Item Code | Unique identifier for the item. |
 | Item Name | Enter the name of the item. |
 
-#### Optional Fields – Item Configuration
+#### Optional Fields â€“ Item Configuration
 
 Below are the optional fields available while creating an item, along with short descriptions:
 
 | Field          | Description |
 |---------------|------------|
 | Remarks | Additional notes or comments related to the item. (e.g., "High demand electronic accessory")|
-| Item Prices | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 → 500 INR, PriceList: 2 → 550 INR")|
+| Item Prices | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 â†’ 500 INR, PriceList: 2 â†’ 550 INR")|
 | Inventory Item | Indicates whether the item is managed in inventory. (e.g., "Yes or No")|
-| InventoryUOM | item’s stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters).| 
+| InventoryUOM | itemâ€™s stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters).| 
 | Location | Specifies the storage location of the item.(e.g., "Warehouse-1")|
 |Item Group Code | Categorizes the item into a specific group. (e.g., "100")|
 | Additional Identifier | Any extra reference ID for the item.|
@@ -896,17 +897,17 @@ Below are the optional fields available while creating an item, along with short
 
 #### Example configuration Fields
 
-   <img src="\img\credentials\sap-b1\SAP-AC-NIC39.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NIC40.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NIC41.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-ACNIC42.jpg" width="700" />
-   <img src="\img\credentials\sap-b1\SAP-AC-NIC43.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC39.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC40.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC41.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-ACNIC42.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC43.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 #### Result
 
-   <img src="\img\credentials\sap-b1\SAP-AR-CI47.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AR-CI47.jpg" width="700" />
 
 -----------------
 
@@ -920,7 +921,7 @@ This action is commonly used to **maintain accurate product data**, **update pri
 
 #### Select Credential and Action Event
 
-   <img src="\img\credentials\sap-b1\SAP-AC-CNBPD19.jpg" width="700" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPD19.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -953,14 +954,14 @@ Below are the optional fields available while updating an item, along with short
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-UI48.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UI49.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UI48.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UI49.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AC-UI50.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UI50.jpg" width="700" />
 
 ---------------
 
@@ -977,7 +978,7 @@ This action is commonly used to **lookup quotation details**, **track customer-s
 
 #### Select Credential and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GETQTbyNumAtCard51.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETQTbyNumAtCard51.jpg" width="700" />
 
 -------
 
@@ -991,7 +992,7 @@ This action is commonly used to **lookup quotation details**, **track customer-s
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETQbyNumAtCard52.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETQbyNumAtCard52.jpg" width="700" />
 
 Click on **Continute** button to Proceed
 
@@ -999,7 +1000,7 @@ Click on **Continute** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETQbyNumAtCard53.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETQbyNumAtCard53.jpg" width="700" />
 
 --------------
 
@@ -1014,7 +1015,7 @@ This action is commonly used to **generate sales quotations**, **share pricing d
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-NQTC54.jpg" wdith="700" />
+<img src="/img/credentials/sap-b1/SAP-C-NQTC54.jpg" wdith="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1056,17 +1057,17 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-NQTC55.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-NQTC56.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-NQTC57.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-NQTC58.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-NQTC59.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC55.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC56.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC57.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC58.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC59.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-NQTC60.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-NQTC60.jpg" width="700" />
 
 -----------------
 
@@ -1080,7 +1081,7 @@ This action is commonly used to **modify quotation details**, **update pricing o
 
 #### Select Credential and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-UQT61.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-UQT61.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1120,17 +1121,17 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 #### Example Configuration 
 
-<img src="\img\credentials\sap-b1\SAP-AC-UQT62.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UQT63.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UQT64.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UQT65.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UQT66.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT62.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT63.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT64.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT65.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT66.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-UQT67.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-UQT67.jpg" width="700" />
 
 -----------
 
@@ -1144,7 +1145,7 @@ This action is commonly used to **update customer-specific references**, **align
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-UQTbyNumAtCard68.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-UQTbyNumAtCard68.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1161,7 +1162,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-UQTbyNumAtCard69.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQTbyNumAtCard69.jpg" width="700" />
 
 Click on **Continue** button to proceed
 
@@ -1169,7 +1170,7 @@ Click on **Continue** button to proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-UQTbyNumAtCard70.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-UQTbyNumAtCard70.jpg" width="700" />
 
 ------------------
 
@@ -1185,7 +1186,7 @@ This action is commonly used to **lookup sales order details**, **track customer
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GETSObyCRno71.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETSObyCRno71.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1199,7 +1200,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETSObyNumAtCard72.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSObyNumAtCard72.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1207,7 +1208,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETSObyCRno73.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETSObyCRno73.jpg" width="700" />
 
 ### Get order list by item code
 
@@ -1219,7 +1220,7 @@ This action is commonly used to **track item demand**, **analyze order history**
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GETSOLbyIC74.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETSOLbyIC74.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1233,7 +1234,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETSOLbyIC75.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSOLbyIC75.jpg" width="700" />
 
 Click on **Continue** buttonn to Proceed
 
@@ -1241,7 +1242,7 @@ Click on **Continue** buttonn to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETSOLbyIC76.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETSOLbyIC76.jpg" width="700" />
 
 ---------
 
@@ -1255,7 +1256,7 @@ This action is commonly used to **create customer orders**, **manage sales trans
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CNO77.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CNO77.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1298,10 +1299,10 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CNO78.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNO79.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNO80.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNO81.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO78.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO79.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO80.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO81.jpg" width="700" />
 
 
 Click on **Continue** button to Proceed
@@ -1310,7 +1311,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AC-CNO82.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO82.jpg" width="700" />
 
 ------------------
 
@@ -1324,7 +1325,7 @@ This action is commonly used to **create service orders or quotations**, **manag
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CS83.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CS83.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1351,9 +1352,9 @@ Comments | Add any remarks or notes related to the service document. (e.g., "Urg
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CS84.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CS85.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CS86.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS84.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS85.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS86.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1361,7 +1362,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CS87.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CS87.jpg" width="700" />
 
 ---------------------
 
@@ -1377,7 +1378,7 @@ This action is commonly used to **update order details**, **modify pricing or it
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-UO88.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-UO88.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1421,11 +1422,11 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-UO89.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UO90.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UO91.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UO92.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-UO93.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO89.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO90.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO91.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO92.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO93.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1433,7 +1434,7 @@ Click on **Continue** button to Proceed
 
 ### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-UO94.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-UO94.jpg" width="700" />
 
 ------------------
 
@@ -1447,7 +1448,7 @@ This action is commonly used to **update customer-specific references**, **align
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-USOCRno95.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-USOCRno95.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1464,13 +1465,13 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-USOCRno96.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USOCRno96.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
 ### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-USOCRno97.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-USOCRno97.jpg" width="700" />
 
 ---------------
 
@@ -1484,7 +1485,7 @@ This action is commonly used to **void incorrect orders**, **handle order cancel
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CSO98.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CSO98.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1500,14 +1501,14 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CSO99.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSO99.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CSO100.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-CSO101.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CSO100.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CSO101.jpg" width="700" />
 
 --------------
 
@@ -1523,7 +1524,7 @@ This action is commonly used to **lookup invoice details**, **validate financial
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-GETbyDocEntry113.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETbyDocEntry113.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1540,7 +1541,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETbyDocEntry114.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETbyDocEntry114.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1562,7 +1563,7 @@ This action is commonly used to **track invoices generated from orders**, **vali
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GETbyODRDocEntry110.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETbyODRDocEntry110.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1574,7 +1575,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETbyODRDocEntry111.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETbyODRDocEntry111.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1582,7 +1583,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETbyODRDocEntry112.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETbyODRDocEntry112.jpg" width="700" />
 
 -------------
 
@@ -1596,7 +1597,7 @@ This action is commonly used to **lookup invoice details**, **track customer-spe
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-GETINVbyNumAtCard107.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GETINVbyNumAtCard107.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1610,13 +1611,13 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETINVbyNumAtCard108.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETINVbyNumAtCard108.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETINVbyNumAtCard-109.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETINVbyNumAtCard-109.jpg" width="700" />
 
 -------------
 
@@ -1664,9 +1665,9 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CNINV103.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNINV104.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNINV105.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV103.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV104.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV105.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1674,7 +1675,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CNINV106.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CNINV106.jpg" width="700" />
 
 ----------------
 
@@ -1691,7 +1692,7 @@ This action is commonly used to **process product returns**, **adjust inventory*
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-CRETURN107.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CRETURN107.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1726,9 +1727,9 @@ Freight or Expenses Code | Additional costs such as handling or return charges. 
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CRETURN108.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CRETURN109.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CRETURN110.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN108.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN109.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN110.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1736,8 +1737,8 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CRETURN111.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-CRETURN112.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CRETURN111.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CRETURN112.jpg" width="700" />
 
 --------------------
 
@@ -1751,7 +1752,7 @@ The **Create Service Call** action creates a new service request in the system w
 
 #### Select Credentials and Action Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CSRVCCL121.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CSRVCCL121.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1800,12 +1801,12 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL122.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL123.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL124.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL125.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL126.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCL127.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL122.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL123.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL124.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL125.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL126.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL127.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1813,8 +1814,8 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CSRVCCL128.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-CSRVCCL129.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CSRVCCL128.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CSRVCCL129.jpg" width="700" />
 
 --------------
 
@@ -1827,7 +1828,7 @@ The **Update Service Call** action is used to modify an existing service request
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-USVCL130.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-USVCL130.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1878,13 +1879,13 @@ Ship To Address Type | Type of shipping address. (e.g., "null") |
 -------------
 
 #### Example Configuration
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL131.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL132.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL133.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL134.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL135.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL136.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-USRVCCL137.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL131.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL132.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL133.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL134.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL135.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL136.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL137.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1892,9 +1893,9 @@ Click on **Continue** button to Proceed.
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL138.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL139.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-USRVCCL140.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL138.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL139.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL140.jpg" width="700" />
 
 --------------------
 
@@ -1909,7 +1910,7 @@ The **Create a New Sales Opportunity** action is used to record potential sales 
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-CNSOPPR141.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CNSOPPR141.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -1936,9 +1937,9 @@ Contact Person Code | Identifier of the contact person. (e.g., "101") |
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP142.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP143.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CNSOPP144.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP142.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP143.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP144.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1946,8 +1947,8 @@ Click on **Continue** button to Proceed.
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CNSOPP145.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AR-CNSOPP146.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CNSOPP145.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CNSOPP146.jpg" width="700" />
 
 -------------
 
@@ -1964,7 +1965,7 @@ This action is commonly used to **convert currencies**, **calculate financial va
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-GCRNCYRATE147.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GCRNCYRATE147.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1981,7 +1982,7 @@ Click on **Continue** button to Proceed.
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GCRNCYRATE148.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GCRNCYRATE148.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -1989,7 +1990,7 @@ Click on **Continue** button to Proceed.
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GCRNCYRATE149.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GCRNCYRATE149.jpg" width="700" />
 
 ------------
 
@@ -2004,7 +2005,7 @@ The **Set Currency Rate** action is used to define or update the exchange rate f
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-STCRNCYRATE150.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-STCRNCYRATE150.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -2022,7 +2023,7 @@ Click on **Continue** button to Proceed.
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-SCRNCYRATE151.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-SCRNCYRATE151.jpg" width="700" />
 
 Click on **Continue** button to Proceed.
 
@@ -2030,7 +2031,7 @@ Click on **Continue** button to Proceed.
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-SCRNCYRATE152.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-SCRNCYRATE152.jpg" width="700" />
 
 --------------------
 
@@ -2106,7 +2107,7 @@ The **Get Special Prices by Card Code** action retrieves all special pricing det
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\sap-b1\SAP-C-GSPRCbyCRDCDE153.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-GSPRCbyCRDCDE153.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -2122,7 +2123,7 @@ Click on **Continue** button to Proceed
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -2130,7 +2131,7 @@ Click on **Continue** button to Proceed
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-GETSPRCbyCRDCDE155.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-GETSPRCbyCRDCDE155.jpg" width="700" />
 
 --------------
 
@@ -2142,7 +2143,7 @@ The **Create Return Request** action creates a new return request document in th
 
 #### Select Credentials and Actions Event
 
-<img src="\img\credentials\sap-b1\SAP-C-CRTNRQST161.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-C-CRTNRQST161.jpg" width="700" />
 
 Click on **Continue** button to Proceed
 
@@ -2180,9 +2181,9 @@ DocDate | Specify document date if different. (e.g., "2026-04-10") |
 
 #### Example Configuration
 
-<img src="\img\credentials\sap-b1\SAP-AC-CRTNRQST162.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CRTNRQST163.jpg" width="700" />
-<img src="\img\credentials\sap-b1\SAP-AC-CRTNRQST164.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST162.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST163.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST164.jpg" width="700" />
 
 Click on **Continue** button to Proced.
 
@@ -2190,7 +2191,7 @@ Click on **Continue** button to Proced.
 
 #### Result
 
-<img src="\img\credentials\sap-b1\SAP-AR-CRTNRQST165.jpg" width="700" />
+<img src="/img/credentials/sap-b1/SAP-AR-CRTNRQST165.jpg" width="700" />
 
 ---------------------
 
@@ -2244,6 +2245,7 @@ Click on **Continue** button to Proced.
 
 
 
+### Actions
 
 > Quotations Actions
 
@@ -2299,5 +2301,6 @@ Click on **Continue** button to Proced.
 
 ## Need Help?
 
-If you’re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+If youâ€™re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+
 
