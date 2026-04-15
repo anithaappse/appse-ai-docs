@@ -26,7 +26,8 @@ Select the type of file you want to decode.
 
 #### Steps to Use the Base64 Node for PDF Files
 
-3. Under **Type**, select the PDF format you want to decode.
+3. Under **Type**, select the **PDF** option from the dropdown menu.
+
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\select-type.jpg" alt="select type" width="700"/>
 
 
@@ -65,12 +66,6 @@ Use a valid Base64 string for the selected PDF file type (sample shown below).
 
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Input of PDF.jpg" width="700" />
 
-#### Configuration
-
-Provide the Base64-encoded string of the selected PDF in the **Base64 String** field.
-
-<img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Continue1.png" alt="pdf configuration" width="700" />
-
 #### Output
 
 The output displays the decoded PDF text/content in JSON format, which you can map to the next node.
@@ -84,7 +79,7 @@ The output displays the decoded PDF text/content in JSON format, which you can m
 
 #### Steps to Use the Base64 Node for Image Files
 
-3. Under **Type**, select the image format you want to decode.
+3.  Under **Type**, select the **Image** option from the dropdown menu.
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Base64N-CNTNUE5.jpg" width="700" />
 
 4. In the Base64 String field, enter or map the Base64-encoded string of the image you want to decode.
@@ -119,11 +114,6 @@ The following is a sample PNG image that will be used as input for this example.
 
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Image-Input.jpg" width="700" />
 
-#### Configuration
-
-Provide the Base64-encoded string of the selected image in the **Base64 String** field.
-
-<img src="\img\platform\key-concepts\nodes\built-in\base64-decode\ExampleConfig.jpg" width="700" />
 
 #### Output
 
