@@ -60,9 +60,10 @@ The Base64 node currently supports only the PDF files that are **NOT** protected
 :::
 
 #### Example 
+
 #### Input
 
-Use a valid Base64 string for the selected PDF file type (sample shown below).
+The following is a sample PDF that will be used as input for this example.
 
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Input of PDF.jpg" width="700" />
 
@@ -103,6 +104,8 @@ The output displays the decoded PDF text/content in JSON format, which you can m
 
 :::note
 The Base64 node supports the following image file types: **PNG, JPG, JPEG, GIF, BMP, WEBP**.
+
+For accurate data extraction, the image should be of **high quality and clarity**.
 
 :::
 
