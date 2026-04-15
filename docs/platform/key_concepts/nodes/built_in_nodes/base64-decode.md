@@ -69,11 +69,11 @@ Use a valid Base64 string for the selected PDF file type (sample shown below).
 
 Provide the Base64-encoded string of the selected PDF in the **Base64 String** field.
 
-<img src="\img\platform\key-concepts\nodes\built-in\base64-decode\continue.jpg" alt="pdf configuration" width="700" />
+<img src="\img\platform\key-concepts\nodes\built-in\base64-decode\Continue1.png" alt="pdf configuration" width="700" />
 
 #### Output
 
-The output displays the extracted PDF content in a structured response, which you can map to the next node.
+The output displays the decoded PDF text/content in JSON format, which you can map to the next node.
 
 <img src="\img\platform\key-concepts\nodes\built-in\base64-decode\PDF-Output.jpg" alt="output" width="700"/>
 
