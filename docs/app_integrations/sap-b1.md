@@ -14,7 +14,7 @@ SAP Business One (SAP B1) is an integrated enterprise resource planning (ERP) so
 
 Follow the steps below to quickly set up your credential.
 
-### Required Fields
+### Cofiguration Fields
 
 You will be asked to fill in the following details:
 
@@ -25,6 +25,7 @@ You will be asked to fill in the following details:
 | Username    | Your SAP B1 username                         |
 | Password    | Your SAP B1 password                         |
 | Company DB  | The company database name used in SAP B1     |
+| Additional Path | Provide Additional Path (Optional) |
 
 ### Step-by-Step Guide
 
@@ -66,6 +67,18 @@ Copy the **Schema Name**, this is your `Database Name`
 - Use your **SAP B1 client login credentials**.
 - Make sure the user has sufficient API permissions for integration.
 
+### Setup Credentials in Portal
+
+Go to Credentials Page and Click on **Select App**.
+
+<img src="
+\img\credentials\sap-b1\Portal-AppSelect.jpg" width="700" />
+
+Configure the **Credentials** as mentioned above
+
+<img src="\img\credentials\sap-b1\Portal-CredsConfig.jpg" width="700" />
+<img src="\img\credentials\sap-b1\Portal-CredConfig2.png" width="700" />
+
 ### Save Your Credential
 
 Once you've filled in the necessary fields, click **"Save"** to store and verify your setup.
@@ -79,14 +92,30 @@ Once you've filled in the necessary fields, click **"Save"** to store and verify
 
 Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available:
 
-<Tabs>
+<Tabs groupId="sap-b1-section" queryString="sap-b1-section" defaultValue="triggers">
 <TabItem value="triggers" label="Trigger">
 
 ### Triggers
 
+Use these links to open the matching trigger directly in the Trigger tab:
+
+- [New Items Created](?sap-b1-section=triggers#new-items-created)
+- [Items updated](?sap-b1-section=triggers#items-updated)
+- [New Order Created](?sap-b1-section=triggers#new-order-created)
+- [New Quotation Created](?sap-b1-section=triggers#new-quotation-created)
+- [New Business Partner Created](?sap-b1-section=triggers#new-business-partner-created)
+- [Business partners updated](?sap-b1-section=triggers#business-partners-updated)
+- [New AR Invoices created](?sap-b1-section=triggers#new-ar-invoices-created)
+- [New Credit Note Created](?sap-b1-section=triggers#new-credit-note-created)
+- [New deliverynotes Created](?sap-b1-section=triggers#new-deliverynotes-created)
+- [New incoming payments created](?sap-b1-section=triggers#new-incoming-payments-created)
+- [New service calls created](?sap-b1-section=triggers#new-service-calls-created)
+- [New returs created](?sap-b1-section=triggers#new-returs-created)
+- [New activities created](?sap-b1-section=triggers#new-activities-created)
+
 ### New Items Created
 
-The **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.  
+**New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.
 It captures the item details and passes them to the next step for further processing.
 
 > **Note:** This is a trigger node, so it does not take any input data.
@@ -122,14 +151,14 @@ Click on **Continue** , then **Run** the node.
   }
 ]
 ```
-   
+
 
 
 -------
 
 ### Items updated
 
-The **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
+**Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
 
 This trigger is commonly used to **sync inventory changes**, **update product catalogs**.
 
@@ -157,13 +186,46 @@ Click on **Continue** , then **Run** the node.
 ```json
 [
   {
-    "ItemCode": "ITM-1001",
-    "ItemName": "Sample Item - Updated",
-    "UpdateDate": "2026-03-27",
-    "UpdatedFields": [
-      "ItemName",
-      "Price",
-      "WarehouseCode"
+    "ItemCode": "SGLW1234",
+    "ItemName": "Revamp Skin Toner",
+    "ForeignName": null,
+    "ItemsGroupCode": 100,
+    "CustomsGroupCode": -1,
+    "SalesVATGroup": null,
+    "BarCode": null,
+    "VatLiable": "tYES",
+    "PurchaseItem": "tYES",
+    "SalesItem": "tYES",
+    "InventoryItem": "tYES",
+    "User_Text": "Testing Purpose",
+    "QuantityOnStock": 0,
+    "QuantityOrderedByCustomers": 9,
+    "ManageSerialNumbers": "tNO",
+    "ManageBatchNumbers": "tNO",
+    "Valid": "tYES",
+    "Frozen": "tNO",
+    "SalesUnit": null,
+    "PurchaseUnit": null,
+    "ItemType": "itItems",
+    "MaterialType": "mt_FinishedGoods",
+    "CreateDate": "2026-01-22",
+    "UpdateDate": "2026-03-18",
+    "ItemPrices": [
+      {
+        "PriceList": 1,
+        "Price": 70,
+        "Currency": "$"
+      },
+      {
+        "PriceList": 117,
+        "Price": 70,
+        "Currency": "$"
+      },
+      {
+        "PriceList": 118,
+        "Price": 70,
+        "Currency": "$"
+      }
     ]
   }
 ]
@@ -173,7 +235,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New Order Created
 
-The **New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.
+**New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.    
 
 This trigger is commonly used to **automate order processing**, **send notifications**, **update records**, or **initiate downstream actions** based on new order events.
 
@@ -215,14 +277,9 @@ Click on **Continue** , then **Run** the node.
   }
 ]
 ```
-
--------
-
 ### New Quotation Created
 
-The **New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
-
-This trigger is commonly used to **automate quotation processing**, **track sales opportunities**, or **trigger approval workflows**.
+**New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
 
 > **Note:** The trigger executes only after the quotation is successfully created. All relevant quotation details (such as quotation ID, customer information, pricing, and items) are included in the output payload.
 
@@ -268,9 +325,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New Business Partner Created
 
-The **New Business Partner Created Trigger** initiates a workflow whenever a new business partner is added to the SAP Business One. It captures partner details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **automate onboarding processes**.
+**New Business Partner Created Trigger** initiates a workflow whenever a new business partner is added to the SAP Business One. It captures partner details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
 
@@ -308,7 +363,7 @@ Click on **Continue** , then **Run** the node.
 
 ### Business partners updated
 
-The **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
+**Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
 
 This trigger is commonly used to **sync partner data across systems**, or **trigger validation processes**.
 
@@ -351,9 +406,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New AR Invoices created
 
-The **New AR Invoices Created Trigger** initiates a workflow whenever a new Accounts Receivable (AR) invoice is created in the SAP Business One. It captures invoice details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **automate invoice processing**, **send payment notifications**, **update financial records**, or **trigger accounting workflows**.
+**New AR Invoices Created Trigger** initiates a workflow whenever a new Accounts Receivable (AR) invoice is created in the SAP Business One. It captures invoice details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the AR invoice is successfully created. All relevant invoice details (such as invoice ID, customer information, amount, due date, and line items) are included in the output payload.
 
@@ -393,9 +446,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New Credit Note Created
 
-The **New Credit Note Created Trigger** initiates a workflow whenever a new credit note is generated in the SAP Business One. It captures credit note details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **automate refund processing**, **adjust customer balances**, **notify stakeholders**, or **update financial records**.
+**New Credit Note Created Trigger** initiates a workflow whenever a new credit note is generated in the SAP Business One. It captures credit note details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the credit note is successfully created. All relevant details (such as credit note ID, customer information, amount, and related invoice details) are included in the output payload.
 
@@ -435,9 +486,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New deliverynotes Created
 
-The **New Delivery Notes Created Trigger** initiates a workflow whenever a new delivery note is created in the SAP Business One. It captures delivery details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **track shipments**, **update order status**, **notify customers**, or **trigger logistics and fulfillment processes**.
+**New Delivery Notes Created Trigger** initiates a workflow whenever a new delivery note is created in the SAP Business One. It captures delivery details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the delivery note is successfully created. All relevant details (such as delivery note ID, customer information, shipment details, and items) are included in the output payload.
 
@@ -482,9 +531,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New incoming payments created
 
-The **New Incoming Payments Created Trigger** initiates a workflow whenever a new incoming payment is recorded in the SAP Business One. It captures payment details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **update payment status**, **reconcile invoices**, **notify stakeholders**, or **trigger accounting and financial workflows**.
+**New Incoming Payments Created Trigger** initiates a workflow whenever a new incoming payment is recorded in the SAP Business One. It captures payment details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the incoming payment is successfully created. All relevant details (such as payment ID, customer information, amount, payment method, and associated invoices) are included in the output payload.
 
@@ -524,9 +571,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New service calls created
 
-The **New Service Calls Created Trigger** initiates a workflow whenever a new service call is logged in the SAP Business One. It captures service request details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **automate support workflows**, **assign tickets to agents**, **notify teams**, or **track service requests and resolutions**.
+**New Service Calls Created Trigger** initiates a workflow whenever a new service call is logged in the SAP Business One. It captures service request details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the service call is successfully created. All relevant details (such as service call ID, customer information, issue description, and priority) are included in the output payload.
 
@@ -566,9 +611,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New returs created
 
-The **New Returns Created Trigger** initiates a workflow whenever a new return request is created in the SAP Business One. It captures return details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **manage return processes**, **update inventory**, **initiate refunds or replacements**, or **notify relevant teams**.
+**New Returns Created Trigger** initiates a workflow whenever a new return request is created in the SAP Business One. It captures return details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the return is successfully created. All relevant details (such as return ID, customer information, returned items, and reason for return) are included in the output payload.
 
@@ -613,9 +656,7 @@ Click on **Continue** , then **Run** the node.
 
 ### New activities created
 
-The **New Activities Created Trigger** initiates a workflow whenever a new activity is logged in the SAP Business One. It captures activity details and passes them as structured data to subsequent workflow steps.
-
-This trigger is commonly used to **track user actions**, **log interactions**, **notify stakeholders**, or **trigger follow-up tasks and workflows**.
+**New Activities Created Trigger** initiates a workflow whenever a new activity is logged in the SAP Business One. It captures activity details and passes them as structured data to subsequent workflow steps.
 
 > **Note:** The trigger executes only after the activity is successfully created. All relevant details (such as activity ID, type, associated entity, and timestamps) are included in the output payload.
 
@@ -652,22 +693,48 @@ Click on **Continue** , then **Run** the node.
 ```
 
 </TabItem>
-<TabItem value="actions" label="Action" default>
+<TabItem value="actions" label="Action">
 
 ## Actions
 
-The **Actions** component represents a set of operations that are executed within a workflow after a trigger or condition is met. Actions perform specific tasks by processing input data and producing outputs that can be used in subsequent steps.
+**Actions** component represents a set of operations that are executed within a workflow after a trigger or condition is met. Actions perform specific tasks by processing input data and producing outputs that can be used in subsequent steps.
 
 Actions are commonly used to **create, update, retrieve, or delete records**, **send notifications**, **integrate with external systems**, or **transform data** within workflows.
 
 > **Note:** Each action requires proper configuration of inputs and may produce output data that can be referenced in later steps of the workflow.
+
+Use these links to open the matching action section directly in the Action tab:
+
+- [BusinessPartners Actions](?sap-b1-section=actions#businesspartners-actions)
+- [Items Actions](?sap-b1-section=actions#items-actions)
+- [Quotations Actions](?sap-b1-section=actions#quotations-actions)
+- [Orders Actions](?sap-b1-section=actions#orders-actions)
+- [Invoices Actions](?sap-b1-section=actions#invoices-actions)
+- [Returns Actions](?sap-b1-section=actions#returns-actions)
+- [ServiceCall Actions](?sap-b1-section=actions#servicecall-actions)
+- [SalesOpportunities Actions](?sap-b1-section=actions#salesopportunities-actions)
+- [Exchange Rate Actions](?sap-b1-section=actions#exchange-rate-actions)
+- [Sales Tax Codes Actions](?sap-b1-section=actions#sales-tax-codes-actions)
+- [Special Prices Action](?sap-b1-section=actions#special-prices-action)
+- [Return Request Actions](?sap-b1-section=actions#return-request-actions)
+- [Sales Opportunities Action](?sap-b1-section=actions#sales-opportunities-action)
+- [Purchase Order Action](?sap-b1-section=actions#purchase-order-action)
+- [Incoming Payments Action](?sap-b1-section=actions#incoming-payments-action)
+- [Delivery Note Actions](?sap-b1-section=actions#delivery-note-actions)
+- [DownPayment Actions](?sap-b1-section=actions#downpayment-actions)
+- [SalesForecast Action](?sap-b1-section=actions#salesforecast-action)
+- [PaymentDraft Actions](?sap-b1-section=actions#paymentdraft-actions)
+- [Blanket Agreements Actions](?sap-b1-section=actions#blanket-agreements-actions)
+- [Serial Number Details Action](?sap-b1-section=actions#serial-number-details-action)
+- [Service Contracts Action](?sap-b1-section=actions#service-contracts-action)
+- [Customer Equipment Card Actions](?sap-b1-section=actions#customer-equipment-card-actions)
 
 ----
 ## BusinessPartners Actions
 
 ### Get a BusinessPartner by EmailAddress
 
-The **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
+**Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
 
 This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
 
@@ -687,7 +754,7 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|------------|
-| Email Address | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record. |
+| Email Address | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record. (e.g., "tesla.nesla@yopmail.com") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -699,21 +766,47 @@ Click on **Continue**, then **Run** the node.
 
 #### Result
 ```json
-[
-  {
-    "CardCode": "BC6129916",
-    "CardName": "MAX6",
-    "EmailAddress": "example@domain.com",
-    "Phone1": "9XXXXXXXXX"
-  }
-]
+{
+  "CardCode": "165120",
+  "CardName": "TESLA COM",
+  "CardType": "cCustomer",
+  "GroupCode": 100,
+
+  "Phone1": "6789067890",
+  "EmailAddress": "tesla.nesla@yopmail.com",
+
+  "City": "Hyderabad",
+  "Country": "IN",
+  "Currency": "$",
+
+  "BPAddresses": [
+    {
+      "AddressName": "ADD 14",
+      "AddressType": "bo_BillTo",
+      "Street": "Begumpet",
+      "City": "Hyderabad",
+      "ZipCode": "500038",
+      "Country": "IN",
+      "State": "TS"
+    },
+    {
+      "AddressName": "ADD 15",
+      "AddressType": "bo_ShipTo",
+      "Street": "TLR LUXURY RESIDENCY",
+      "City": "Serilingampalle (M), Hyderabad",
+      "ZipCode": "500081",
+      "Country": "IN",
+      "State": "TS"
+    }
+  ]
+}
 ```
 
 ----------------
 
 ### Get CardCode by ContactEmployee email
 
-The **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
+**Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
 
 This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
 
@@ -733,7 +826,7 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|------------|
-| Email | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record (e.g., "example@domain.com"). |
+| Email | Enter the email address of the business partner to search for. This field is used as the primary identifier to fetch the corresponding record (e.g., "amrutha.roy@yopmail.com"). |
 
 Click on **Continue**, then **Run** the node.
 
@@ -748,10 +841,40 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "CardCode": "BC6129916",
-    "ContactEmployee": {
-      "Name": "CTP-002",
-      "EmailAddress": "example@domain.com"
+    "BusinessPartners": {
+      "CardCode": "DEMOBP143",
+      "CardName": "VEDANTU CO",
+      "EmailAddress": "vedantu.co@yopmail.com",
+      "Phone1": "8909876567",
+      "Phone2": null,
+      "ContactPerson": "AMRUTHA ROY",
+      "Currency": "$",
+      "MailAddress": "Tirumala Apartment-B2BBC",
+      "MailCity": "Hyderabad",
+      "MailZipCode": "500044",
+      "MailCountry": "IN",
+      "Address": "JAYALAKSHMI NAGAR-B2BBC",
+      "City": "Hyderabad",
+      "ZipCode": "500038",
+      "Country": "IN",
+      "BillToState": "TS",
+      "Website": null,
+      "Industry": null,
+      "IndustryType": null
+    },
+    "BusinessPartners/ContactEmployees": {
+      "CardCode": "DEMOBP143",
+      "InternalCode": 365,
+      "Title": "0",
+      "Gender": "E",
+      "Name": "AMRUTHA ROY",
+      "LastName": "ROY",
+      "MiddleName": null,
+      "FirstName": "AMRUTHA",
+      "Phone1": null,
+      "Phone2": null,
+      "MobilePhone": "9878987654",
+      "Address": null
     }
   }
 ]
@@ -761,8 +884,8 @@ Click on **Continue**, then **Run** the node.
 
 ### Create New BusinessPartner
 
-The **Create New Business Partner with CardCode** action creates a new business partner in the system using a unique CardCode. It allows you to configure mandatory and optional details, which are then stored and passed as structured data for further workflow steps.
-This action is commonly used to **onboard new customers or vendors**, **store contact and address information**, and **enable downstream business processes**.
+**Create New Business Partner with CardCode** action creates a new business partner in the SAP using a unique CardCode. It allows you to configure mandatory and optional details, which are then stored and passed as structured data for further workflow steps.
+This action is commonly used to **onboard new customers or vendors**, **store contact and address information**.
 
 > **Note:** CardCode must be unique. Optional fields can be configured based on business requirements, and missing optional values will not block the creation process.
 
@@ -780,44 +903,31 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|------------|
-| CardCode | Enter a unique identifier for the business partner (e.g., "BP-001"). |
+| CardCode | Enter a unique identifier for the business partner (e.g., "STOP002"). |
 
 #### Optional Fields
-
-#### 1. Customer Details
-
-| Field          | Description |
-|---------------|------------|
-| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
-| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
-| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
-
-#### 2. BP Addresses
-
-| Field          | Description |
-|---------------|------------|
-| Address Name | Enter Address Name (e.g., "ADD 001" )|
-| Address Type | Select either **Ship To** or **Bill To** |
+| Customer Details
+Customer Name | Enter Required Customer Name (e.g., "Config") |
+| Phone1 | Enter Required Phone Number (e.g., "9987654321") |
+| Email Address | Enter Required Mobile Number (e.g., "config.co@yopmail.com")|
+| BP Addresses
+Address Name | Enter Address Name (e.g., "ADD 12345" )|
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
 | Optional Address Fields  
-Street  
-Block or Sector  
-Zip Code  
-City  
-Country  
-State | Enter Required Address details |
-
-#### 3. Contact Employees
-
-| Field          | Description |
-|---------------|------------|
-| Name | (e.g., "CTP-002")|
-| Optional Contact Fields  
-First Name  
-Last Name  
-Phone1  
-Email Address  
-Job Title  
-Position | Enter Required Contact details |
+Street  | Enter Street Name (e.g., "Madhura Nagar") |
+| Block or Sector | Block (e.g., "B70 TLR Residency") |
+| Zip Code  | Zip Code (e.g., "500038") |
+| City | City (e.g.,"Hyderabad") |  
+| Country | Country (e.g., "India") | 
+| State | State (e.g., "Telangana") |
+| Contact Employees
+Name | Enter contact employee name (e.g., "Check 0110") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required. |
+| Email Address | Enter email address (e.g., "demo.1234co@yopmail.com") |
+| Job Title | Enter job title if required. |
+| Position | Enter position if required. |
 
 Click on **Continue**, then **Run** the node.
 
@@ -836,20 +946,28 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "CardCode": "BP-001",
-    "CardName": "Joe Mark",
-    "Phone1": "9XXXXXXXXX",
-    "EmailAddress": "example@domain.com",
+    "CardCode": "STOP002",
+    "CardName": "Config",
+    "Phone1": "9987654321",
+    "EmailAddress": "config.co@yopmail.com",
     "BPAddresses": [
       {
-        "AddressName": "ADD 001",
-        "AddressType": "bo_ShipTo"
+        "AddressName": "ADD 12345",
+        "AddressType": "bo_ShipTo",
+        "Street": "Madhura Nagar",
+        "Block": "B70 TLR Residency",
+        "ZipCode": "500038",
+        "City": "Hyderabad",
+        "Country": "India",
+        "State": "Telangana"
       }
     ],
     "ContactEmployees": [
       {
-        "Name": "CTP-002",
-        "Position": "Manager"
+        "Name": "Check 0110",
+        "FirstName": "Demo",
+        "LastName": "Customer",
+        "EmailAddress": "demo.1234co@yopmail.com"
       }
     ]
   }
@@ -860,9 +978,9 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new businesspartner witout CardCode
 
-The **Create New Business Partner (Without CardCode)** action creates a new business partner in the system without requiring a CardCode. The system automatically generates a unique CardCode upon successful creation.
+**Create New Business Partner (Without CardCode)** action creates a new business partner in the SAP without requiring a CardCode. The SAP automatically generates a unique CardCode upon successful creation.
 
-This action is commonly used to **quickly create business partners**, **reduce manual effort in assigning IDs**, and **support automated onboarding workflows**.
+This action is commonly used to **quickly create business partners**, **reduce manual effort in assigning IDs**.
 
 > **Note:** The CardCode is auto-generated by the system. Optional fields can be configured as needed, and leaving them empty will not prevent the creation of the business partner.
 
@@ -878,40 +996,27 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|------------|
-| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
-
-#### Optional Field
-| Field          | Description |
-|---------------|------------|
-| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
-| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
-
-#### 2. BP Addresses
-
-| Field          | Description |
-|---------------|------------|
-| Address Name | Enter Address Name (e.g., "ADD 001" )|
-| Address Type | Select either **Ship To** or **Bill To** |
-| Optional Address Fields  
-Street  
-Block or Sector  
-Zip Code  
-City  
-Country  
-State | Enter Required Address details |
-
-#### 3. Contact Employees
-
-| Field          | Description |
-|---------------|------------|
-| Name | (e.g., "CTP-002")|
-| Optional Contact Fields  
-First Name  
-Last Name  
-Phone1  
-Email Address  
-Job Title  
-Position | Enter Required Contact details |
+| Customer Name | Enter required customer name (e.g., "WilliamRober") |
+| Optional Field
+Phone1 | Enter required phone number (e.g., "8909876545") |
+| Email Address | Enter required email address (e.g., "william.rober333@yopmail.com") |
+| BP Addresses
+Address Name | Enter address name (e.g., "ADD 12346") |
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter ZIP code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
+| Contact Employees
+Name | Enter contact employee name (e.g., "Check 0111") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required (e.g., "9987654322") |
+| Email Address | Enter email address (e.g., "demo.auto@yopmail.com") |
+| Job Title | Enter job title if required (e.g., "Sales Executive") |
+| Position | Enter position if required (e.g., "Manager") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -931,9 +1036,9 @@ Click on **Continue**, then **Run** the node.
 [
   {
     "CardCode": "V10025",
-    "CardName": "Joe Mark",
-    "Phone1": "9XXXXXXXXX",
-    "EmailAddress": "example@domain.com"
+    "CardName": "WilliamRober",
+    "Phone1": "8909876545",
+    "EmailAddress": "william.rober333@yopmail.com"
   }
 ]
 ```
@@ -942,9 +1047,9 @@ Click on **Continue**, then **Run** the node.
 
 ### Update a businesspartner
 
-The **Update Business Partner** action modifies the details of an existing business partner in the system. It allows updating specific fields while retaining unchanged information.
+**Update Business Partner** action modifies the details of an existing business partner in the SAP. It allows updating specific fields while retaining unchanged information.
 
-This action is commonly used to **maintain accurate partner records**, **update contact and address information**, and **sync changes across systems**.
+This action is commonly used to **maintain accurate partner records**, **update contact and address information**, and **sync changes across SAP**.
 
 > **Note:** Only the fields provided in the configuration will be updated. Fields left empty will remain unchanged in the existing business partner record.
 
@@ -958,34 +1063,29 @@ Click on **Continue** button.
 
 #### Configuration Fields
 
-#### 1. Customer Details
-
 | Field          | Description |
 |---------------|------------|
-| Customer Name | Enter Required Customer Name (e.g., "Joe Mark") |
-| Phone1 | Enter Required Phone Number (e.g., "9XXXXXXXXX") |
-| Email Address | Enter Required Mobile Number (e.g., "example@domain.com")|
-
-#### 2. BP Addresses
-
-| Field          | Description |
-|---------------|------------|
-| Address Name | Enter Address Name (e.g., "ADD 001" )|
-| Address Type | Select either **Ship To** or **Bill To** |
-| Optional Address Fields  
-Street  
-Block or Sector  
-Zip Code  
-City  
-Country  
-State | Enter Required Address details |
-
-#### 3. Contact Employees
-
-| Field          | Description |
-|---------------|------------|
-| Name | (e.g., "CTP-002")|
-| Optional Contact Fields <br/> First Name  <br/> Last Name  <br/> Phone1  <br/> Email Address  <br/> Job Title  <br/> Position  | Enter Required Contact details |
+| Card Code | Enter business partner code to update. (e.g., "STOP001") |
+| Customer Name | Enter required customer name (e.g., "Robbin Martin") |
+| Phone1 | Enter required phone number (e.g., "9879090907") |
+| Email Address | Enter required email address (e.g., "config.co@yopmail.com") |
+| BP Addresses
+Address Name | Enter address name (e.g., "ADD 12345") |
+| Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter ZIP code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
+| Contact Employees
+Name | Enter contact employee name (e.g., "Check 0110") |
+| First Name | Enter first name (e.g., "Demo") |
+| Last Name | Enter last name (e.g., "Customer") |
+| Phone1 | Enter phone number if required (e.g., "9987654322") |
+| Email Address | Enter email address (e.g., "demo.1234co@yopmail.com") |
+| Job Title | Enter job title if required (e.g., "Sales Lead") |
+| Position | Enter position if required (e.g., "Manager") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1004,21 +1104,11 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "CardCode": "BP-001",
-    "CardName": "Joe Mark Updated",
-    "Phone1": "9XXXXXXXXX",
-    "EmailAddress": "example@domain.com",
-    "ContactEmployees": [
-      {
-        "Name": "CTP-002",
-        "JobTitle": "Sales Lead"
-      }
-    ]
+    "_pair_index": 0,
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-UBP34.jpg" width="700" />
 
 ---------
 
@@ -1027,9 +1117,9 @@ Click on **Continue**, then **Run** the node.
 
 ### Get a Item by ItemCode
 
-The **Get an Item by ItemCode** action retrieves the details of an item using its unique ItemCode. It returns the matching item record as a structured object.
+**Get an Item by ItemCode** action retrieves the details of an item using its unique ItemCode. It returns the matching item record as a structured object.
 
-This action is commonly used to **lookup item information**, **validate product records**, **fetch inventory details**, or **use item data in workflows**.
+This action is commonly used to **lookup item information**, **validate product records**, **fetch inventory details**.
 
 > **Note:** If the provided ItemCode does not exist, the output will be empty or null.
 
@@ -1072,11 +1162,11 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a New Item {#create-a-new-item}
 
-The **Create New Item** action creates a new item in the system with the specified details. It captures item information and stores it as a structured record for use in workflows and inventory processes.
+**Create New Item** action creates a new item in the SAP with the specified details. It captures item information and stores it as a structured record for use in workflows and inventory processes.
 
-This action is commonly used to **add new products**, **manage inventory**, **update product catalogs**, and **support sales and procurement workflows**.
+This action is commonly used to **add new products**, **manage inventory**.
 
-> **Note:** If ItemCode is not provided, the system may automatically generate one. Optional fields can be configured as needed without blocking item creation.
+> **Note:** If ItemCode is not provided, SAP may not generate Item. Optional fields can be configured as needed without blocking item creation.
 
 #### Select the Credential and Action Event
 
@@ -1090,22 +1180,16 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|------------|
-| Item Code | Unique identifier for the item. |
-| Item Name | Enter the name of the item. |
-
-#### Optional Fields â€“ Item Configuration
-
-Below are the optional fields available while creating an item, along with short descriptions:
-
-| Field          | Description |
-|---------------|------------|
-| Remarks | Additional notes or comments related to the item. (e.g., "High demand electronic accessory")|
+| Item Code | Unique identifier for the item (e.g., "DOC-910"). |
+| Item Name | Enter the name of the item (e.g., "ThinkPad-V1.2.2"). |
+| Optional Fields
+Remarks | Additional notes or comments related to the item. (e.g., "ThinkPad is a line of business-focused laptops developed by Lenovo, originally created by IBM.")|
 | Item Prices | Defines pricing details for the item across different price lists. (e.g., "PriceList: 1 â†’ 500 INR, PriceList: 2 â†’ 550 INR")|
 | Inventory Item | Indicates whether the item is managed in inventory. (e.g., "Yes or No")|
 | InventoryUOM | itemâ€™s stock is tracked and managed in the inventory system (e.g., Nos, Kg, Liters).| 
 | Location | Specifies the storage location of the item.(e.g., "Warehouse-1")|
 |Item Group Code | Categorizes the item into a specific group. (e.g., "100")|
-| Additional Identifier | Any extra reference ID for the item.|
+| Additional Identifier | Any extra reference ID for the item (e.g., "ALT-56789"). |
 | Purchase Item | Marks the item as available for purchasing. (e.g., "Yes or No")|
 | Sales Item | Marks the item as available for sales. (e.g., "Yes or No")|
 | Ship Type | Defines the shipping method applicable to the item. (e.g., "5, 6")|
@@ -1116,7 +1200,7 @@ Below are the optional fields available while creating an item, along with short
 | ItemType | Specifies the type of item (e.g., product or service).(e.g., "Items, Labour, travel")|
 | ServiceGroup | Groups service-type items under a category. (e.g., "-1")|
 | ProductSource | Defines the origin/source of the product.(e.g., "Local")|
-| BarCode | Unique barcode identifier for the item.(e.g., "null")|
+| BarCode | Unique barcode identifier for the item (e.g., "8901234567890"). |
 | VatLiable | Indicates if VAT is applicable to the item.(e.g., "Yes or No")|
 
 > **Note:** These fields are optional and can be configured based on business requirements.
@@ -1135,8 +1219,9 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "ItemCode": "ITM-1001",
-    "ItemName": "Laptop Pro 15",
+    "ItemCode": "DOC-910",
+    "ItemName": "ThinkPad-V1.2.2",
+    "Remarks": "ThinkPad is a line of business-focused laptops developed by Lenovo, originally created by IBM.",
     "InventoryUOM": "Nos",
     "ItemGroupCode": 100,
     "SalesItem": "tYES",
@@ -1150,9 +1235,9 @@ Click on **Continue**, then **Run** the node.
 
 ### Update an Item {#update-a-item}
 
-The **Update Item** action modifies the details of an existing item in the system using its ItemCode. It allows updating specific fields while keeping other data unchanged.
+**Update Item** action modifies the details of an existing item in the SAP using its ItemCode. It allows updating specific fields while keeping other data unchanged.
 
-This action is commonly used to **maintain accurate product data**, **update pricing and availability**, and **sync item details across systems**.
+This action is commonly used to **maintain accurate product data**, **update pricing and availability**, and **sync item details across SAP**.
 
 > **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
 
@@ -1165,25 +1250,18 @@ Click on **Continue** button.
 ------------
 
 #### Configuration Fields
-
-Below are the optional fields available while Updating an item, along with short descriptions:
-
 | Field          | Description |
 |---------------|------------|
 | Item Code | Unique identifier of the item to be updated.(e.g.,"ITM-1001")
-
-Below are the optional fields available while updating an item, along with short descriptions and examples:
-
-| Field          | Description |
-|---------------|------------|
-| Item Name | Name of the item. (e.g., "Laptop Pro 15") |
+| Optionals
+Item Name | Name of the item. (e.g., "Laptop Pro 15") |
 | Remarks | Additional notes or comments related to the item. (e.g.,"Updated model with enhanced features") |
 | Additional Identifier | Any extra reference ID for the item.(e.g., "ALT-56789") |
-| Item Group Code | Categorizes the item into a specific group.  (e.g.,"Electronics") |
-| Purchase Item | Marks the item as available for purchasing (True/False).  (e.g., "True") |
-| Sales Item | Marks the item as available for sales (e.g., "True/False"). |
-| Inventory Item | Indicates whether the item is managed in inventory (e.g., "True/False"). |
-| Manufacturer | Specifies the manufacturer of the item. (e.g.,"HP") |
+| Item Group Code | Categorizes the item into a specific group. (e.g., "100") |
+| Purchase Item | Marks the item as available for purchasing (e.g., "tYES"). |
+| Sales Item | Marks the item as available for sales (e.g., "tYES"). |
+| Inventory Item | Indicates whether the item is managed in inventory (e.g., "tYES"). |
+| Manufacturer | Specifies the manufacturer of the item (e.g., "HP"). |
 | Default Warehouse | Defines the default warehouse for the item. (e.g., "WH-01") |
 | Item Price | Defines the price of the item. (e.g., "65000") |
 
@@ -1200,17 +1278,11 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "ItemCode": "ITM-1001",
-    "ItemName": "Laptop Pro 15",
-    "Remarks": "Updated model with enhanced features",
-    "ItemGroupCode": "Electronics",
-    "DefaultWarehouse": "WH-01",
-    "Price": 65000
+    "_pair_index": 0,
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AC-UI50.jpg" width="700" />
 
 ---------------
 
@@ -1219,11 +1291,11 @@ Click on **Continue**, then **Run** the node.
 
 ### Get a quotation by customer reference no
 
-The **Get a Quotation by Customer Reference Number** action retrieves quotation details using the customer reference number (`NumAtCard`). It returns the matching quotation record as a structured object.
+**Get a Quotation by Customer Reference Number** action retrieves quotation details using the customer reference number (`NumAtCard`). It returns the matching quotation record as a structured object.
 
 This action is commonly used to **lookup quotation details**, **track customer-specific references**, **validate records**, or **fetch quotation data for further processing**.
 
-> **Note:** If multiple quotations match the provided reference number, the system may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+> **Note:** If multiple quotations match the provided reference number, the SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
 
 #### Select the Credential and Action Event
 
@@ -1265,9 +1337,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new quotation
 
-The **Create New Quotation** action creates a new sales quotation in the system using customer and item details. It captures all configured data and stores it as a structured document for further processing.
-
-This action is commonly used to **generate sales quotations**, **share pricing details with customers**, and **initiate sales processes**.
+**Create New Quotation** action creates a new sales quotation in the SAP using customer and item details. It captures all configured data and stores it as a structured document for further processing.
 
 > **Note:** Mandatory fields must be provided to create a quotation. Optional fields can be configured as needed without blocking the process.
 
@@ -1290,24 +1360,22 @@ ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 UnitPrice | Price per unit of the item. (e.g., "100") |
 | TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
-| Discount Percentage | Discount applied to the item. (e.g., "10%, 10.5%") |
+| Discount Percentage | Discount applied to the item. (e.g., "10") |
 | Optional Fields
 DocDate | Date of the quotation. (e.g., "2026-03-13") |
-| NumAtCard | Customer reference number. (e.g., "null, Ref-145 etc..,") |
-| Address Extension 
-ShipToStreet
-ShipToBlock
-ShipToCity
-ShipToCountry
-ShipToZipCode
-ShipToState | Enter ShipTo details as per the requirement |
-| Address Extension 
-BillToStreet
-BillToBlock
-BillToCity
-BillToCountry
-BillToZipCode
-BillToState | Enter BillTo details as per the requirement |
+| NumAtCard | Customer reference number. (e.g., "REF-145") |
+| ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
+| ShipToBlock | Enter the ShipTo block. (e.g., "B70 TLR Residency") |
+| ShipToCity | Enter the ShipTo city. (e.g., "Hyderabad") |
+| ShipToCountry | Enter the ShipTo country. (e.g., "India") |
+| ShipToZipCode | Enter the ShipTo ZIP code. (e.g., "500038") |
+| ShipToState | Enter the ShipTo state. (e.g., "Telangana") |
+| BillToStreet | Enter the BillTo street. (e.g., "Begumpet") |
+| BillToBlock | Enter the BillTo block. (e.g., "Lane 2") |
+| BillToCity | Enter the BillTo city. (e.g., "Hyderabad") |
+| BillToCountry | Enter the BillTo country. (e.g., "India") |
+| BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
+| BillToState | Enter the BillTo state. (e.g., "Telangana") |
 | Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
@@ -1349,7 +1417,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Update quotation
 
-The **Update Quotation** action modifies an existing quotation in the system using the document number (DocNum). It allows updating header details, address information, document lines, and additional expenses.
+**Update Quotation** action modifies an existing quotation in the SAP using the document number (DocNum). It allows updating header details, address information, document lines, and additional expenses.
 
 This action is commonly used to **modify quotation details**, **update pricing or items**, and **maintain accurate sales records**.
 
@@ -1365,33 +1433,31 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|---------------|
-| DocNum | Enter the quotation document number to be updated. (e.g., "503") |
+| DocEntry | Enter the quotation document number to be updated. (e.g., "503") |
 | Optional Document Fields  
-| DocDueDate | pdate the due date of the quotation. (e.g., "2026-08-09") | 
-| CardCode |  CardCode will unique. (e.g., "BC6129916") |
-| NumAtCard | Update the customer reference number. (e.g., "null, Ref-1122")|
-| Address Extension 
-ShipToStreet
-ShipToBlock
-ShipToCity
-ShipToCountry
-ShipToZipCode
-ShipToState | Enter ShipTo details as per the requirement |
-| Address Extension 
-BillToStreet
-BillToBlock
-BillToCity
-BillToCountry
-BillToZipCode
-BillToState | Enter BillTo details as per the requirement |
+| DocDueDate | Update the due date of the quotation. (e.g., "2026-08-09") | 
+| CardCode | CardCode will be unique. (e.g., "BC6129916") |
+| NumAtCard | Update the customer reference number. (e.g., "Ref-100") |
+| ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
+| ShipToBlock | Enter the ShipTo block. (e.g., "B70 TLR Residency") |
+| ShipToCity | Enter the ShipTo city. (e.g., "Hyderabad") |
+| ShipToCountry | Enter the ShipTo country. (e.g., "India") |
+| ShipToZipCode | Enter the ShipTo ZIP code. (e.g., "500038") |
+| ShipToState | Enter the ShipTo state. (e.g., "Telangana") |
+| BillToStreet | Enter the BillTo street. (e.g., "Begumpet") |
+| BillToBlock | Enter the BillTo block. (e.g., "Lane 2") |
+| BillToCity | Enter the BillTo city. (e.g., "Hyderabad") |
+| BillToCountry | Enter the BillTo country. (e.g., "India") |
+| BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
+| BillToState | Enter the BillTo state. (e.g., "Telangana") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "5") |
 | Optional Fields (Document Lines)
 UnitPrice | Price per unit of the item. (e.g., "123") |
-| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
-| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+| Discount Percentage | Discount applied to the item. (e.g., "10") |
 | Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
@@ -1409,18 +1475,17 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "value": "Quotation updated successfully"
+    "_pair_index": 0,
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-UQT67.jpg" width="700" />
 
 -----------
 
 ### Update quotation customer reference no
 
-The **Update Quotation Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing quotation in the system.
+**Update Quotation Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing quotation in the SAP.
 
 This action is commonly used to **update customer-specific references**, **align documents with external systems**, or **correct quotation details**.
 
@@ -1439,7 +1504,7 @@ Click on **Continue** button.
 | Field          | Description |
 |---------------|---------------|
 | DocEntry | Enter the internal document entry number of the quotation. (e.g., "503") |
-| NumAtCard | Enter the updated customer reference number. (e.g., "Old data - Ref-100 and updated data Ref-104") |
+| NumAtCard | Enter the updated customer reference number. (e.g., "REF-104") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1455,12 +1520,11 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "value": "Quotation customer reference updated successfully"
+    "_pair_index": 0,
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-UQTbyNumAtCard70.jpg" width="700" />
 
 ------------------
 
@@ -1468,11 +1532,11 @@ Click on **Continue**, then **Run** the node.
 
 ### Get an sales order by customer reference no
 
-The **Get a Sales Order by Customer Reference Number** action retrieves sales order details using the customer reference number (`NumAtCard`). It returns the matching sales order record as a structured object.
+**Get a Sales Order by Customer Reference Number** action retrieves sales order details using the customer reference number (`NumAtCard`). It returns the matching sales order record as a structured object.
 
 This action is commonly used to **lookup sales order details**, **track customer-specific references**, **validate records**, or **fetch order data for further processing**.
 
-> **Note:** If multiple sales orders match the provided reference number, the system may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+> **Note:** If multiple sales orders match the provided reference number, SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
 
 #### Select the Credential and Action Event
 
@@ -1486,7 +1550,7 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|---------------|
-| NumAtCard | Enter the customer reference number associated with the sales order. (e.g"Ref-104, 222, 664111000000375101 etc..,") |
+| NumAtCard | Enter the customer reference number associated with the sales order. (e.g., "Ref-104") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1511,7 +1575,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Get order list by item code
 
-The **Get Order List by Item Code** action retrieves a list of sales orders that contain a specific item. It returns the matching orders as a structured collection of records.
+**Get Order List by Item Code** action retrieves a list of sales orders that contain a specific item. It returns the matching orders as a structured collection of records.
 
 This action is commonly used to **track item demand**, **analyze order history**, **monitor sales activity**, or **fetch related orders for processing**.
 
@@ -1530,7 +1594,7 @@ Click on **Continue** button.
 | Field          | Description |
 |---------------|---------------|
 | Size Limit | Specify the maximum number of records to retrieve. (e.g., "100") |
-| Item Code | Enter the unique identifier of the item to search for in orders. (e.g., "") |
+| Item Code | Enter the unique identifier of the item to search for in orders. (e.g., "BCB2B0001") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1557,9 +1621,9 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new sales order
 
-The **Create New Sales Order** action creates a new sales order in the system using customer, item, and delivery details. It captures all configured data and stores it as a structured document for further processing.
+**Create New Sales Order** action creates a new sales order in the SAP using customer, item, and delivery details. It captures all configured data and stores it as a structured document for further processing.
 
-This action is commonly used to **create customer orders**, **manage sales transactions**, and **initiate delivery and billing processes**.
+This action is commonly used to **create customer orders**, **manage sales transactions**.
 
 > **Note:** Mandatory fields must be provided to create a sales order. Optional fields can be configured as needed without blocking the process.
 
@@ -1569,38 +1633,36 @@ This action is commonly used to **create customer orders**, **manage sales trans
 
 Click on **Continue** button.
 
-#### Example Configuration
+#### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
-| Document Date | Specify the date of the sales order. (e.g., "") |
-| Document Due Date | Specify the due/delivery date. (e.g., "") |
-| Card Code | Enter the customer code. (e.g., "") |
+| Document Date | Specify the date of the sales order. (e.g., "2026-04-01") |
+| Document Due Date | Specify the due or delivery date. (e.g., "2026-04-05") |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "5") |
 | Optional Fields (Document Lines)
 UnitPrice | Price per unit of the item. (e.g., "123") |
-| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
-| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+| Discount Percentage | Discount applied to the item. (e.g., "10") |
 | Additional Fields 
-Contact Person Code | Identifier for the contact person. (e.g., "") |
-| NumAtCard | Customer reference number. (e.g., "") |
-| Address Extension 
-ShipToStreet
-ShipToBlock
-ShipToCity
-ShipToCountry
-ShipToZipCode
-ShipToState | Enter ShipTo details as per the requirement |
-| Address Extension 
-BillToStreet
-BillToBlock
-BillToCity
-BillToCountry
-BillToZipCode
-BillToState | Enter BillTo details as per the requirement |
+Contact Person Code | Identifier for the contact person. (e.g., "134") |
+| NumAtCard | Customer reference number. (e.g., "Ref-104") |
+| ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
+| ShipToBlock | Enter the ShipTo block. (e.g., "B70 TLR Residency") |
+| ShipToCity | Enter the ShipTo city. (e.g., "Hyderabad") |
+| ShipToCountry | Enter the ShipTo country. (e.g., "India") |
+| ShipToZipCode | Enter the ShipTo ZIP code. (e.g., "500038") |
+| ShipToState | Enter the ShipTo state. (e.g., "Telangana") |
+| BillToStreet | Enter the BillTo street. (e.g., "Begumpet") |
+| BillToBlock | Enter the BillTo block. (e.g., "Lane 2") |
+| BillToCity | Enter the BillTo city. (e.g., "Hyderabad") |
+| BillToCountry | Enter the BillTo country. (e.g., "India") |
+| BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
+| BillToState | Enter the BillTo state. (e.g., "Telangana") |
 | Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
@@ -1639,7 +1701,7 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 ### Create a Service
 
-The **Create Service** action creates a service-type document (Order or Quotation) in the system using customer and service details. It captures all configured data and stores it as a structured document for further processing.
+**Create Service** action creates a service-type document (Order or Quotation) in the SAP using customer and service details. It captures all configured data and stores it as a structured document for further processing.
 
 This action is commonly used to **create service orders or quotations**, **manage service-based transactions**, and **track customer service activities**.
 
@@ -1665,8 +1727,8 @@ Click on **Continue** button.
 | Unit Price | Price per unit of service. (e.g., "200") |
 | Quantity | Number of service units. (e.g., "3") |
 | Optionals 
-TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
-| Discount Percentage | Discount applied to the item. (e.g., "10%") |
+TaxCode | Tax code applicable to the item. (e.g., "NT") |
+| Discount Percentage | Discount applied to the item. (e.g., "10") |
 | Additional Field
 Comments | Add any remarks or notes related to the service document. (e.g., "Urgent service request") |
 
@@ -1701,7 +1763,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Update Order
 
-The **Update Order** action modifies an existing sales order in the system using the document entry (DocEntry). It allows updating header details, document lines, address information, and additional expenses.
+**Update Order** action modifies an existing sales order in the SAP using the document entry (DocEntry). It allows updating header details, document lines, address information, and additional expenses.
 
 This action is commonly used to **update order details**, **modify pricing or items**, and **maintain accurate sales records**.
 
@@ -1723,7 +1785,7 @@ Click on **Continue** button.
 |---------------|---------------|
 | DocEntry | Enter the internal document entry number of the order. (e.g., "11464") |
 | Doc Due Date | Update the due/delivery date. (e.g., "2026-08-11") |
-| NumAtCard | Update the customer reference number. (e.g., "Ref-111") |
+| NumAtCard | Update the customer reference number. (e.g., "Ref-104") |
 | Rounding | Enable or disable rounding (**tYes** or **tNo**). (e.g., "tYes") |
 | Rounding Difference Amount | Specify the rounding adjustment value. (e.g., "2.50") |
 | DocumentLines
@@ -1731,23 +1793,21 @@ ItemCode | Unique identifier of the item. (e.g., "BCB2B0001")
 | Quantity | Quantity of the item. (e.g., "8") |
 | Optional Fields (Document Lines)
 UnitPrice | Price per unit of the item. (e.g., "160") |
-| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
-| Discount Percentage | Discount applied to the item. (e.g., "13%") |
-| Address Extension 
-ShipToStreet
-ShipToBlock
-ShipToCity
-ShipToCountry
-ShipToZipCode
-ShipToState | Enter ShipTo details as per the requirement |
-| Address Extension 
-BillToStreet
-BillToBlock
-BillToCity
-BillToCountry
-BillToZipCode
-BillToState | Enter BillTo details as per the requirement |
+| Discount Percentage | Discount applied to the item. (e.g., "13") |
+| ShipToStreet | Enter the ShipTo street. (e.g., "Madhura Nagar") |
+| ShipToBlock | Enter the ShipTo block. (e.g., "B70 TLR Residency") |
+| ShipToCity | Enter the ShipTo city. (e.g., "Hyderabad") |
+| ShipToCountry | Enter the ShipTo country. (e.g., "India") |
+| ShipToZipCode | Enter the ShipTo ZIP code. (e.g., "500038") |
+| ShipToState | Enter the ShipTo state. (e.g., "Telangana") |
+| BillToStreet | Enter the BillTo street. (e.g., "Begumpet") |
+| BillToBlock | Enter the BillTo block. (e.g., "Lane 2") |
+| BillToCity | Enter the BillTo city. (e.g., "Hyderabad") |
+| BillToCountry | Enter the BillTo country. (e.g., "India") |
+| BillToZipCode | Enter the BillTo ZIP code. (e.g., "500016") |
+| BillToState | Enter the BillTo state. (e.g., "Telangana") |
 | Document Additional Expenses (Optional) 
 Freight or Expenses Code | Additional costs applied to the quotation such as freight, handling, or service charges. (e.g., "300") |
 
@@ -1765,22 +1825,20 @@ Click on **Continue**, then **Run** the node.
 
 ------------
 
-### Result
+#### Result
 ```json
 [
   {
-    "value": "Sales order updated successfully"
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-UO94.jpg" width="700" />
 
 ------------------
 
 ### Update salesorder customer reference no
 
-The **Update Sales Order Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing sales order in the system.
+**Update Sales Order Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing sales order in the SAP.
 
 This action is commonly used to **update customer-specific references**, **align orders with external systems**, or **correct sales order details**.
 
@@ -1799,7 +1857,7 @@ Click on **Continue** button.
 | Field          | Description |
 |---------------|---------------|
 | DocEntry | Enter the internal document entry number of the sales order. (e.g., ("11464")) |
-| NumAtCard | Enter the updated customer reference number. . (e.g., "Ref-1AAA") |
+| NumAtCard | Enter the updated customer reference number. (e.g., "Ref-104") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1809,22 +1867,20 @@ Click on **Continue**, then **Run** the node.
 
 <img src="/img/credentials/sap-b1/SAP-AC-USOCRno96.jpg" width="700" />
 
-### Result
+#### Result
 ```json
 [
   {
-    "value": "Sales order customer reference updated successfully"
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-USOCRno97.jpg" width="700" />
 
 ---------------
 
 ### Cancel a Sales Order
 
-The **Cancel Sales Order** action cancels an existing sales order in the system using the document entry (DocEntry). Once cancelled, the order is marked as inactive and cannot be processed further.
+**Cancel Sales Order** action cancels an existing sales order in the SAP using the document entry (DocEntry). Once cancelled, the order is marked as inactive and cannot be processed further.
 
 This action is commonly used to **void incorrect orders**, **handle order cancellations**, or **stop further processing of an order**.
 
@@ -1870,7 +1926,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Get invoice by DocEntry 
 
-The **Get Invoice by DocEntry** action retrieves invoice details using the internal document entry number (`DocEntry`). It returns the matching invoice record as a structured object.
+**Get Invoice by DocEntry** action retrieves invoice details using the internal document entry number (`DocEntry`). It returns the matching invoice record as a structured object.
 
 This action is commonly used to **lookup invoice details**, **validate financial records**, **track billing information**, or **fetch invoice data for further processing**.
 
@@ -1918,11 +1974,11 @@ Click on **Continue**, then **Run** the node.
 
 ### Get invoice by order DocEntry
 
-The **Get Invoice by Order DocEntry** action retrieves invoice details associated with a specific sales order using the order's document entry number. It returns the related invoice record(s) as structured data.
+**Get Invoice by Order DocEntry** action retrieves invoice details associated with a specific sales order using the order's document entry number. It returns the related invoice record(s) as structured data.
 
 This action is commonly used to **track invoices generated from orders**, **validate billing against sales orders**, or **fetch related financial documents for processing**.
 
-> **Note:** If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the system may return one or a list based on configuration.
+> **Note:** If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the SAP may return one or a list based on configuration.
 
 #### Select the Credential and Action Event
 
@@ -1934,7 +1990,7 @@ Click on **Continue** button.
 
 | Field          | Description |
 |---------------|---------------|
-| DocEntry | Enter the internal document entry number of the sales order. (e.g., "") |
+| DocEntry | Enter the internal document entry number of the sales order. (e.g., "11464") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -1968,7 +2024,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Get invoice by NumAtCard
 
-The **Get Invoice by Customer Reference Number** action retrieves invoice details using the customer reference number (`NumAtCard`). It returns the matching invoice record(s) as structured data.
+**Get Invoice by Customer Reference Number** action retrieves invoice details using the customer reference number (`NumAtCard`). It returns the matching invoice record(s) as structured data.
 
 This action is commonly used to **lookup invoice details**, **track customer-specific references**, **validate billing records**, or **fetch invoice data for further processing**.
 
@@ -2011,7 +2067,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new AR invoice
 
-The **Create New AR Invoice** action creates a new Accounts Receivable invoice in the system using customer and item details. It supports both standard AR invoices and reserve invoices.
+**Create New AR Invoice** action creates a new Accounts Receivable invoice in the SAP using customer and item details. It supports both standard AR invoices and reserve invoices.
 
 This action is commonly used to **generate invoices**, **bill customers**, and **manage financial transactions**.
 
@@ -2034,16 +2090,16 @@ Click on **Continue** button.
 | CardCode | Enter the customer code. (e.g., "BC6129916") |
 | Reserve Invoice | Select the invoice type (**AR Invoice** or **Reserve Invoice**). (e.g., "AR Invoice") |
 | DocumentLines
-ItemCode | Unique identifier of the item. (e.g., "BCB2B0001 or WOOCOM101")
+ItemCode | Unique identifier of the item. (e.g., "WOOCOM101")
 | Quantity | Quantity of the item. (e.g., "7") |
-| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, Exempt ect..,") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Optional Fields (Document Lines)
 UnitPrice | Price per unit of the item. (e.g., "500") |
 | Vat Group | VAT group classification. (e.g., "VAT1") |
-| Discount Percentage | Discount applied to the item. (e.g., "13%") |
+| Discount Percentage | Discount applied to the item. (e.g., "13") |
 | BaseLine | Base document line reference. (e.g., "0") |
 | BaseType | Base document type. (e.g., "-1") |
-| BaseEntry | Base document entry reference. (e.g., "null or 1455") |
+| BaseEntry | Base document entry reference. (e.g., "1455") |
 | NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
 | ContactPerson | Identifier of the contact person. (e.g., "134") |
 | Document Additional Expenses (Optional) 
@@ -2071,9 +2127,11 @@ Click on **Continue**, then **Run** the node.
     "DocDueDate": "2026-05-19",
     "CardCode": "BC6129916",
     "ReserveInvoice": "AR Invoice",
+    "NumAtCard": "REF-INV01",
+    "ContactPerson": 134,
     "DocumentLines": [
       {
-        "ItemCode": "BCB2B0001",
+        "ItemCode": "WOOCOM101",
         "Quantity": 7,
         "UnitPrice": 500,
         "TaxCode": "NT"
@@ -2090,7 +2148,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create Returns
 
-The **Create Returns** action creates a return document in the system for items returned by a customer. It captures return details and stores them as a structured document for further processing.
+**Create Returns** action creates a return document in the system for items returned by a customer. It captures return details and stores them as a structured document for further processing.
 
 This action is commonly used to **process product returns**, **adjust inventory**, and **manage refund or replacement workflows**.
 
@@ -2114,7 +2172,7 @@ Click on **Continue** button.
 | DocumentLines
 ItemCode | Unique identifier of the item. (e.g., "DIET001")
 | Quantity | Quantity of the item. (e.g., "1") |
-| TaxCode | Tax code applicable to the item. (e.g., "IGST, CGST, NT, DEFAULT, Exempt ect..,") |
+| TaxCode | Tax code applicable to the item. (e.g., "NT") |
 | Optional Fields (Document Lines)
 UnitPrice | Price per unit of the item. (e.g., "20") |
 | Vat Group | VAT group classification. (e.g., "tNO") |
@@ -2122,7 +2180,7 @@ UnitPrice | Price per unit of the item. (e.g., "20") |
 | Warehouse | Warehouse where the return is processed. (e.g., "01") |
 | BaseLine | Base document line reference. (e.g., "0") |
 | BaseType | Base document type. (e.g., "-1") |
-| BaseEntry | Base document entry reference. (e.g., "null or 1455") |
+| BaseEntry | Base document entry reference. (e.g., "1455") |
 | NumAtCard | Enter the customer reference number. (e.g., "REF-INV01") |
 | ContactPerson | Identifier of the contact person. (e.g., "134") |
 | Document Additional Expenses (Optional) 
@@ -2147,13 +2205,18 @@ Click on **Continue**, then **Run** the node.
   {
     "DocEntry": 205,
     "DocNum": 88,
+    "DocDate": "2026-04-01",
+    "DocDueDate": "2026-05-19",
     "CardCode": "ZC0001",
+    "NumAtCard": "REF-INV01",
+    "ContactPerson": 134,
     "Comments": "Damaged item returned",
     "DocumentLines": [
       {
         "ItemCode": "DIET001",
         "Quantity": 1,
         "UnitPrice": 20,
+        "TaxCode": "NT",
         "WarehouseCode": "01"
       }
     ]
@@ -2167,7 +2230,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create Service Call
 
-The **Create Service Call** action creates a new service request in the system with customer, item, and issue details. It helps in tracking service activities and managing support processes.
+**Create Service Call** action creates a new service request in the SAP with customer, item, and issue details. It helps in tracking service activities and managing support processes.
 
 **Note:** Mandatory fields must be provided to create a service call. Optional fields can be configured based on business requirements.
 
@@ -2183,36 +2246,36 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Customer Code | Enter the customer code. (e.g., "CUST-001") |
-| Subject | Provide the subject of the service call. (e.g., "System Installation Issue") |
+| Customer Code | Enter the customer code. (e.g., "BC6129916") |
+| Subject | Provide the subject of the service call. (e.g., "DemoCall") |
 | Status | Define the current status of the service call. (e.g., "Open") |
-| Customer Name | Enter the name of the customer. (e.g., "ABC Pvt Ltd") |
-| Contact Person Code | Identifier of the contact person. (e.g., "101") |
-| Description | Detailed description of the issue/request. (e.g., "Installation not completed successfully") |
+| Customer Name | Enter the name of the customer. (e.g., "MAX") |
+| Contact Person Code | Identifier of the contact person. (e.g., "134") |
+| Description | Detailed description of the issue/request. (e.g., "This call is regarding testing purposes.") |
 | Priority | Set the priority level. (e.g., "High") |
-| Start Date | Specify the start date of the service. (e.g., "2026-04-01") |
-| Start Time | Specify the start time. (e.g., "10:00") |
-| End Due Date | Specify the expected completion date. (e.g., "2026-04-02") |
-| End Time | Specify the expected completion time. (e.g., "18:00") |
+| Start Date | Specify the start date of the service. (e.g., "2026-04-06") |
+| Start Time | Specify the start time. (e.g., "17:32:00") |
+| End Due Date | Specify the expected completion date. (e.g., "2026-04-20") |
+| End Time | Specify the expected completion time. (e.g., "23:32:00") |
 | Assigned Date | Date when the service is assigned. (e.g., "2026-04-01") |
-| Item Code | Unique identifier of the item. (e.g., "ITEM-001") |
-| Item Description | Description of the item. (e.g., "Laptop Installation") |
-| Item Group Code | Categorizes the item. (e.g., "Electronics") |
+| Item Code | Unique identifier of the item. (e.g., "BCB2B0001") |
+| Item Description | Description of the item. (e.g., "Hyderated Water Bottle1") |
+| Item Group Code | Categorizes the item. (e.g., "100") |
 | Optionals
 | Ship To Address Type | Type of shipping address. (e.g., "Customer") |
-| ShipToStreet | Shipping street address. (e.g., "Street 1") |
-| Ship To Address 2 | Additional shipping address line. (e.g., "Area 51") |
-| Ship To Address 3 | Additional shipping address line. (e.g., "Near Park") |
-| ShipToBlock | Shipping block/area. (e.g., "Block A") |
+| ShipToStreet | Shipping street address. (e.g., "Domin Street") |
+| Ship To Address 2 | Additional shipping address line. (e.g., "District Complex") |
+| Ship To Address 3 | Additional shipping address line. (e.g., "Old Star Build") |
+| ShipToBlock | Shipping block or area. (e.g., "Omega Block") |
 | ShipToCity | Shipping city. (e.g., "Hyderabad") |
 | ShipToCountry | Shipping country. (e.g., "India") |
-| ShipToZipCode | Shipping postal code. (e.g., "500001") |
+| ShipToZipCode | Shipping postal code. (e.g., "500033") |
 | ShipToState | Shipping state. (e.g., "Telangana") |
 | Bill To Address Type | Type of billing address. (e.g., "Customer") |
-| BillToStreet | Billing street address. (e.g., "Street 2") |
-| Bill To Address 2 | Additional billing address line. (e.g., "Area 52") |
-| Bill To Address 3 | Additional billing address line. (e.g., "Near Mall") |
-| BillToBlock | Billing block/area. (e.g., "Block B") |
+| BillToStreet | Billing street address. (e.g., "Zing Street") |
+| Bill To Address 2 | Additional billing address line. (e.g., "Domestic Resort") |
+| Bill To Address 3 | Additional billing address line. (e.g., "Merchant street") |
+| BillToBlock | Billing block or area. (e.g., "d block valley") |
 | BillToCity | Billing city. (e.g., "Hyderabad") |
 | BillToCountry | Billing country. (e.g., "India") |
 | BillToZipCode | Billing postal code. (e.g., "500002") |
@@ -2238,12 +2301,19 @@ Click on **Continue**, then **Run** the node.
 [
   {
     "ServiceCallID": 1024,
-    "CustomerCode": "CUST-001",
-    "CustomerName": "ABC Pvt Ltd",
-    "Subject": "System Installation Issue",
+    "CustomerCode": "BC6129916",
+    "CustomerName": "MAX",
+    "ContactPersonCode": 134,
+    "Subject": "DemoCall",
+    "Description": "This call is regarding testing purposes.",
     "Status": "Open",
     "Priority": "High",
-    "ItemCode": "ITEM-001"
+    "StartDate": "2026-04-06",
+    "StartTime": "17:32:00",
+    "EndDueDate": "2026-04-20",
+    "EndTime": "23:32:00",
+    "ItemCode": "BCB2B0001",
+    "ItemDescription": "Hyderated Water Bottle1"
   }
 ]
 ```
@@ -2253,7 +2323,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Update Service Call
 
-The **Update Service Call** action is used to modify an existing service request with updated customer, item, status, and resolution details. It helps in tracking progress, updating issue status, and maintaining service history.
+**Update Service Call** action is used to modify an existing service request with updated customer, item, status, and resolution details. It helps in tracking progress, updating issue status, and maintaining service history.
 
 **Note:** Ensure valid status and priority values are selected based on business rules. Optional address fields can be updated if required.
 
@@ -2269,13 +2339,14 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
+| Service Call Id | Enter the service call identifier. (e.g., "84") |
 | Customer Code | Enter the customer code. (e.g., "BC6129916") |
 | Customer Name | Enter the name of the customer. (e.g., "MAX WELL") |
 | Contact Person Code | Identifier of the contact person. (e.g., "134") |
 | Subject | Provide the subject of the service call. (e.g., "DemoCall - updated") |
 | Description | Updated description of the issue. (e.g., "This call is regarding testing purposes.") |
-| Priority | Select priority based on requirement. (e.g., "Low", "Medium", "High") |
-| Status | Select current status. (e.g., "Open", "On_Hold", "Pending", "Escalated", "Closed") |
+| Priority | Select priority based on requirement. (e.g., "Medium") |
+| Status | Select current status. (e.g., "Closed") |
 | Start Date | Specify the start date. (e.g., "2026-04-06") |
 | Start Time | Specify the start time. (e.g., "17:32:00") |
 | End Due Date | Specify the expected completion date. (e.g., "2026-04-20") |
@@ -2286,26 +2357,26 @@ Click on **Continue** button.
 | Item Group Code | Categorizes the item. (e.g., "100") |
 | Resolution | Final resolution or action taken. (e.g., "Test") |
 | Optional Fields
-Ship To Address Type | Type of shipping address. (e.g., "null") |
+Ship To Address Type | Type of shipping address. (e.g., "Customer") |
 | ShipToStreet | Shipping street address. (e.g., "Domin Street") |
 | Ship To Address 2 | Additional shipping address line. (e.g., "District Complex") |
 | Ship To Address 3 | Additional shipping address line. (e.g., "Old Star Build") |
 | Ship To Number | Shipping Number. (e.g., "1/33 Valley")
 | ShipToBlock | Shipping block/area. (e.g., "Omega Block") |
 | ShipToCity | Shipping city. (e.g., "Hyderabad") |
-| ShipToCountry | Shipping country. (e.g., "India or IN") |
+| ShipToCountry | Shipping country. (e.g., "IN") |
 | ShipToZipCode | Shipping postal code. (e.g., "500033") |
-| ShipToState | Shipping state. (e.g., "Telangana or TS") |
-| Bill To Address Type | Type of billing address. (e.g., "TEST CHECk123") |
+| ShipToState | Shipping state. (e.g., "TS") |
+| Bill To Address Type | Type of billing address. (e.g., "Customer") |
 | BillToStreet | Billing street address. (e.g., "Zing Street") |
 | Billing to Street Number | Billing Street Number (e.g., "1-987") |
 | Bill To Address 2 | Additional billing address line. (e.g., "Domestic Resort") |
 | Bill To Address 3 | Additional billing address line. (e.g., "Merchant street") |
 | BillToBlock | Billing block/area. (e.g., "d block valley") |
 | BillToCity | Billing city. (e.g., "Hyderabad") |
-| BillToCountry | Billing country. (e.g., "India or IN") |
+| BillToCountry | Billing country. (e.g., "IN") |
 | BillToZipCode | Billing postal code. (e.g., "500002") |
-| BillToState | Billing state. (e.g., "Telangana or TS") |
+| BillToState | Billing state. (e.g., "TS") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -2326,19 +2397,10 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "ServiceCallID": 1024,
-    "CustomerCode": "BC6129916",
-    "CustomerName": "MAX WELL",
-    "Status": "Closed",
-    "Priority": "Medium",
-    "Resolution": "Test"
+    "value": ""
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL138.jpg" width="700" />
-<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL139.jpg" width="700" />
-<img src="/img/credentials/sap-b1/SAP-AR-USRVCCL140.jpg" width="700" />
 
 --------------------
 
@@ -2347,7 +2409,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new Sales Opportunity
 
-The **Create a New Sales Opportunity** action is used to record potential sales deals in the system. It helps track leads, monitor progress through different stages, and estimate revenue.
+**Create a New Sales Opportunity** action is used to record potential sales deals in the SAP. It helps track leads, monitor progress through different stages, and estimate revenue.
 
 **Note:** Sales Opportunity Lines are mandatory to track stages and progress of the opportunity. Optional fields can be configured based on business requirements.
 
@@ -2363,18 +2425,18 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| BusinessPartner Code | Enter the customer/business partner code. (e.g., "CUST-001") |
-| Opportunity Name | Provide the name of the opportunity. (e.g., "New ERP Implementation") |
-| Start Date | Specify the opportunity start date. (e.g., "2026-04-01") |
+| BusinessPartner Code | Enter the customer/business partner code. (e.g., "BC6129916") |
+| Opportunity Name | Provide the name of the opportunity. (e.g., "Demo Opportunity") |
+| Start Date | Specify the opportunity start date. (e.g., "2026-04-06") |
 |Sales Opportunity Lines
-Start Date | Specify the start date of the stage. (e.g., "2026-04-01") |
-| Closing Date | Expected closing date of the opportunity. (e.g., "2026-04-30") |
-| Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "50000") |
-| Stage Key | Define the stage of the opportunity. (e.g., "1 - Qualification") |
+Start Date | Specify the start date of the stage. (e.g., "2026-04-06") |
+| Closing Date | Expected closing date of the opportunity. (e.g., "2026-04-06") |
+| Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "80000") |
+| Stage Key | Define the stage of the opportunity. (e.g., "3") |
 |Optional Fields
-Contact Person Code | Identifier of the contact person. (e.g., "101") |
-| Total Amount | Total estimated value of the opportunity. (e.g., "45000") |
-| Remarks | Additional notes or comments. (e.g., "High priority client") |
+| Contact Person Code | Identifier of the contact person. (e.g., "134") |
+| Total Amount | Total estimated value of the opportunity. (e.g., "80000") |
+| Remarks | Additional notes or comments. (e.g., "Test Demo") |
 
 Click on **Continue**, then **Run** the node.
 
@@ -2428,7 +2490,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Get Currency Exchange Rate
 
-The **Get Currency Exchange Rate** action retrieves the exchange rate between two currencies for a specific date. It helps in financial calculations, reporting, and currency conversions.
+**Get Currency Exchange Rate** action retrieves the exchange rate between two currencies for a specific date. It helps in financial calculations, reporting, and currency conversions.
 
 This action is commonly used to **convert currencies**, **calculate financial values**, or **fetch historical exchange rates**.
 
@@ -2446,7 +2508,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Currency Code | Enter the currency code for which the exchange rate is required. (e.g., "USD", "INR", "EUR") |
+| Currency Code | Enter the currency code for which the exchange rate is required. (e.g., "Indian Rupee") |
 | Date | Specify the date to fetch the exchange rate. (e.g., "2026-04-06") |
 
 Click on **Continue**, then **Run** the node.
@@ -2473,7 +2535,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Set Currency Rate
 
-The **Set Currency Rate** action is used to define or update the exchange rate for a specific currency on a given date. This is useful for maintaining accurate financial records and currency conversions.
+**Set Currency Rate** action is used to define or update the exchange rate for a specific currency on a given date. This is useful for maintaining accurate financial records and currency conversions.
 
 > **Note:** Ensure the exchange rate is accurate, as it impacts financial transactions and reporting.
 
@@ -2491,8 +2553,8 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Currency Code | Enter the currency code for which the rate is being set. (e.g., "USD", "INR", "EUR") |
-| Rate Date | Specify the date for the exchange rate. (e.g., "2026-04-061") |
+| Currency Code | Enter the currency code for which the rate is being set. (e.g., "INR") |
+| Rate Date | Specify the date for the exchange rate. (e.g., "2026-04-06") |
 | Exchange Rate | Enter the exchange rate value. (e.g., "3.9") |
 
 Click on **Continue**, then **Run** the node.
@@ -2509,7 +2571,7 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "Currency": "USD",
+    "Currency": "INR",
     "RateDate": "2026-04-06",
     "ExchangeRate": 3.9,
     "Status": "success",
@@ -2525,7 +2587,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create Sales Tax Code
 
-The **Create Sales Tax Code** action is used to define a new tax code in the system. It helps manage taxation rules for sales and purchasing transactions.
+**Create Sales Tax Code** action is used to define a new tax code in the SAP. It helps manage taxation rules for sales and purchasing transactions.
 
 > **Note:** Tax configurations should be set carefully as they directly impact financial calculations and compliance.
 
@@ -2578,7 +2640,7 @@ Click on **Continue**, then **Run** the node.
     "ValidForAR": "tYES",
     "ValidForAP": "tYES",
     "UserSignature": 7,
-    "Rate": 6,
+    "Rate": 5,
     "Name": "IMST",
     "Freight": "tNO",
     "Code": "IMST",
@@ -2603,7 +2665,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Update Sales Tax Code
 
-The **Update Sales Tax Code** action is used to modify an existing tax code in the system. It allows updating tax details and configurations based on business or compliance requirements.
+**Update Sales Tax Code** action is used to modify an existing tax code in the SAP. It allows updating tax details and configurations based on business or compliance requirements.
 
 #### Select Credentials and Action Event
 
@@ -2611,11 +2673,11 @@ Click on **Continue** button
 
 -------
 
-### Configuration Fields
+#### Configuration Fields
 
 | Field | Description |
 |------|-------------|
-| Tax Code (Identifier) | Enter the unique tax code to be updated. (e.g., "GST18") |
+| Tax Code (Identifier) | Enter the unique tax code to be updated. (e.g., "IMST") |
 | Tax Name | Name of the tax. (e.g., "IMST") |
 | Tax Rate (%) | Percentage of the tax rate. (e.g., "6") |
 |Sales Tax Code Lines
@@ -2650,27 +2712,10 @@ Click on **Continue**, Then **Run** node
 ```json
 [
   {
-    "Code": "GST18",
-    "Name": "IMST",
-    "Rate": 6,
-    "ValidForAR": "tYES",
-    "ValidForAP": "tYES",
-    "Freight": "tNO",
-    "IsItemLevel": "tNO",
-    "FADebit": "tNO",
-    "SalesTaxCodes_Lines": [
-      {
-        "STCCode": "GST18",
-        "STACode": "CA",
-        "STAType": -3,
-        "EffectiveRate": 18
-      }
-    ]
+    "value": ""
   }
 ]
 ```
-
-<img src="\img\credentials\sap-b1\SAP-AR-USLSTAXCODE237.jpg" width="700" />
 
 -------------------
 
@@ -2678,7 +2723,7 @@ Click on **Continue**, Then **Run** node
 
 ### Get Special Prices by Card Code
 
-The **Get Special Prices by Card Code** action retrieves all special pricing details configured for a specific business partner. It helps in identifying customer-specific pricing agreements and discounts.
+**Get Special Prices by Card Code** action retrieves all special pricing details configured for a specific business partner. It helps in identifying customer-specific pricing agreements and discounts.
 
 > **Note:** This action returns all special prices associated with the given Card Code, including item-level pricing and discounts if configured.
 
@@ -2710,22 +2755,76 @@ Click on **Continue**, then **Run** the node.
 ```json
 [
   {
-    "CardCode": "BC6129916",
-    "ItemCode": "BCB2B0001",
-    "PriceListNum": 1,
-    "SpecialPrice": 450,
-    "Currency": "$",
-    "DiscountPercent": 10,
-    "AutoUpdate": "tNO"
+    "SpecialPrices": {
+      "Price": 0,
+      "Valid": "Y",
+      "ValidTo": null,
+      "CardCode": "ZC0001",
+      "Currency": null,
+      "ItemCode": "DIET001",
+      "ValidFrom": null,
+      "SourcePrice": 0,
+      "PriceListNum": 0,
+      "DiscountPercent": 10
+    },
+    "BusinessPartners": {
+      "CardCode": "BC6129916",
+      "CardName": "MAX6"
+    }
   },
   {
-    "CardCode": "BC6129916",
-    "ItemCode": "WOOCOM101",
-    "PriceListNum": 1,
-    "SpecialPrice": 500,
-    "Currency": "$",
-    "DiscountPercent": 5,
-    "AutoUpdate": "tNO"
+    "SpecialPrices": {
+      "Price": 0,
+      "Valid": "Y",
+      "ValidTo": null,
+      "CardCode": "ZC0001",
+      "Currency": null,
+      "ItemCode": "DIET002",
+      "ValidFrom": null,
+      "SourcePrice": 0,
+      "PriceListNum": 0,
+      "DiscountPercent": 10
+    },
+    "BusinessPartners": {
+      "CardCode": "BC6129916",
+      "CardName": "MAX6"
+    }
+  },
+  {
+    "SpecialPrices": {
+      "Price": 0,
+      "Valid": "Y",
+      "ValidTo": null,
+      "CardCode": "ZC0001",
+      "Currency": null,
+      "ItemCode": "DIET003",
+      "ValidFrom": null,
+      "SourcePrice": 0,
+      "PriceListNum": 0,
+      "DiscountPercent": 10
+    },
+    "BusinessPartners": {
+      "CardCode": "BC6129916",
+      "CardName": "MAX6"
+    }
+  },
+  {
+    "SpecialPrices": {
+      "Price": 0,
+      "Valid": "Y",
+      "ValidTo": null,
+      "CardCode": "ZC0001",
+      "Currency": null,
+      "ItemCode": "1234",
+      "ValidFrom": null,
+      "SourcePrice": 0,
+      "PriceListNum": 0,
+      "DiscountPercent": 10
+    },
+    "BusinessPartners": {
+      "CardCode": "BC6129916",
+      "CardName": "MAX6"
+    }
   }
 ]
 ```
@@ -2736,7 +2835,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create Return Request
 
-The **Create Return Request** action creates a new return request document in the system for items that need to be returned. It captures customer, item, and pricing details for further processing.
+**Create Return Request** action creates a new return request document in the SAP for items that need to be returned. It captures customer, item, and pricing details for further processing.
 
 #### Select the Credential and Action Event
 
@@ -2768,7 +2867,7 @@ Tax Code | Applicable tax code. (e.g., "NT") |
 DocDate | Specify document date if different. (e.g., "2026-04-10") |
 | NumAtCard | Customer reference number. (e.g., "null") |
 | ContactPersonCode | Identifier of the contact person. (e.g., "134") |
-| Comment | Additional remarks. (e.g., "Return due to defect") |
+| Comment | Additional remarks. (e.g., "null") |
 | Additional Expenses (Optional)
  Additional Expenses | Extra charges such as handling or logistics. (e.g., "200") |
 
@@ -2795,7 +2894,8 @@ Click on **Continue**, then **Run** the node.
     "DocDate": "2026-04-30",
     "CardCode": "BC6129916",
     "CardName": "MAX6",
-    "Comments": "Return due to defect",
+    "Comments": null,
+    "NumAtCard": null,
     "DocTotal": 200,
     "DocCurrency": "$",
     "ContactPersonCode": 134,
@@ -2834,7 +2934,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create a new sales opportunity
 
-The **Create a New Sales Opportunity** action is used to record and track potential sales deals in the system, including stages, expected value, and customer details.
+**Create a New Sales Opportunity** action is used to record and track potential sales deals in the system, including stages, expected value, and customer details.
 
 #### Select the Credential and Action Event
 
@@ -2970,7 +3070,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Create Purchase Order
 
-The **Create Purchase Order** action creates a new purchase order in the system for procuring goods or services from a vendor. It captures vendor, item, pricing, and delivery details.
+**Create Purchase Order** action creates a new purchase order in the SAP for procuring goods or services from a vendor. It captures vendor, item, pricing, and delivery details.
 
 #### Select Credentials and action Event
 
@@ -3004,7 +3104,7 @@ Vendor Reference No | Vendor-provided reference number. (e.g., "728902") |
 | Bill To Address Code | Code for billing address. (e.g., "BILL 001") |
 | Remarks | Additional notes. (e.g., "Urgent order or Demo purpose") |
 | Contact Person Code | Identifier of the contact person. (e.g., "134") |
-| Document Currency | Currency of the document. (e.g., "INR") |
+| Document Currency | Currency of the document. (e.g., "$") |
 | Discount Percentage | Overall document discount. (e.g., "5") |
 | Additional Expenses | Extra charges such as freight. (e.g., "300") |
 | Address Extension (Optional)
@@ -3094,7 +3194,7 @@ Click on **Continue**, then **Run** the node.
 
 ### Update Purchase Order
 
-The **Update Purchase Order** action modifies an existing purchase order using the document entry (DocEntry). It allows updating vendor reference details, item lines, and address information.
+**Update Purchase Order** action modifies an existing purchase order using the document entry (DocEntry). It allows updating vendor reference details, item lines, and address information.
 
 #### Select Credentials and Action Event
 
@@ -3110,22 +3210,15 @@ Click on **Continue** button
 |------|-------------|
 | DocEntry | Enter the internal document entry number of the purchase order. (e.g., "39") |
 | NumAtCard (Vendor Ref No) | Enter the vendor reference number. (e.g., "728902") |
-
-### Document Lines
-
-| Field | Description |
-|------|-------------|
-| Line Number | Enter Item Line Number e.g., ("01")|
+| Document Lines
+Line Number | Enter Item Line Number e.g., ("01")|
 | Item Code | Unique identifier of the item. (e.g., "DIET002") |
 | Quantity | Quantity of the item. (e.g., "20") |
 | Unit Price | Price per unit. (e.g., "20") |
 | Discount Percentage | Discount applied to the item. (e.g., "3") |
 | Tax Code | Applicable tax code. (e.g., "NT") |
-
-### Address Extension (Optional)
-
-#### Ship To Address
-| ShipToStreet | Shipping street address e.g., ("Lake Street2")|
+| Address Extension (Optional)
+ShipToStreet | Shipping street address e.g., ("Lake Street2")|
 | ShipToStreetNo | Street number e.g., ("1/43")|
 | ShipToBlock | Block/area e.g., ("")|
 | ShipToCity | City e.g., ("Hyderabad")|
@@ -3159,38 +3252,10 @@ Click on **Continue**, then **Run** the node
 ```json
 [
   {
-    "DocEntry": 39,
-    "NumAtCard": "728902",
-    "DocumentLines": [
-      {
-        "LineNum": 1,
-        "ItemCode": "DIET002",
-        "Quantity": 20,
-        "UnitPrice": 20,
-        "DiscountPercent": 3,
-        "TaxCode": "NT"
-      }
-    ],
-    "AddressExtension": {
-      "ShipToStreet": "Lake Street2",
-      "ShipToStreetNo": "1/43",
-      "ShipToBlock": "",
-      "ShipToCity": "Hyderabad",
-      "ShipToZipCode": "500037",
-      "ShipToCountry": "IN",
-      "ShipToState": "TS",
-      "BillToStreet": "Mark Spencer street",
-      "BillToStreetNo": "RDL 233",
-      "BillToCity": "Hyderabad",
-      "BillToZipCode": "500036",
-      "BillToCountry": "IN",
-      "BillToState": "TS"
-    }
+    "value": ""
   }
 ]
 ```
-
-<img src="\img\credentials\sap-b1\SAP-AR-UPRORD216.jpg" width="700" />
 
 ----------------------
 
@@ -3199,7 +3264,7 @@ Click on **Continue**, then **Run** the node
 
 ### Create CreditCard Incoming Payments
 
-The **Create Credit Card Incoming Payments** action records an incoming payment made via credit card for a customer. It captures card details, payment amount, and related information.
+**Create Credit Card Incoming Payments** action records an incoming payment made via credit card for a customer. It captures card details, payment amount, and related information.
 
 #### Select the Credetials and Action Event
 
@@ -3213,13 +3278,13 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Card Code | Enter the customer code. (e.g., "CUST-001") |
+| Card Code | Enter the customer code. (e.g., "BC6129916") |
 | Credit Card Details
-Credit Card | Specify the credit card type. (e.g., "Visa", "MasterCard") |
-| Credit Card Number | Enter the credit card number. (e.g., "4111111111111111") |
-| Card Valid Until | Enter the card expiry date. (e.g., "12/2028") |
-| Voucher | Enter the payment voucher/reference number. (e.g., "VCH-12345") |
-| Credit Amount | Enter the payment amount. (e.g., "5000") |
+Credit Card | Specify the credit card type. (e.g., "1") |
+| Credit Card Number | Enter the credit card number. (e.g., "4242") |
+| Card Valid Until | Enter the card expiry date. (e.g., "2028-04-19") |
+| Voucher | Enter the payment voucher/reference number. (e.g., "1") |
+| Credit Amount | Enter the payment amount. (e.g., "500") |
 | Optional Fields
 Remarks | Add any additional notes related to the payment. (e.g., "Payment received via credit card") |
 
@@ -3249,7 +3314,7 @@ Click on **Continue**, then **Run** node
     "CardCode": "BC6129916",
     "CardName": "MAX6",
     "DocCurrency": "$",
-    "Remarks": "Demo Purpose",
+    "Remarks": "Payment received via credit card",
     "JournalRemarks": "Incoming Payments - BC6129916",
     "DueDate": "2026-04-17",
 
@@ -3282,7 +3347,7 @@ Click on **Continue**, then **Run** node
 
 ### Create Check Incoming Payments
 
-The **Create Check Incoming Payments** action records an incoming payment made via cheque for a customer. It captures bank details, cheque amount, and related payment information.
+**Create Check Incoming Payments** action records an incoming payment made via cheque for a customer. It captures bank details, cheque amount, and related payment information.
 
 #### Select Credentials and Action Event
 
@@ -3296,14 +3361,14 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Card Code | Enter the customer code. (e.g., "CUST-001") |
+| Card Code | Enter the customer code. (e.g., "ZC0001") |
 | Payment Checks
-Cheque Bank Account | Enter the bank account linked to the cheque. (e.g., "HDFC-001") |
-| Cheque Amount | Enter the cheque amount. (e.g., "7500") |
+Cheque Bank Account | Enter the bank account linked to the cheque. (e.g., "_SYS00000000006") |
+| Cheque Amount | Enter the cheque amount. (e.g., "500") |
 | Optional Fields
-Cheque Due Date | Specify the cheque clearance date. (e.g., "2026-04-10") |
+| Cheque Due Date | Specify the cheque clearance date. (e.g., "2026-04-17") |
 | Transferable | Indicate if the cheque is transferable (**Yes** or **No**). (e.g., "Yes") |
-| Document Due Date | Specify the due date for the payment document. (e.g., "2026-04-15") |
+| Document Due Date | Specify the due date for the payment document. (e.g., "2026-04-17") |
 | Remarks | Add any additional notes. (e.g., "Cheque received from customer") |
 
 > **Note:** Ensure cheque details are accurate before processing to avoid payment discrepancies.
@@ -3331,6 +3396,7 @@ Click on **Continue**, then **Run** node
     "CardCode": "ZC0001",
     "CardName": "GivaJewellers",
     "DocCurrency": "$",
+    "Remarks": "Cheque received from customer",
     "JournalRemarks": "Incoming Payments - ZC0001",
     "DueDate": "2026-04-17",
 
@@ -3350,7 +3416,7 @@ Click on **Continue**, then **Run** node
 
 ### Create Cash Incoming Payments
 
-The **Create Cash Incoming Payments** action records an incoming payment made via cash for a customer. It captures customer details, cash account, and payment amount.
+**Create Cash Incoming Payments** action records an incoming payment made via cash for a customer. It captures customer details, cash account, and payment amount.
 
 #### Select Credentials and Action Events
 
@@ -3368,7 +3434,7 @@ Click on **Continue** button
 | Cash Account | Specify the cash account to which payment is received. (e.g., "_SYS00000000002") |
 | Cash Amount | Enter the amount received in cash. (e.g., "600") |
 | Optional Fields
-Posting Date | Specify the posting date of the transaction. (e.g., "2026-04-18") |
+| Posting Date | Specify the posting date of the transaction. (e.g., "2026-04-18") |
 | Remarks | Add any notes related to the payment. (e.g., "Demo Purpose") |
 | Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
 
@@ -3389,26 +3455,20 @@ Click on **Continue**, then **Run** node
 ```json
 [
   {
-    "DocEntry": 522,
-    "DocNum": 301,
+    "DocEntry": 523,
+    "DocNum": 302,
     "DocType": "rCustomer",
-    "DocDate": "2026-04-17",
-    "CardCode": "ZC0001",
-    "CardName": "GivaJewellers",
+    "DocDate": "2026-04-18",
+    "CardCode": "NR",
     "DocCurrency": "$",
+    "Remarks": "Demo Purpose",
     "JournalRemarks": "Incoming Payments - ZC0001",
-    "DueDate": "2026-04-17",
 
-    "PaymentChecks": [
-      {
-        "LineNum": 0,
-        "CheckNumber": 1,
-        "DueDate": "2026-04-17",
-        "CheckSum": 500,
-        "Currency": "$",
-        "CheckAccount": "_SYS00000000006"
-      }
-    ]
+    "PaymentCash": {
+        "CashAccount": "_SYS00000000002",
+        "CashSum": 600,
+        "Currency": "$"
+    }
   }
 ]
 ```
@@ -3417,7 +3477,7 @@ Click on **Continue**, then **Run** node
 
 ### Create a Delivery Note
 
-The **Create Delivery Note** action creates a delivery document in the system for goods being shipped to a customer. It captures delivery, item, and logistics details for order fulfillment.
+**Create Delivery Note** action creates a delivery document in the SAP for goods being shipped to a customer. It captures delivery, item, and logistics details for order fulfillment.
 
 #### Select Credentials and Action Event
 
@@ -3431,37 +3491,37 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Document Date | Specify the delivery document date. (e.g., "2026-04-01") |
-| Delivery Date | Specify the expected delivery date. (e.g., "2026-04-03") |
-| Customer Code | Enter the customer code. (e.g., "CUST-001") |
+| Document Date | Specify the delivery document date. (e.g., "2026-04-18") |
+| Delivery Date | Specify the expected delivery date. (e.g., "2026-04-18") |
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
 | Document Lines
-Item Code | Unique identifier of the item. (e.g., "ITEM-001") |
-| Quantity | Quantity to be delivered. (e.g., "3") |
-| Unit Price | Price per unit. (e.g., "1200") |
+Item Code | Unique identifier of the item. (e.g., "DIET002") |
+| Quantity | Quantity to be delivered. (e.g., "10") |
+| Unit Price | Price per unit. (e.g., "100") |
 | Optional Fields (Document Lines)
-Warehouse Code | Warehouse from which goods are delivered. (e.g., "WH-01") |
-| Tax Code | Applicable tax code. (e.g., "GST18") |
-| Discount Percentage | Discount applied to the item. (e.g., "5") |
+| Warehouse Code | Warehouse from which goods are delivered. (e.g., "01") |
+| Tax Code | Applicable tax code. (e.g., "NT") |
+| Discount Percentage | Discount applied to the item. (e.g., "10") |
 | VAT Group | VAT classification. (e.g., "VAT18") |
 | Base Document Line | Reference to base document line. (e.g., "0") |
 | Base Document Type | Base document type reference. (e.g., "17") |
 | Base Document Entry | Base document entry reference. (e.g., "14012") |
 | Optional Fields (Header)
-Contact Person Code | Identifier of the contact person. (e.g., "101") |
-| Sales Person Code | Identifier of the sales employee. (e.g., "5") |
-| Remarks | Additional notes. (e.g., "Deliver urgently") |
-| Customer Reference No | Customer reference number. (e.g., "REF-DEL-001") |
-| Ship To Code | Shipping address code. (e.g., "SHIP-01") |
-| Bill To Code | Billing address code. (e.g., "BILL-01") |
+| Contact Person Code | Identifier of the contact person. (e.g., "102") |
+| Sales Person Code | Identifier of the sales employee. (e.g., "6") |
+| Remarks | Additional notes. (e.g., "Demo Purpose") |
+| Customer Reference No | Customer reference number. (e.g., "REF-1455") |
+| Ship To Code | Shipping address code. (e.g., "GivaJewellers") |
+| Bill To Code | Billing address code. (e.g., "GivaJewellers") |
 | Address Extension (Optional)
-ShipToStreet | Shipping street address (e.g., "Street 1") |
-| ShipToCity | Shipping city (e.g., "Hyderabad") |
-| ShipToCountry | Shipping country (e.g., "India") |
-| ShipToZipCode | Postal code (e.g., "500001") |
-| BillToStreet | Billing street address (e.g., "Street 2") |
-| BillToCity | Billing city (e.g., "Hyderabad") |
-| BillToCountry | Billing country (e.g., "India") |
-| BillToZipCode | Postal code (e.g., "500002") |
+| ShipToStreet | Shipping street address (e.g., "Adffhgjh") |
+| ShipToCity | Shipping city (e.g., "Miami") |
+| ShipToCountry | Shipping country (e.g., "US") |
+| ShipToZipCode | Postal code (e.g., "33144") |
+| BillToStreet | Billing street address (e.g., "streetNo") |
+| BillToCity | Billing city (e.g., "NewYork") |
+| BillToCountry | Billing country (e.g., "US") |
+| BillToZipCode | Postal code (e.g., "10001") |
 | Additional Expenses (Optional)
 Additional Expenses | Extra charges such as freight or handling. (e.g., "250") |
 
@@ -3493,6 +3553,9 @@ Click on **Continue**, then **Run** node
     "DocTotal": 900,
     "DocCurrency": "$",
     "Comments": "Demo Purpose",
+    "NumAtCard": "REF-1455",
+    "ContactPersonCode": 102,
+    "SalesPersonCode": 6,
     "JournalMemo": "Deliveries - ZC0001",
     "ShipToCode": "GivaJewellers",
     "DocumentStatus": "bost_Open",
@@ -3532,7 +3595,7 @@ Click on **Continue**, then **Run** node
 
 ### Update a Delivery Note
 
-The **Update Delivery Note** action modifies an existing delivery document using the document entry (DocEntry). It allows updating item details, quantities, pricing, and header information.
+**Update Delivery Note** action modifies an existing delivery document using the document entry (DocEntry). It allows updating item details, quantities, pricing, and header information.
 
 #### Select Credentials and Action Event
 
@@ -3545,6 +3608,7 @@ Click on **Continue** button
 | Field | Description |
 |------|-------------|
 | DocEntry | Enter the internal document entry number of the delivery note. (e.g., "151") |
+| Delivery Date | Enter the updated delivery date. (e.g., "2026-04-18") |
 | Customer Code | Enter the Customer Code. (e.g., "ZC0001") |
 | Document Lines (Optional)
 Line Number | Specify the line number to update. (e.g., "1") |
@@ -3559,17 +3623,17 @@ Contact Person Code | Identifier of the contact person. (e.g., "102") |
 | Sales Person Code | Identifier of the sales employee. (e.g., "6") |
 | Remarks | Additional notes. (e.g., "Demo Purpose Update") |
 | Customer Reference No | Customer reference number. (e.g., "REF-DEL-002") |
-| Ship To Code | Shipping address code. (e.g., "SHIP-02") |
-| Bill To Code | Billing address code. (e.g., "BILL-02") |
+| Ship To Code | Shipping address code. (e.g., "GivaJewellers") |
+| Bill To Code | Billing address code. (e.g., "GivaJewellers") |
 | Address Extension (Optional)
-ShipToStreet | Shipping street address (e.g., "Street A") |
-| ShipToCity | Shipping city (e.g., "Chennai") |
+| ShipToStreet | Shipping street address (e.g., "Domin Street") |
+| ShipToCity | Shipping city (e.g., "Hyderabad") |
 | ShipToCountry | Shipping country (e.g., "India") |
-| ShipToZipCode | Postal code (e.g., "600001") |
-| BillToStreet | Billing street address (e.g., "Street B") |
-| BillToCity | Billing city (e.g., "Chennai") |
+| ShipToZipCode | Postal code (e.g., "500033") |
+| BillToStreet | Billing street address (e.g., "Zing Street") |
+| BillToCity | Billing city (e.g., "Hyderabad") |
 | BillToCountry | Billing country (e.g., "India") |
-| BillToZipCode | Postal code (e.g., "600002") |
+| BillToZipCode | Postal code (e.g., "500002") |
 | Additional Expenses (Optional)
 Additional Expenses | Extra charges such as freight or handling. (e.g., "200") |
 
@@ -3592,40 +3656,15 @@ Click on **Continue**, then **Run** node
 ```json
 [
   {
-    "DocEntry": 151,
-    "CardCode": "ZC0001",
-    "Comments": "Demo Purpose Update",
-    "NumAtCard": "REF-DEL-002",
-    "DocumentLines": [
-      {
-        "LineNum": 1,
-        "ItemCode": "DIET002",
-        "Quantity": 10,
-        "UnitPrice": 100,
-        "WarehouseCode": "01",
-        "TaxCode": "NT"
-      }
-    ],
-    "AddressExtension": {
-      "ShipToStreet": "Street A",
-      "ShipToCity": "Chennai",
-      "ShipToCountry": "India",
-      "ShipToZipCode": "600001",
-      "BillToStreet": "Street B",
-      "BillToCity": "Chennai",
-      "BillToCountry": "India",
-      "BillToZipCode": "600002"
-    }
+    "value": ""
   }
 ]
 ```
 
-<img src="\img\credentials\sap-b1\SAP-AR-UDLVRYNT229.jpg" width="700" />
-
 
 ### Get Delivery by Order DocEntry
 
-The **Get Delivery by Order DocEntry** action retrieves delivery note details associated with a specific sales order using the order's document entry number. It returns the related delivery document(s) as structured data.
+**Get Delivery by Order DocEntry** action retrieves delivery note details associated with a specific sales order using the order's document entry number. It returns the related delivery document(s) as structured data.
 
 #### Select Credentials and Action Event
 
@@ -3678,7 +3717,7 @@ Click on **Continue**, then **Run** node
 
 ### Get Delivery by NumAtCard
 
-The **Get Delivery by Customer Reference Number** action retrieves delivery note details using the customer reference number (`NumAtCard`). It returns the matching delivery document(s) as structured data.
+**Get Delivery by Customer Reference Number** action retrieves delivery note details using the customer reference number (`NumAtCard`). It returns the matching delivery document(s) as structured data.
 
 #### Select Credentials and Action Event
 
@@ -3768,7 +3807,7 @@ Click on **Continue**, then **Run** node
 
 ## DownPayment Actions
 
-The **Create Down Payment** action creates a down payment document for a customer. It is used to record advance payments before the final invoice is generated.
+**Create Down Payment** action creates a down payment document for a customer. It is used to record advance payments before the final invoice is generated.
 
 #### Select Credentials and Action Event
 
@@ -3811,6 +3850,7 @@ Click on **Continue**, then **Run** node
 ```json
 {
   "DocDate": "2026-04-18",
+  "DocDueDate": "2026-04-18",
   "CardCode": "POST321",
   "DownPaymentType": "dptInvoice",
   "DownPaymentPercentage": 100,
@@ -3819,6 +3859,7 @@ Click on **Continue**, then **Run** node
       "ItemCode": "LT001",
       "Quantity": 10,
       "UnitPrice": 100,
+      "TaxCode": "NT",
       "DiscountPercent": 5,
       "WarehouseCode": "01"
     }
@@ -3831,7 +3872,7 @@ Click on **Continue**, then **Run** node
 
 ### Create a SalesForecast
 
-The **Create Sales Forecast** action is used to define future sales expectations for items over a specified period. It helps in planning inventory, production, and business strategies.
+**Create Sales Forecast** action is used to define future sales expectations for items over a specified period. It helps in planning inventory, production, and business strategies.
 
 #### Select Credentials and Action Event
 
@@ -3845,18 +3886,15 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Forecast Code | Unique identifier for the forecast. (e.g., "FC-001") |
-| Forecast Name | Name of the forecast. (e.g., "Q2 Sales Forecast") |
-| Optional Fields
-Forecast Start Date | Start date of the forecast period. (e.g., "2026-04-01") |
-| Forecast End Date | End date of the forecast period. (e.g., "2026-06-30") |
-| Sales Forecast Lines
-Item Code | Unique identifier of the item. (e.g., "ITEM-001") |
-| Quantity | Forecasted quantity. (e.g., "100") |
-| Sales Forecasted Day | Date for the forecast entry. (e.g., "2026-04-15") |
-| Optional Fields (Forecast Lines)
-Warehouse | Warehouse related to the forecast. (e.g., "WH-01") |
-| Forecast View | Defines how forecast is viewed (e.g., "Monthly", "Daily") |
+| Forecast Code | Unique identifier for the forecast. (e.g., "D022") |
+| Forecast Name | Name of the forecast. (e.g., "For Daily forecast3") |
+| Forecast Start Date (Optional) | Start date of the forecast period. (e.g., "2026-04-19") |
+| Forecast End Date (Optional) | End date of the forecast period. (e.g., "2026-04-28") |
+| Item Code | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET003") |
+| Forecasted Day | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-02-27") |
+| Quantity | Forecasted quantity in Sales Forecast Lines. (e.g., "10") |
+| Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
+| Forecast View (Optional) | Defines how forecast is viewed. (e.g., "fvtDaily") |
 
 > **Note:** Forecast lines are essential for defining item-level predictions. Optional fields can be configured based on planning requirements.
 
@@ -3883,14 +3921,21 @@ Click on **Continue**, then **Run** node
     "ForecastName": "For Daily forecast3",
     "Numerator": 42,
     "View": "fvtDaily",
-    "SalesForecastLines": []
+    "SalesForecastLines": [
+      {
+        "ItemNo": "DIET003",
+        "ForecastedDay": "2026-02-27",
+        "Quantity": 10,
+        "Warehouse": "01"
+      }
+    ]
   }
 ]
 ```
 
 ### Update SalesForecast
 
-The **Update Sales Forecast** action is used to modify an existing sales forecast using its unique identifier. It allows updating forecast details and item-level forecast data.
+**Update Sales Forecast** action is used to modify an existing sales forecast using its unique identifier. It allows updating forecast details and item-level forecast data.
 
 #### Select Credentials and Action Event
 
@@ -3904,17 +3949,14 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Id (Numerator) | Enter the unique identifier of the forecast. (e.g., "1001") |
-| Optional Fields
-Forecast Name | Update the name of the forecast. (e.g., "Updated Q2 Forecast") |
-| Forecast Start Date | Update the start date of the forecast period. (e.g., "2026-04-01") |
-| Forecast End Date | Update the end date of the forecast period. (e.g., "2026-06-30") |
-| Sales Forecast Lines (Optional)
-Item Code | Unique identifier of the item. (e.g., "ITEM-002") |
-| Quantity | Updated forecasted quantity. (e.g., "150") |
-| Sales Forecasted Day | Date for the forecast entry. (e.g., "2026-05-01") |
-| Additional Optional Fields
-Warehouse | Warehouse related to the forecast. (e.g., "WH-02") |
+| Id (Numerator) | Enter the unique identifier of the forecast. (e.g., "42") |
+| Forecast Name (Optional) | Update the name of the forecast. (e.g., "For Daily forecast333-Latest") |
+| Forecast Start Date (Optional) | Update the start date of the forecast period. (e.g., "2026-04-19") |
+| Forecast End Date (Optional) | Update the end date of the forecast period. (e.g., "2026-04-28") |
+| Item Code (Optional) | Unique identifier of the item in Sales Forecast Lines. (e.g., "DIET002") |
+| Forecasted Day (Optional) | Date for the forecast entry in Sales Forecast Lines. (e.g., "2026-04-19") |
+| Quantity (Optional) | Updated forecasted quantity in Sales Forecast Lines. (e.g., "11") |
+| Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
 
 > **Note:** Only the provided fields will be updated. Ensure the correct forecast Id is used to avoid modifying the wrong forecast data.
 
@@ -3939,13 +3981,11 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-<img src="" width="700" />
-
 ---------------
 
 ### Get Sales Forecast by Id
 
-The **Get Sales Forecast by Id** action retrieves details of a specific sales forecast using its unique identifier (Numerator). It returns forecast header and line-level data.
+**Get Sales Forecast by Id** action retrieves details of a specific sales forecast using its unique identifier (Numerator). It returns forecast header and line-level data.
 
 #### Select Credentials and Action Event
 
@@ -4001,7 +4041,7 @@ Click on **Continue**, then **Run** node
 
 ### Create Payment Draft
 
-The **Create Payment Draft** action is used to create a draft payment document (incoming or outgoing). It allows users to save payment details for review before final posting.
+**Create Payment Draft** action is used to create a draft payment document (incoming or outgoing). It allows users to save payment details for review before final posting.
 
 #### Select Credentials and Payments
 
@@ -4015,15 +4055,14 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Payment Type | Select the type of payment. (e.g., "Incoming Payment" or "Outgoing Payment") |
-| Card Code | Enter the customer/vendor code. (e.g., "CUST-001") |
-| Optional Fields
-Document Date | Specify the document date. (e.g., "2026-04-01") |
-| Tax Date | Specify the tax date. (e.g., "2026-04-01") |
-| Due Date | Specify the due date. (e.g., "2026-04-05") |
-| Remarks | Add any notes related to the payment. (e.g., "Draft payment created") |
-| Journal Remarks | Enter accounting-related remarks. (e.g., "Payment Draft Entry") |
-| Cash Amount | Enter the cash amount for the payment. (e.g., "1000") |
+| Payment Type | Select the type of payment. (e.g., "Incoming Payment (Customer)") |
+| Card Code | Enter the customer/vendor code. (e.g., "ZC0001") |
+| Document Date (Optional) | Specify the document date. (e.g., "2026-04-19") |
+| Tax Date (Optional) | Specify the tax date. (e.g., "2026-04-19") |
+| Due Date (Optional) | Specify the due date. (e.g., "2026-04-19") |
+| Remarks (Optional) | Add any notes related to the payment. (e.g., "Demo Purpose") |
+| Journal Remarks (Optional) | Enter accounting-related remarks. (e.g., "Incoming Payment") |
+| Cash Amount (Optional) | Enter the cash amount for the payment. (e.g., "600") |
 
 > **Note:** Draft payments can be reviewed and finalized later. Mandatory fields must be provided to create the draft successfully.
 
@@ -4074,7 +4113,7 @@ Click on **Continue**, then **Run** node
 
 ### Get Payment Draft by DocEntry
 
-The **Get Payment Draft by DocEntry** action retrieves details of a specific payment draft using its internal document entry number. It returns the draft payment information as structured data.
+**Get Payment Draft by DocEntry** action retrieves details of a specific payment draft using its internal document entry number. It returns the draft payment information as structured data.
 
 #### Select Credentials and Action Event
 
@@ -4088,7 +4127,7 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30012") |
+| DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
 > **Note:** If no draft exists for the provided DocEntry, the response will be empty or null.
 
@@ -4130,7 +4169,7 @@ Click on **Continue**, then **Run** node
 
 ### Convert Payment Draft to Incoming Payment
 
-The **Convert Payment Draft to Incoming Payment** action converts an existing payment draft into a finalized incoming payment. This is typically done after reviewing and confirming the draft details.
+**Convert Payment Draft to Incoming Payment** action converts an existing payment draft into a finalized incoming payment. This is typically done after reviewing and confirming the draft details.
 
 #### Select Crdentials and Action Event
 
@@ -4144,7 +4183,7 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30012") |
+| DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
 > **Note:** Once converted, the draft becomes a posted incoming payment and may no longer be editable as a draft. Ensure all details are verified before conversion.
 
@@ -4176,7 +4215,7 @@ Click on **Continue**, then **Run** node
 
 ### Create Sales Blanket Agreement
 
-The **Create Sales Blanket Agreement** action is used to define long-term agreements with customers for supplying goods or services under predefined terms. It helps in managing recurring sales with agreed pricing and quantities.
+**Create Sales Blanket Agreement** action is used to define long-term agreements with customers for supplying goods or services under predefined terms. It helps in managing recurring sales with agreed pricing and quantities.
 
 #### Select Credentials and Action Event
 
@@ -4194,17 +4233,14 @@ Click on **Continue** button
 | BP Code | Enter the business partner (customer) code. (e.g., "ZC0001") |
 | Agreement Method | Define how the agreement is managed. (e.g., "amItem") |
 | End Date | Specify the agreement end date. (e.g., "2026-04-20") |
-| Agreement Item Lines
-Item No | Unique identifier of the item. (e.g., "DIET002") |
-| Optional Fields (Item Lines)
-Planned Quantity | Planned quantity for the agreement. (e.g., "4") |
-| Unit Price | Agreed price per unit. (e.g., "100") |
-| Line Discount | Discount applied on the item. (e.g., "2") |
-| Optional Fields (Header)
-BP Name | Name of the business partner. (e.g., "GivaJewellers") |
-| NumAtCard | Customer reference number. (e.g., "664111000000360085") |
-| Contact Person Code | Identifier of the contact person. (e.g., "4") |
-| Remarks | Additional notes. (e.g., "Demo Purpose") |
+| Item No | Unique identifier of the item in Agreement Item Lines. (e.g., "DIET002") |
+| Planned Quantity (Optional) | Planned quantity for the agreement item. (e.g., "4") |
+| Unit Price (Optional) | Agreed price per unit. (e.g., "100") |
+| Line Discount (Optional) | Discount applied on the item. (e.g., "2") |
+| BP Name (Optional) | Name of the business partner. (e.g., "GivaJewellers") |
+| NumAtCard (Optional) | Customer reference number. (e.g., "664111000000360085") |
+| Contact Person Code (Optional) | Identifier of the contact person. (e.g., "4") |
+| Remarks (Optional) | Additional notes. (e.g., "Demo Purpose") |
 
 > **Note:** Blanket agreements are used for long-term contracts. Ensure correct pricing and quantities are defined before creating the agreement.
 
@@ -4225,12 +4261,15 @@ Click on **Continue**, then **Run** node
 ```json
 {
   "BPCode": "ZC0001",
+  "BPName": "GivaJewellers",
   "StartDate": "2026-04-19",
   "EndDate": "2026-04-20",
   "AgreementType": "atGeneral",
   "AgreementMethod": "amItem",
   "PriceMode": "pmNet",
   "BPCurrency": "$",
+  "NumAtCard": "664111000000360085",
+  "ContactPersonCode": 4,
   "Remarks": "Demo Purpose",
 
   "BlanketAgreements_ItemsLines": [
@@ -4246,7 +4285,7 @@ Click on **Continue**, then **Run** node
 
 ### Update Sales Blanket Agreement
 
-The **Update Sales Blanket Agreement** action is used to modify an existing blanket agreement using its agreement number. It allows updating business partner details, agreement validity, and item-level terms.
+**Update Sales Blanket Agreement** action is used to modify an existing blanket agreement using its agreement number. It allows updating business partner details, agreement validity, and item-level terms.
 
 #### Select Credentials and Action Events
 
@@ -4260,20 +4299,17 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Agreement No | Enter the unique agreement number. (e.g., "5001") |
-| Optional Fields (Header)
-BP Code | Update the business partner code. (e.g., "CUST-002") |
-| BP Name | Update the business partner name. (e.g., "XYZ Pvt Ltd") |
-| NumAtCard | Customer reference number. (e.g., "REF-BA-002") |
-| Remarks | Additional notes. (e.g., "Updated agreement terms") |
-| End Date | Update the agreement end date. (e.g., "2027-12-31") |
-| Agreement Item Lines
-Agreement Row Number | Specify the line number to update. (e.g., "1") |
-| Optional Fields (Item Lines)
-Item No | Update the item code. (e.g., "ITEM-002") |
-| Planned Quantity | Update the planned quantity. (e.g., "1500") |
-| Unit Price | Update the unit price. (e.g., "550") |
-| Line Discount | Update the discount percentage. (e.g., "10") |
+| Agreement No | Enter the unique agreement number. (e.g., "22") |
+| BP Code (Optional) | Update the business partner code. (e.g., "ZC0001") |
+| BP Name (Optional) | Update the business partner name. (e.g., "GivaJewellers") |
+| NumAtCard (Optional) | Customer reference number. (e.g., "664111000000360085") |
+| Remarks (Optional) | Additional notes. (e.g., "Demo Purpose - Updated") |
+| End Date (Optional) | Update the agreement end date. (e.g., "2026-04-20") |
+| Agreement Row Number | Specify the line number to update. (e.g., "0") |
+| Item No (Optional) | Update the item code. (e.g., "DIET003") |
+| Planned Quantity (Optional) | Update the planned quantity. (e.g., "6") |
+| Unit Price (Optional) | Update the unit price. (e.g., "100") |
+| Line Discount (Optional) | Update the discount percentage. (e.g., "5") |
 
 > **Note:** Only the provided fields will be updated. Ensure the correct Agreement No and row number are used to avoid unintended changes.
 
@@ -4298,134 +4334,458 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-<img src="\img\credentials\sap-b1\SAP-AR-USLSBLNKTAGREMENT260.jpg" width="700" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Actions
-
-> Quotations Actions
-
-- Get list of Quotations with filtering and sorting options
-
-> Invoices Actions
-
-- Create AR Invoice
-- Create AR Reserve Invoice
-
-> Drafts Actions
-
-- Create Drafts
-- Update an existing Draft
-- Get list of Drafts with filtering and sorting options
-- Delete Draft
-
-> Orders Actions
-
-- Get list of Orders with filtering and sorting options
-- Update an existing Sales Order
-- Create a Sales Order
-
-> Down Payments Actions
-
-- Update an existing Down Payment
-- Create a new Down Payment Invoice
-- Get list of Down Payments with filtering and sorting options
-
-> Invoice Actions
-
-- Create an Invoice
-- Update an existing Invoice
-
-> Business Partners Actions
-
-- Get list of BusinessPartners with filtering and sorting options
-- Create a new BusinessPartner
-- Update an existing BusinessPartner
-
-> Items Actions
-
-- Delete Item
-- Update Item
-- Create a new Item
-- Get list of Items
-
-> Credit Notes Actions
-
-- Create AR Credit Memo
+<img src="/img/credentials/sap-b1/SAP-AR-USLSBLNKTAGREMENT260.jpg" width="700" />
 
 </TabItem>
 </Tabs>
 
----
 
-## Need Help?
 
-If youâ€™re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+## Serial Number Details Action
+
+### Get Serial Number Details by serial number
+
+**Get Serial Number Details by Serial Number** action retrieves detailed information of an item using its unique serial number. It helps in tracking item history, availability, and related transactions.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-GSRLNUMbySLNO261.jpg" width="700" />
+
+Clcik on **Continue** button
+
+----------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Serial Number | Enter the unique serial number of the item. (e.g., "SL-001") |
+
+> **Note:** If the provided serial number does not exist, the response will be empty or null.
+
+Click on **Continue**, then **Run** node
+
+--------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GSRLNUMbySRLNo262.jpg" width="700" />
+
+#### Result
+
+```json
+[
+  {
+    "DocEntry": 1,
+    "ItemCode": "SERIAL001",
+    "ItemDescription": "Serial Test",
+    "MfrSerialNo": "SL001",
+    "SerialNumber": "SL-001",
+    "LotNumber": "123",
+    "SystemNumber": 1,
+    "AdmissionDate": "2026-04-20",
+    "ManufacturingDate": null,
+    "ExpirationDate": null,
+    "MfrWarrantyStart": null,
+    "MFrWarrantyEnd": null,
+    "Location": "01",
+    "Details": null
+  }
+]
+```
+
+## Service Contracts Action
+
+### Create Service Contract
+
+**Create Service Contract** action is used to define a service agreement for a customer, typically covering warranty or support services for specific items or serial numbers.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-CSRVCCNTRCT263.jpg" width="700" />
+
+Click on **Continue** button
+
+------------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
+| Contract Type | Specify the contract type. (e.g., "Serial Number") |
+| Service Type | Define the type of service. (e.g., "Warranty") |
+| Start Date | Specify the contract start date. (e.g., "2026-04-20") |
+| End Date | Specify the contract end date. (e.g., "2026-04-30") |
+| Service Contract Lines
+Internal Serial Number | Enter the internal serial number. (e.g., "SL-001") |
+| Item Code | Unique identifier of the item. (e.g., "SERIAL001") |
+| Optional Fields
+Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL001") |
+| Contact Code | Identifier of the contact person. (e.g., "4") |
+| Customer Name | Name of the customer. (e.g., "GivaJewellers") |
+| Status | Contract status. (e.g., "Draft") |
+| Response Unit | Unit for response time. (e.g., "Hours" or "Days") |
+| Monday Enabled | Enable service on Monday (**Yes/No**). (e.g., "Yes") |
+| Tuesday Enabled | Enable service on Tuesday (**Yes/No**). (e.g., "Yes") |
+| Wednesday Enabled | Enable service on Wednesday (**Yes/No**). (e.g., "Yes") |
+| Thursday Enabled | Enable service on Thursday (**Yes/No**). (e.g., "Yes") |
+| Friday Enabled | Enable service on Friday (**Yes/No**). (e.g., "Yes") |
+
+> **Note:** Ensure correct serial numbers and service dates are configured, as they define the validity and scope of the service contract.
+
+Click on **Continue**, then **Run** node
+
+--------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCNTRCT264.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCNTRCT265.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCNTRCT266.jpg" width="700" />
+<img src="\img\credentials\sap-b1\SAP-AC-CSRVCCNTRCT267.jpg" width="700" />
+
+--------------------
+
+#### Result
+
+```json
+[
+  {
+    "odata.metadata": "https://insync.pro/b1s/v1/$metadata#ServiceContracts/@Element",
+    "ContractID": 6,
+    "CustomerCode": "ZC0001",
+    "CustomerName": "GivaJewellers",
+    "ContactCode": 4,
+    "Owner": 7,
+    "Status": "scs_Draft",
+    "ContractTemplate": null,
+    "ContractType": "ct_SerialNumber",
+    "Renewal": "tNO",
+    "ReminderTime": null,
+    "RemindUnit": "reu_Days",
+    "DurationOfCoverage": null,
+    "StartDate": "2026-04-20",
+    "EndDate": "2026-04-30",
+    "ResolutionTime": null,
+    "ResolutionUnit": "rsu_Days",
+    "Description": null,
+    "MondayEnabled": "tYES",
+    "TuesdayEnabled": "tYES",
+    "WednesdayEnabled": "tYES",
+    "ThursdayEnabled": "tYES",
+    "FridayEnabled": "tYES",
+    "SaturdayEnabled": "tYES",
+    "SundayEnabled": "tYES",
+    "MondayStart": "08:00:00",
+    "MondayEnd": "17:00:00",
+    "TuesdayStart": "08:00:00",
+    "TuesdayEnd": "17:00:00",
+    "WednesdayStart": "08:00:00",
+    "WednesdayEnd": "17:00:00",
+    "ThursdayStart": "08:00:00",
+    "ThursdayEnd": "17:00:00",
+    "FridayStart": "08:00:00",
+    "FridayEnd": "17:00:00",
+    "SaturdayStart": "00:00:00",
+    "SaturdayEnd": "23:59:00",
+    "SundayStart": "00:00:00",
+    "SundayEnd": "23:59:00",
+    "IncludeParts": "tNO",
+    "IncludeLabor": "tNO",
+    "IncludeTravel": "tNO",
+    "TemplateRemarks": null,
+    "Remarks": null,
+    "IncludeHolidays": "tNO",
+    "ServiceType": "bst_Warranty",
+    "ResponseUnit": "boru_Hour",
+    "ResponseTime": null,
+    "TerminationDate": null,
+    "AttachmentEntry": null,
+    "ServiceBPType": "srvcSales",
+    "ServiceContract_Lines": [
+      {
+        "LineNum": 1,
+        "ManufacturerSerialNum": "SL001",
+        "InternalSerialNum": "SL-001",
+        "ItemCode": "SERIAL001",
+        "ItemName": "Serial Test",
+        "ItemGroup": null,
+        "StartDate": "2026-04-20",
+        "EndDate": "2026-04-30",
+        "ItemGroupName": null,
+        "TerminationDate": null
+      }
+    ]
+  }
+]
+```
+
+### Get Service Contracts by Customer Code
+
+**Get Service Contracts by Customer Code** action retrieves all service contracts associated with a specific customer. It helps in tracking active, expired, or draft service agreements.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-GSRCCNTRCTbyCSTMRCDE268.jpg" width="700" />
+
+Click on **Continue** button
+
+--------------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
+
+> **Note:** If no service contracts are found for the provided customer code, the response will be empty or null.
+
+Click on **Continue**, then **Run** node
+
+----------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-GSRVCCNTRCTbyCSTMRCDE269.jpg" width="700" />
+
+-------------
+
+#### Result
+
+```json
+[
+  {
+    "ContractID": 5,
+    "CustomerCode": "ZC0001",
+    "CustomerName": "GivaJewellers",
+    "ContactCode": 4,
+    "Owner": 7,
+    "Status": "scs_Draft",
+    "ContractTemplate": null,
+    "ContractType": "ct_SerialNumber",
+    "Renewal": "tNO",
+    "ReminderTime": null,
+    "RemindUnit": "reu_Days",
+    "DurationOfCoverage": null,
+    "StartDate": "2026-04-20",
+    "EndDate": "2029-04-02",
+    "ResolutionTime": null,
+    "ResolutionUnit": "rsu_Days",
+    "Description": null,
+    "MondayEnabled": "tYES",
+    "TuesdayEnabled": "tYES",
+    "WednesdayEnabled": "tYES",
+    "ThursdayEnabled": "tYES",
+    "FridayEnabled": "tYES",
+    "SaturdayEnabled": "tYES",
+    "SundayEnabled": "tYES",
+    "MondayStart": "08:00:00",
+    "MondayEnd": "17:00:00",
+    "TuesdayStart": "08:00:00",
+    "TuesdayEnd": "17:00:00",
+    "WednesdayStart": "08:00:00",
+    "WednesdayEnd": "17:00:00",
+    "ThursdayStart": "08:00:00",
+    "ThursdayEnd": "17:00:00",
+    "FridayStart": "08:00:00",
+    "FridayEnd": "17:00:00",
+    "SaturdayStart": "00:00:00",
+    "SaturdayEnd": "23:59:00",
+    "SundayStart": "00:00:00",
+    "SundayEnd": "23:59:00",
+    "IncludeParts": "tNO",
+    "IncludeLabor": "tNO",
+    "IncludeTravel": "tNO",
+    "TemplateRemarks": null,
+    "Remarks": "Demo Purpose",
+    "IncludeHolidays": "tNO",
+    "ServiceType": "bst_Regular",
+    "ResponseUnit": "boru_Hour",
+    "ResponseTime": null,
+    "TerminationDate": null,
+    "AttachmentEntry": null,
+    "ServiceBPType": "srvcSales",
+    "ServiceContract_Lines": [
+      {
+        "LineNum": 1,
+        "ManufacturerSerialNum": "SL001",
+        "InternalSerialNum": "SL-001",
+        "ItemCode": "SERIAL001",
+        "ItemName": "Serial Test",
+        "ItemGroup": null,
+        "StartDate": "2026-04-20",
+        "EndDate": "2029-04-02",
+        "ItemGroupName": null,
+        "TerminationDate": null
+      }
+    ]
+  },
+  {
+    "ContractID": 6,
+    "CustomerCode": "ZC0001",
+    "CustomerName": "GivaJewellers",
+    "ContactCode": 4,
+    "Owner": 7,
+    "Status": "scs_Draft",
+    "ContractTemplate": null,
+    "ContractType": "ct_SerialNumber",
+    "Renewal": "tNO",
+    "ReminderTime": null,
+    "RemindUnit": "reu_Days",
+    "DurationOfCoverage": null,
+    "StartDate": "2026-04-20",
+    "EndDate": "2026-04-30",
+    "ResolutionTime": null,
+    "ResolutionUnit": "rsu_Days",
+    "Description": null,
+    "MondayEnabled": "tYES",
+    "TuesdayEnabled": "tYES",
+    "WednesdayEnabled": "tYES",
+    "ThursdayEnabled": "tYES",
+    "FridayEnabled": "tYES",
+    "SaturdayEnabled": "tYES",
+    "SundayEnabled": "tYES",
+    "MondayStart": "08:00:00",
+    "MondayEnd": "17:00:00",
+    "TuesdayStart": "08:00:00",
+    "TuesdayEnd": "17:00:00",
+    "WednesdayStart": "08:00:00",
+    "WednesdayEnd": "17:00:00",
+    "ThursdayStart": "08:00:00",
+    "ThursdayEnd": "17:00:00",
+    "FridayStart": "08:00:00",
+    "FridayEnd": "17:00:00",
+    "SaturdayStart": "00:00:00",
+    "SaturdayEnd": "23:59:00",
+    "SundayStart": "00:00:00",
+    "SundayEnd": "23:59:00",
+    "IncludeParts": "tNO",
+    "IncludeLabor": "tNO",
+    "IncludeTravel": "tNO",
+    "TemplateRemarks": null,
+    "Remarks": null,
+    "IncludeHolidays": "tNO",
+    "ServiceType": "bst_Warranty",
+    "ResponseUnit": "boru_Hour",
+    "ResponseTime": null,
+    "TerminationDate": null,
+    "AttachmentEntry": null,
+    "ServiceBPType": "srvcSales",
+    "ServiceContract_Lines": [
+      {
+        "LineNum": 1,
+        "ManufacturerSerialNum": "SL001",
+        "InternalSerialNum": "SL-001",
+        "ItemCode": "SERIAL001",
+        "ItemName": "Serial Test",
+        "ItemGroup": null,
+        "StartDate": "2026-04-20",
+        "EndDate": "2026-04-30",
+        "ItemGroupName": null,
+        "TerminationDate": null
+      }
+    ]
+  }
+]
+```
+
+
+## Customer Equipment Card Actions
+
+### Create Customer Equipment Card
+
+**Create Customer Equipment Card** action is used to register and track equipment assigned to a customer. It helps manage installed items, serial numbers, and service-related details.
+
+#### Select Credentials and Action Events
+
+<img src="\img\credentials\sap-b1\SAP-C-CEQPCRD270.jpg" width="700" />
+
+Click on **Continue** button
+
+-------------------
+
+#### Configuration Fields
+
+| Field | Description |
+|------|-------------|
+| Customer Code | Enter the customer code. (e.g., "ZC0001") |
+| Internal Serial Number | Unique internal serial number of the equipment. (e.g., "SL-002") |
+| Item Code | Identifier of the item/equipment. (e.g., "SERIAL001") |
+| Install Location | Specify the installation location. (e.g., "01") |
+| Optional Fields
+Contact Employee Code | Identifier of the contact employee. (e.g., "4") |
+| Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL-002") |
+
+> **Note:** Ensure serial numbers are unique and correctly mapped to the customer for accurate tracking and service management.
+
+Click on **Continue**, then **Run** node
+
+-------------------
+
+#### Example Configuration
+
+<img src="\img\credentials\sap-b1\SAP-AC-CEQPCRD271.jpg" width="700" />
+
+-----------
+
+#### Result
+
+```json
+[
+  {
+    "odata.metadata": "https://insync.pro/b1s/v1/$metadata#CustomerEquipmentCards/@Element",
+    "EquipmentCardNum": 2,
+    "CustomerCode": "ZC0001",
+    "CustomerName": "GivaJewellers",
+    "ContactEmployeeCode": 4,
+    "DirectCustomerCode": null,
+    "DirectCustomerName": null,
+    "ManufacturerSerialNum": "SL-002",
+    "InternalSerialNum": "SL-002",
+    "RequiredResolutionTime": null,
+    "RequiredResolutionUnit": "rsu_Days",
+    "ItemCode": "SERIAL001",
+    "ItemDescription": "Serial Test",
+    "InvoiceCode": null,
+    "InvoiceNumber": null,
+    "DeliveryDate": null,
+    "ContactPhone": null,
+    "Street": "Adffhgjh",
+    "Block": null,
+    "ZipCode": "33144",
+    "City": "Miami",
+    "County": null,
+    "CountryCode": "US",
+    "StateCode": "FL",
+    "InstallLocation": "01",
+    "ContractCode": null,
+    "ContractStartDate": null,
+    "ContractEndDate": null,
+    "DeliveryCode": null,
+    "DeliveryNumber": null,
+    "StatusOfSerialNumber": "sns_Active",
+    "ReplaceSN": null,
+    "DefaultTechnician": null,
+    "ReplacedBySN": null,
+    "Defaultterritory": null,
+    "BuildingFloorRoom": "",
+    "AttachmentEntry": null,
+    "StreetNo": null,
+    "ServiceBPType": "et_Sales",
+    "CustomerEquipmentCardBusinessPartners": [
+      {
+        "BPCode": "ZC0001"
+      }
+    ]
+  }
+]
+```
+
+
+
+### Need Help?
+
+If you are unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
 
 
