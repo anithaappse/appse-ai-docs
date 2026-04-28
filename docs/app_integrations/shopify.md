@@ -166,9 +166,6 @@ Click on **Continue** , then **Run** the node.
 [
   {
     "id": "gid://shopify/Company/733937836",
-
-</TabItem>
-
     "name": "WinterFell",
     "note": null,
     "createdAt": "2024-12-27T06:15:31Z",
@@ -4608,8 +4605,8 @@ Click on **Continue** button
 | Refund Input * | Enter the refund input payload. |
 | Order ID * | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
 | Refund Line Items (Optional) | Configure line items to be refunded. |
-| Item #1 - Line Item ID * | Enter the line item ID to refund. (e.g., "gid://shopify/LineItem/17065684533420") |
-| Item #1 - Quantity * | Enter the quantity to refund. (e.g., "1") |
+| Line Item ID * | Enter the line item ID to refund. (e.g., "gid://shopify/LineItem/17065684533420") |
+| Quantity * | Enter the quantity to refund. (e.g., "1") |
 
 > **Note:** `Refund Input` and `Order ID` are required. For line item refunds, `Line Item ID` and `Quantity` are required.
 
@@ -4741,7 +4738,7 @@ Click on **Continue** button
 | Title * | Enter the catalog title. (e.g., "Retail Sales") |
 | Status * | Enter the catalog status. (e.g., "ACTIVE") |
 | Context * | Configure catalog context details. |
-| Company Location IDs (Optional)Item #1
+| Company Location IDs (Optional)Item
 Company Location ID | Enter the company location ID. (e.g., "gid://shopify/CompanyLocation/13888618668") |
 
 > **Note:** `Title`, `Status`, and `Context` are required.
