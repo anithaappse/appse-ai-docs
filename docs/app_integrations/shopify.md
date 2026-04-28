@@ -1841,7 +1841,7 @@ Click on **Continue** , then **Run** the node.
 
 ### Get Customer by Email
 
-The **Get Customer by Email** action retrieves customer (business partner) details using the email address. It helps in quickly identifying customer records based on contact information.
+**Get Customer by Email** action retrieves customer (business partner) details using the email address. It helps in quickly identifying customer records based on contact information.
 
 #### Select Credentials and Action Event
 
@@ -2220,7 +2220,7 @@ Click on **Continue**, then **Run** node
 
 ### Create Company Location
 
-The **Create Company Location** action is used to add a new location for a company, including shipping address and related details. This helps manage multiple locations under a single company.
+**Create Company Location** action is used to add a new location for a company, including shipping address and related details. This helps manage multiple locations under a single company.
 
 #### Select Credentials and Action Event
 
@@ -2557,7 +2557,7 @@ Click on **Continue**, then **Run** node
 
 ### Get Locations by Company ID
 
-The **Get Locations by Company ID** action retrieves all locations associated with a specific company. It helps in managing and viewing multiple company locations.
+**Get Locations by Company ID** action retrieves all locations associated with a specific company. It helps in managing and viewing multiple company locations.
 
 #### Select Credentials and Action Event
 
@@ -3374,10 +3374,10 @@ Click on **Continue** button
 | Field | Description |
 |------|-------------|
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
-| Prices | Configure one or more fixed-price items to add to the selected price list. |
-| Prices (Item) — Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
-| Prices (Item) — Price Amount | Enter the fixed price amount. (e.g., "150") |
-| Prices (Item) — Price Currency Code | Enter the currency code for the fixed price. (e.g., "USD") |
+| Prices - (Item)
+Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
+| Price Amount | Enter the fixed price amount. (e.g., "150") |
+| Price Currency Code | Enter the currency code for the fixed price. (e.g., "USD") |
 
 > **Note:** All fields are required. In this example, one fixed price item is added for the specified variant with amount `150` in `USD`.
 
@@ -3422,7 +3422,6 @@ Click on **Continue** button
 | Field | Description |
 |------|-------------|
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
-| Price List ID | Enter the unique identifier of the price list. (e.g., "gid://shopify/PriceList/24368971948") |
 | Prices to Add / Update
 Variant ID | Enter the product variant identifier. (e.g., "gid://shopify/ProductVariant/46181637980332") |
 | Price Amount | Specify the fixed price amount. (e.g., "190") |
@@ -3475,8 +3474,8 @@ Click on **Continue** button
 | Field | Description |
 |------|-------------|
 | Price List ID | Enter the Shopify price list ID. (e.g., "gid://shopify/PriceList/24368971948") |
-| Variant IDs | Configure one or more variant IDs to delete fixed prices from the selected price list. |
-| Variant IDs (Item) - Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
+| Variant IDs - Item
+Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/46181637980332") |
 
 > **Note:** `Price List ID` and at least one `Variant ID` are required.
 
@@ -4055,12 +4054,12 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Order ID * | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
-| Risk Level * | Enter the risk level. (e.g., "Low") |
-| Risk Facts * | Add risk facts to assess the order risk. |
+| Order ID | Enter the Shopify order ID. (e.g., "gid://shopify/Order/7240844705964") |
+| Risk Level | Enter the risk level. (e.g., "Low") |
+| Risk Facts | Add risk facts to assess the order risk. |
 | Item Risk Fact (Item)
-Description * | Enter the description for item #1. (e.g., "Billing Address region is Risk") |
-| Sentiment * | Enter the sentiment for item #1. (e.g., "Positive (lowers risk)") |
+Description | Enter the description for item (e.g., "Billing Address region is Risk") |
+| Sentiment | Enter the sentiment for item (e.g., "Positive (lowers risk)") |
 
 > **Note:** `Order ID`, `Risk Level`, `Risk Facts`, `Risk Fact`, `Description`, and `Sentiment` are required.
 
@@ -4325,14 +4324,13 @@ Click on **Continue** button
 
 | Field | Description |
 |------|-------------|
-| Fulfillment Input * | Enter the fulfillment input payload. |
 | Line Items by Fulfillment Order * | Configure line items grouped by fulfillment order. |
-| Item #1 - Fulfillment Order ID * | Enter the fulfillment order ID. (e.g., "gid://shopify/FulfillmentOrder/8230582943916") |
-| Item #1 - Fulfillment Order Line Items (Optional) | Configure specific line items for this fulfillment order. |
-| Item #1 - Line Item ID * | Enter the fulfillment order line item ID. (e.g., "gid://shopify/FulfillmentOrderLineItem/17189762039980") |
-| Item #1 - Quantity * | Enter the quantity to fulfill. (e.g., "1") |
-| Tracking Info (Optional) | Configure tracking details for the fulfillment. |
-| Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
+| Fulfillment Order ID * | Enter the fulfillment order ID. (e.g., "gid://shopify/FulfillmentOrder/8230582943916") |
+| Item - Fulfillment Order Line Items (Optional)
+Line Item ID * | Enter the fulfillment order line item ID. (e.g., "gid://shopify/FulfillmentOrderLineItem/17189762039980") |
+| Quantity * | Enter the quantity to fulfill. (e.g., "1") |
+| Tracking Info (Optional)
+Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
 
 > **Note:** `Fulfillment Input`, `Line Items by Fulfillment Order`, `Fulfillment Order ID`, `Line Item ID`, and `Quantity` are required.
 
@@ -4844,12 +4842,6 @@ Click on **Continue** button.
 | Key | Unique key name for the metafield inside the namespace. (e.g., "Type") |
 | Value | Enter the metafield value. (e.g., "png") |
 | Type | Specify the metafield data type. (e.g., "Single Line Text") |
-| Example
-Object ID | gid://shopify/Product/8536686002348 |
-| Namespace | PRD_IMG |
-| Key | Type |
-| Value | png |
-| Type | Single Line Text |
 
 > **Note:** If the namespace and key already exist for the given object, the value will be updated. Otherwise, a new metafield will be created.
 
@@ -4880,36 +4872,6 @@ Click on **Continue**, then **Run** node
 ]
 ```
 -----------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </TabItem>
 
