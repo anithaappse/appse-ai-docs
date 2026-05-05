@@ -5,8 +5,6 @@ slug: /app-integrations/notion/
 
 Notion is an all-in-one workspace platform for notes, documents, wikis, and project management. Integrating Notion into appse ai enables you to automate page creation, database management, content updates, and more — directly within your workflows.
 
-
-
 ## Set Up Credential
 
 :::info
@@ -35,17 +33,11 @@ Click **Select a Credential** and choose **Notion** from the application list. A
 
 #### 2. Go to Notion Integrations
 
-Navigate to  [Notion Integrations](https://www.notion.so/profile/integrations) (log in to Notion if prompted) and click **"New integration"**.
+Navigate to [Notion Integrations](https://www.notion.so/profile/integrations) (log in to Notion if prompted) and click **"New integration"**.
 
 #### 3. Set Integration Type to Internal
 
-Under integration type, select **"Internal"**. Click **"Create a new integration"** to proceed.
-
-:::info
-
-Select **Internal** to get an Integration Token. Internal integrations provide a Bearer Token that can be used directly to authenticate API requests.
-
-:::
+Under integration type, select **"Internal"** — this provides a Bearer Token that can be used directly to authenticate API requests. Click **"Create a new integration"** to proceed.
 
 <img src="/img/credentials/notion/create-new-cred-notion.png" alt="appse ai Notion integration type selection screen" width="700"/>
 
@@ -116,8 +108,6 @@ Both triggers require a **Database ID** — you can find this in the Notion data
 - **On Page Added to Database** — Triggers whenever a new page is added to a specified Notion database. Use this trigger to start a workflow automatically when a new database entry is created.
 
 - **On Page Updated in Database** — Triggers whenever an existing page inside a specified Notion database is updated. Use this trigger to react to changes in database records in real time.
-
-
 
 ### Actions
 
