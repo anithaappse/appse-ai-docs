@@ -3,30 +3,6 @@ title: "BigCommerce B2B"
 slug: /app-integrations/bigcommerceb2b
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<style>{`
-.bigcommerce-b2b-doc div[class*='language-json'] {
-  max-width: 100%;
-  overflow: auto;
-}
-
-.bigcommerce-b2b-doc div[class*='language-json'] pre {
-  max-height: 24rem;
-  overflow: auto;
-  font-size: 0.82rem;
-  line-height: 1.35;
-}
-
-.bigcommerce-b2b-doc div[class*='language-json'] code {
-  white-space: pre;
-  word-break: normal;
-}
-`}</style>
-
-<div className="bigcommerce-b2b-doc">
-
 BigCommerce is a powerful e-commerce solution which also offers a dedicated B2B Edition with advanced features tailored for wholesale and business-to-business operations, enabling companies to manage complex pricing structures, customer groups, company accounts, and bulk ordering efficiently. appse ai lets you seamlessly connect with your BigCommerce B2B account to automate key processes such as order management, company management, quote synchronization, and invoice updates—helping streamline operations and enhance efficiency through intelligent, automated workflows.
 
 ---
@@ -128,21 +104,18 @@ Once both **Store Hash** and **API Token** are entered into the credential form,
 
 ---
 
-## Triggers and Actions
+### Triggers and Actions
 
-Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available.
-
-<Tabs>
-  <TabItem value="triggers" label="Triggers">
+Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available:
 
 ## Triggers
 
 ### New Companies Created
 
-New Companies Created trigger is used to fetch newly created company records from BigCommerce B2B based on a specified time and limit.
+**New Companies Created** trigger is used to fetch newly created company records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-NWCUSTMRCRTD1.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-NWCUSTMRCRTD1.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -162,7 +135,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-NWCUSTMRCRTD2.jpg" width="700" />
 
 -------------------------
 
@@ -201,10 +174,10 @@ Click on **Continue**, then **Run** node.
 
 ### New Users Created
 
-New Users Created trigger is used to fetch newly created user records from BigCommerce B2B based on a specified time and limit.
+**New Users Created** trigger is used to fetch newly created user records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-NWUSRSCRTD3.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-NWUSRSCRTD3.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -224,7 +197,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-NWCUSTMRCRTD2.jpg" width="700" />
 
 -------------------------
 
@@ -260,10 +233,10 @@ Click on **Continue**, then **Run** node.
 
 ### New Quotes Created
 
-New Quotes Created trigger is used to fetch newly created quote records from BigCommerce B2B based on a specified time and limit.
+**New Quotes Created** trigger is used to fetch newly created quote records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-NWQOTSCRTD5.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-NWQOTSCRTD5.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -283,7 +256,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-NWCUSTMRCRTD2.jpg" width="700" />
 
 -------------------------
 
@@ -326,10 +299,10 @@ Click on **Continue**, then **Run** node.
 
 ### New B2B Orders Created
 
-New B2B Orders Created trigger is used to fetch newly created B2B order records from BigCommerce B2B based on a specified time and limit.
+**New B2B Orders Created** trigger is used to fetch newly created B2B order records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-NWB2BORDSCRTD6.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-NWB2BORDSCRTD6.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -349,7 +322,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-NWCUSTMRCRTD2.jpg" width="700" />
 
 -------------------------
 
@@ -387,19 +360,16 @@ Click on **Continue**, then **Run** node.
 ```
 ---------------------------
 
-  </TabItem>
-  <TabItem value="actions" label="Actions">
-
 ## Actions
 
-## Company Actions
+## Comapny Actions
 
 ### Create Company
 
-Create Company action is used to create a new company in BigCommerce B2B with admin details and address information.
+**Create Company** action is used to create a new company in Shopify with admin details and address information.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-CRTNWCMPNY7.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-CRTNWCMPNY7.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -431,8 +401,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-CRTNWCMPNY8.jpg" width="700" />
-<img src="/img/credentials/bigcommerce-b2b/AC-CRTNWCMPNY9.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-CRTNWCMPNY8.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-CRTNWCMPNY9.jpg" width="700" />
 
 -------------------------
 
@@ -457,10 +427,10 @@ Click on **Continue**, then **Run** node.
 
 ### Update Company
 
-Update Company action is used to modify an existing company’s details in BigCommerce B2B including company information and address details.
+**Update Company** action is used to modify an existing company’s details in Shopify including company information and address details.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-UPDTCMPNY10.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-UPDTCMPNY10.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -489,8 +459,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNY11.jpg" width="700" />
-<img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNY12.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-UPDTCMPNY11.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-UPDTCMPNY12.jpg" width="700" />
 
 -------------------------
 
@@ -513,10 +483,10 @@ Click on **Continue**, then **Run** node.
 
 ### Get Company by ID
 
-Get Company by ID action is used to retrieve company details in BigCommerce B2B using the unique company identifier.
+**Get Company by ID** action is used to retrieve company details in Shopify using the unique company identifier.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-GTCMPNYbyID13.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-GTCMPNYbyID13.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -535,7 +505,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-GTCMPNYbyID14.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-GTCMPNYbyID14.jpg" width="700" />
 
 ------------------------
 
@@ -583,10 +553,10 @@ Click on **Continue**, then **Run** node.
 
 ### Create User
 
-Create User action is used to create a new user associated with a company in BigCommerce B2B with role and contact details.
+**Create User** action is used to create a new user associated with a company in Shopify with role and contact details.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-CRTUSR15.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-CRTUSR15.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -611,7 +581,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-CRTUSR16.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-CRTUSR16.jpg" width="700" />
 
 -------------------------
 
@@ -635,10 +605,10 @@ Click on **Continue**, then **Run** node.
 
 ### Update User
 
-Update User action is used to modify an existing user’s details in BigCommerce B2B such as name, contact information, and role.
+**Update User** action is used to modify an existing user’s details in Shopify such as name, contact information, and role.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-UPDTUSR17.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-UPDTUSR17.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -663,7 +633,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-UPDTUSR18.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-UPDTUSR18.jpg" width="700" />
 
 -------------------------
 
@@ -707,10 +677,10 @@ Click on **Continue**, then **Run** node.
 
 ### Get User by Email
 
-Get User by Email action is used to retrieve user details in BigCommerce B2B using the user's email address.
+**Get User by Email** action is used to retrieve user details in Shopify using the user's email address.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-GTUSRbyEML19.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-GTUSRbyEML19.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -729,7 +699,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-GTUSRbyEML20.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-GTUSRbyEML20.jpg" width="700" />
 
 -------------------------
 
@@ -765,10 +735,10 @@ Click on **Continue**, then **Run** node.
 
 ### Get User by ID
 
-Get User by ID action is used to retrieve user details in BigCommerce B2B using the unique user identifier.
+**Get User by ID** action is used to retrieve user details in Shopify using the unique user identifier.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-GTUSRbyUSRID21.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-GTUSRbyUSRID21.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -787,7 +757,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-GTUSRbyUSRID22.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-GTUSRbyUSRID22.jpg" width="700" />
 
 -------------------------
 
@@ -830,10 +800,10 @@ Click on **Continue**, then **Run** node.
 
 ### Get Company Users
 
-Get Company Users action is used to retrieve all users associated with a specific company in BigCommerce B2B.
+**Get Company Users** action is used to retrieve all users associated with a specific company in Shopify.
 
 #### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-GTCMPNYUSR23.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\C-GTCMPNYUSR23.jpg" width="700" />
 
 Click on **Continue** button.
 
@@ -854,7 +824,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-GTCMPNYUSR24.jpg" width="700" />
+<img src="\img\credentials\bigcommerce-b2b\AC-GTCMPNYUSR24.jpg" width="700" />
 
 -------------------------
 
@@ -914,10 +884,10 @@ Click on **Continue**, then **Run** node.
 
 ### Get Company Addresses
 
-Get Company Addresses action is used to retrieve all addresses associated with a specific company in BigCommerce B2B.
+**Get Company Addresses** action is used to retrieve all addresses associated with a specific company in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\bigcommerce-b2b\C-GTCMPNYADDRSbyCMPNYID30.jpg" width="700" />
+<img src="" width="700" />
 
 Click on **Continue** button.
 
@@ -938,7 +908,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\bigcommerce-b2b\AC-GTCMPNYADDRSbyCMPNYID31.jpg" width="700" />
+<img src="" width="700" />
+<img src="" width="700" />
 
 -------------------------
 
@@ -972,151 +943,43 @@ Click on **Continue**, then **Run** node.
 -----------------------
 
 
-### Update Company Address
 
-Update Company Address action is used to modify an existing company address in BigCommerce B2B with updated contact and location details.
 
-#### Select Credentials and Action Events
-<img src="\img\credentials\bigcommerce-b2b\C-UPDTCMPNYADRS32.jpg" width="700" />
 
-Click on **Continue** button.
 
----------------------------
 
-#### Configuration
 
-| Field | Description |
-|------|-------------|
-| Address Id | Enter the unique address identifier. (e.g., "35205391") |
-| Optional Fields | Additional address details that can be updated. |
-| Company Id | Enter the associated company identifier. (e.g., "12623321") |
-| Address Line 1 | Primary address line. (e.g., "Necklace Road") |
-| Address Line 2 | Secondary address line. (e.g., "Near Park Line") |
-| City | City name. (e.g., "Hyderabad") |
-| First Name | Contact person's first name. (e.g., "Nancy") |
-| Last Name | Contact person's last name. (e.g., "Nan") |
-| Zip Code | Postal code. (e.g., "515405") |
-| Country Name | Country name. (e.g., "India") |
-| Country Code | Country code. (e.g., "IN") |
-| State Code | State code. (e.g., "AP") |
-| State Name | State name. (e.g., "Andhra Pradesh") |
-| Phone Number | Contact number. (e.g., "8987876765") |
 
-> **Note:** Address Id is mandatory. Only the provided optional fields will be updated.
 
-Click on **Continue**, then **Run** node.
 
--------------------------
 
-#### Example Configuration
-<img src="\img\credentials\bigcommerce-b2b\AC-UPDTCMPNYADRS33.jpg" width="700" />
-<img src="\img\credentials\bigcommerce-b2b\AC-UPDTCMPNYADRS34.jpg" width="700" />
 
--------------------------
 
-#### Result
 
-```json
-[
-  {
-    "code": 200,
-    "data": {
-      "addressId": 35205391
-    },
-    "meta": {
-      "message": "Success"
-    }
-  }
-]
-```
--------------------
 
-## Order Action
 
-### Get Orders by BC Order Id
 
-Get Orders by BC Order Id action is used to retrieve order details in BigCommerce B2B using the BigCommerce order identifier.
 
-#### Select Credentials and Action Events
-<img src="\img\credentials\bigcommerce-b2b\C-GTORDRbyBCODRID35.jpg" width="700" />
 
-Click on **Continue** button.
 
----------------------------
 
-#### Configuration
 
-| Field | Description |
-|------|-------------|
-| BC Order Id | Enter the BigCommerce order identifier. (e.g., "503") |
 
-> **Note:** BC Order Id is mandatory. The action returns order details mapped with the specified BigCommerce order.
 
-Click on **Continue**, then **Run** node.
 
--------------------------
 
-#### Example Configuration
-<img src="\img\credentials\bigcommerce-b2b\AC-GTORDRbyBCODRID36.jpg" width="700" />
 
--------------------------
 
-#### Result
 
-```json
-[
-  {
-    "id": 29544152,
-    "bcOrderId": "503",
-    "totalIncTax": 1007.25,
-    "poNumber": null,
-    "status": "Awaiting Payment",
-    "customStatus": "Awaiting Payment",
-    "cartId": null,
-    "items": 1,
-    "usdIncTax": 1007.25,
-    "companyId": 8565402,
-    "currencyCode": "USD",
-    "money": {
-      "currencyLocation": "left",
-      "currencyToken": "$",
-      "decimalToken": ".",
-      "decimalPlaces": 2,
-      "thousandsToken": ","
-    },
-    "statusCode": 7,
-    "isArchived": false,
-    "channelId": 1,
-    "channelName": "aec",
-    "isInvoiceOrder": 0,
-    "invoiceId": null,
-    "invoiceNumber": null,
-    "invoiceStatus": null,
-    "extraInt1": null,
-    "extraInt2": null,
-    "extraInt3": null,
-    "extraInt4": null,
-    "extraInt5": null,
-    "extraStr1": null,
-    "extraStr2": null,
-    "extraStr3": null,
-    "extraStr4": null,
-    "extraStr5": null,
-    "extraText": null,
-    "extraInfo": {},
-    "extraFields": [],
-    "createdAt": 1753355083,
-    "updatedAt": 1753355098
-  }
-]
-```
-----------------------
 
-  </TabItem>
-</Tabs>
 
-</div>
 
-### Support
+
+
+
+
+
+
+## Support
 
 Need help? Contact our support team at hello@appse.ai
