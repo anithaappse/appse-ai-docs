@@ -153,20 +153,31 @@ Refer to the **API Key tab** (Steps 1–8) to generate your Consumer Key and Con
 
 Here is the list of available triggers in WooCommerce:
 
-- **New Customers Created** – Retrieves events when a new customer is created in WooCommerce.
-- **Customers Updated** – Retrieves events when an existing WooCommerce customer is updated.
-- **New Products Created** – Retrieves events when a new product is added to WooCommerce.
-- **Products Updated** – Retrieves events when an existing WooCommerce product is updated.
-- **New Orders Created** – Retrieves events when a new order is placed in WooCommerce.
-- **Orders Updated** – Retrieves events when an existing WooCommerce order is updated.
+| Trigger                  | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| **New Products Created** | Retrieves events when a new product is added to WooCommerce.      |
+| **Products Updated**     | Retrieves events when an existing WooCommerce product is updated. |
+| **New Orders Created**   | Retrieves events when a new order is placed in WooCommerce.       |
+| **Orders Updated**       | Retrieves events when an existing WooCommerce order is updated.   |
 
 ## Actions
 
 Here is the list of available actions in WooCommerce product using product ID or SKU.
 
-- **Get Product by SKU** – Retrieve detailed product information from WooCommerce by SKU.
-- **Get Order Refund by Order ID** – Retrieve refund details for a specific WooCommerce order.
-- **Create Order Refund** – Create a refund for a WooCommerce order based on the order ID.
+| Action                           | Description                                                               |
+| -------------------------------- | ------------------------------------------------------------------------- |
+| **Get Product by SKU**           | Retrieve detailed product information from WooCommerce by SKU.            |
+| **Get Customer by ID**           | Retrieve detailed customer information using the WooCommerce customer ID. |
+| **Create Customer**              | Create a new customer in WooCommerce.                                     |
+| **Update Customer**              | Update an existing WooCommerce customer’s details.                        |
+| **Get Customer by Email**        | Retrieve customer information using the customer email address.           |
+| **Create Product**               | Create a new product in WooCommerce.                                      |
+| **Update Product**               | Update an existing WooCommerce product.                                   |
+| **Search Orders by Date Range**  | Search WooCommerce orders within a specified date range.                  |
+| **Create Order**                 | Create a new order in WooCommerce.                                        |
+| **Update Order**                 | Update an existing WooCommerce order.                                     |
+| **Get Order Refund by Order ID** | Retrieve refund details for a specific WooCommerce order.                 |
+| **Create Order Refund**          | Create a refund for a WooCommerce order based on the order ID.            |
 
 ## Support
 
