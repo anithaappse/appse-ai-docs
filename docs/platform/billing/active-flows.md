@@ -13,12 +13,12 @@ description: Learn what Active Flows are, how the concurrent flow limit works, a
 
 ## Flow Limits by Plan
 
-| Plan | Active Flows Included |
-|------|-----------------------|
-| Free | Not included — workflow execution requires a paid plan |
-| Starter | 3 flows |
-| Growth | 5 flows |
-| Enterprise | 5 flows |
+| Plan       | Active Flows Included                                  |
+| ---------- | ------------------------------------------------------ |
+| Free       | Not included — workflow execution requires a paid plan |
+| Starter    | 3 flows                                                |
+| Growth     | 5 flows                                                |
+| Enterprise | 5 flows                                                |
 
 You can monitor your current active flow usage at any time by navigating to **Billing → Usage → Active Flows**.
 
@@ -36,13 +36,14 @@ When your active flow limit is reached, **you will not be able to activate any a
 
 Attempting to activate a workflow beyond your plan's limit displays the following prompt:
 
-> *"Your plan has reached the active Flow limit. Buy more Flows to keep activating workflows."*
+> _"Your plan has reached the active Flow limit. Buy more Flows to keep activating workflows."_
 
 <br/>
 
 <img src="\img\platform\billing\flow-limit-reached.png" alt="Flow limit reached modal" width="500"/>
 
 To activate a new workflow, you can either:
+
 - **Deactivate** an existing active workflow to free up a slot, or
 - **Buy more flows** to increase your concurrent limit.
 
@@ -60,7 +61,7 @@ Extra flows are priced at **$10 per flow per month**, billed annually at **$120 
 - **From next renewal**: The extra flows are permanently added to your plan and billed as part of your annual subscription going forward.
 
 :::info
-Unlike AI Credit packs, extra flows are a **recurring add-on** — not a one-time purchase. Once bought, they are included in your plan at every renewal until removed.
+Unlike AI Credit packs, extra flows are a **recurring add-on** — not a one-time purchase. Once bought, they are included in your plan at every renewal.
 :::
 
 ### How to Buy Extra Flows
