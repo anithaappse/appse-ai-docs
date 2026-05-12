@@ -143,8 +143,6 @@ Click on **Continue** button. , then **Run** the node.
 
 #### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
 <img src="/img/credentials/sap-b1/TriggerConfiguration.jpg" width="700"  alt="SAP B1 New Items Created screenshot" />
 
 #### Result
