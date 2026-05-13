@@ -85,7 +85,7 @@ Once you've filled in the necessary fields, click **"Save"** to store and verify
 - If successful, your SAP B1 credential will show a "check (✓)" icon. Now you can use this application for your integrations.
 - If it fails, you will be displayed a "!" icon. In that case, please recheck your API Key and Domain or contact support.
 
----
+--------
 
 ## Triggers and Actions
 
@@ -120,7 +120,7 @@ It captures the item details and passes them to the next step for further proces
 
 > **Note:** This is a trigger node, so it does not take any input data.
 
------
+------------------
 
 #### Select Credentials and Trigger Event
 
@@ -128,7 +128,7 @@ It captures the item details and passes them to the next step for further proces
 
 Click on **Continue** button.
 
--------
+----------------------
 
 #### Configuration Fields
 
@@ -137,7 +137,7 @@ Click on **Continue** button.
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ----------------
 
@@ -164,11 +164,10 @@ Click on **Continue** button. , then **Run** the node.
 
 **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
 
-This trigger is commonly used to **sync inventory changes**, **update product catalogs**.
 
 > **Note:** The trigger executes only after the item update is successfully saved. All relevant details (such as item ID, updated fields, and timestamps) are included in the output payload.
 
-------
+---------------------
 
 #### Select Credentials and Trigger Event
 
@@ -183,9 +182,9 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
---------------
+-----------------
 
 #### Example Configuration
 
@@ -264,7 +263,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 --------
 
@@ -312,7 +311,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -339,7 +338,6 @@ Click on **Continue** button. , then **Run** the node.
   }
 ]
 ```
-
 -------
 
 ### New Business Partner Created
@@ -348,7 +346,7 @@ Click on **Continue** button. , then **Run** the node.
 
 > **Note:** The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
 
--------
+-------------------
 
 #### Select Credentials and Trigger Event
 
@@ -364,7 +362,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -390,7 +388,6 @@ Click on **Continue** button. , then **Run** the node.
 
 **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
 
-This trigger is commonly used to **sync partner data across systems**, or **trigger validation processes**.
 
 > **Note:** The trigger executes only after the business partner update is successfully saved. All relevant details (such as partner ID, modified fields, contact information, and timestamps) are included in the output payload.
 
@@ -410,7 +407,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -458,7 +455,7 @@ Click on **Continue** button..
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -504,7 +501,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -550,7 +547,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -601,7 +598,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -647,7 +644,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -693,7 +690,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
@@ -744,7 +741,7 @@ Click on **Continue** button..
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
-Click on **Continue** button. , then **Run** the node.
+Click on **Continue** button, then **Run** the node.
 
 ---------
 
