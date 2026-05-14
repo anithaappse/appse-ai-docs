@@ -42,7 +42,7 @@ This opens the Zoho POS credential form. Add your **Connection Name**.
 
 <img src="/img/credentials/zohopos/enter-connection-name-zohoPos.png" alt="appse ai Zoho POS Connection Name" width="700"/>
 
-Select the correct **Base Url** (US, IN)
+Select the correct **Base URL** (US, IN).
 
 <img src="/img/credentials/zohopos/select-base-url-appseai.png" alt="appse ai Zoho POS select data center" width="700"/>
 
@@ -86,7 +86,7 @@ Keep your credentials secure. Do not share your Client Secret publicly. If you b
 
 Here is a list of the available actions for Zoho POS:
 
-### Actions
+
 
 #### Bills
 
