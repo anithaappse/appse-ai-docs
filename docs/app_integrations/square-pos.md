@@ -63,11 +63,11 @@ Use this path when you already have a Square application configured and only nee
 
 1. Navigate to the [Square Developer Dashboard](https://developer.squareup.com/apps) → **Applications** page.
 
-<img src="/img/credentials/square-pos/sp1.png" alt="Applications page" width="700"/>
+<img src="/img/credentials/square-pos/sp01.png" alt="Applications page" width="700"/>
 
 2. Click on the open button for the respective application.
 
-<img src="/img/credentials/square-pos/sp2.png" alt="Open existing application" width="700"/>
+<img src="/img/credentials/square-pos/sp02.png" alt="Open existing application" width="700"/>
 
 You will use this application’s OAuth settings and credentials in the following steps.
 
@@ -78,21 +78,21 @@ Use this path when you need a new Square application for appse ai.
 
 1. Navigate to the [Square Developer Dashboard](https://developer.squareup.com/apps) → **Applications** page
 
-<img src="/img/credentials/square-pos/sp1.png" alt="Applications page" width="700"/>
+<img src="/img/credentials/square-pos/sp01.png" alt="Applications page" width="700"/>
 
 2. Start creating an application by clicking on the Plus (+) icon displayed.
 
-<img src="/img/credentials/square-pos/sp6.png" alt="Add new app" width="700"/>
+<img src="/img/credentials/square-pos/sp06.png" alt="Add new app" width="700"/>
 
 3. Enter an **Application name** you will recognize later.
 
-<img src="/img/credentials/square-pos/sp7.png" alt="Enter app name" width="700"/>
+<img src="/img/credentials/square-pos/sp07.png" alt="Enter app name" width="700"/>
 
 4. Complete next steps - `What will you build first?`, `Find your audience` then finish creating the application.
 
-<img src="/img/credentials/square-pos/sp8.png" alt="Choose product use case" width="700"/>
+<img src="/img/credentials/square-pos/sp08.png" alt="Choose product use case" width="700"/>
 
-<img src="/img/credentials/square-pos/sp9.png" alt="Choose audience" width="700"/>
+<img src="/img/credentials/square-pos/sp09.png" alt="Choose audience" width="700"/>
 
 After the application created, continue with **Configure OAuth** below.
 
@@ -103,7 +103,9 @@ After the application created, continue with **Configure OAuth** below.
 
 In your Square application, go to the **OAuth** section and configure the redirect URL.
 
-<img src="/img/credentials/square-pos/sp4.png" alt="Configure Redirect URL" width="700"/>
+<img src="/img/credentials/square-pos/sp03.png" alt="Navigate to Oauth" width="700"/>
+
+<img src="/img/credentials/square-pos/sp04.png" alt="Configure redirect URL" width="700"/>
 
 Add the callback URL displayed in the appse ai configure credential form. For example:
 
@@ -111,7 +113,7 @@ Add the callback URL displayed in the appse ai configure credential form. For ex
 https://embedded-ui.appse.ai/oauth-callback.html
 ```
 
-<img src="/img/credentials/square-pos/sp5.png" alt="Redirect URL popup" width="700"/>
+<img src="/img/credentials/square-pos/sp05.png" alt="Redirect URL popup" width="700"/>
 
 This URL must match the **Callback URL** shown in the appse ai Square POS credential form.
 
