@@ -1,6 +1,7 @@
 ---
 title: "Dynamics 365 Business Central"
 slug: /app-integrations/dynamics-365-business-central
+description: Step-by-step guide to set up Business Central credentials and automate ERP workflows in appse ai.
 ---
 
 Dynamics 365 Business Central is an all-in-one business management solution designed to help organizations streamline their financials, operations, and customer relationships. With appse ai, you can easily connect your Dynamics 365 Business Central account, automate business processes, and integrate data seamlessly across your workflows, enhancing efficiency and accuracy in your operations.
@@ -91,7 +92,7 @@ Once you've filled in the necessary fields, click **"Save"** to store and verify
 **New Customer Created** trigger is used to fetch newly created customer records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-NWCSTMRCRTD1.jpg" width="700" />
+<img src="/img/credentials/business-central/C-NWCSTMRCRTD1.jpg" alt="New Customer Created" width="700" />
 
 Click on **Continue** button.
 
@@ -111,7 +112,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New Customer Created example configuration" width="700" />
 
 -------------------------
 
@@ -158,7 +159,7 @@ Click on **Continue**, then **Run** node.
 **Customer Update** trigger is used to fetch updated customer records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-CSTMRUPDT3.jpg" width="700" />
+<img src="/img/credentials/business-central/C-CSTMRUPDT3.jpg" alt="Customer Update" width="700" />
 
 Click on **Continue** button.
 
@@ -178,7 +179,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="Customer Update example configuration" width="700" />
 
 -------------------------
 
@@ -225,7 +226,7 @@ Click on **Continue**, then **Run** node.
 **New Contacts Created** trigger is used to fetch newly created contact records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-NWCNTCTCRTD4.jpg" width="700" />
+<img src="/img/credentials/business-central/C-NWCNTCTCRTD4.jpg" alt="New Contacts Created" width="700" />
 
 Click on **Continue** button.
 
@@ -245,7 +246,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New Contacts Created example configuration" width="700" />
 
 -------------------------
 
@@ -288,7 +289,7 @@ Click on **Continue**, then **Run** node.
 **Contacts Updated** trigger is used to fetch updated contact records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-CONTCTUPDT5.jpg" width="700" />
+<img src="/img/credentials/business-central/C-CONTCTUPDT5.jpg" alt="Contacts Updated" width="700" />
 
 Click on **Continue** button.
 
@@ -308,7 +309,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="Contacts Updated example configuration" width="700" />
 
 -------------------------
 
@@ -351,7 +352,7 @@ Click on **Continue**, then **Run** node.
 **New Items Created** trigger is used to fetch newly created item records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-NWITMCRTD6.jpg" width="700" />
+<img src="/img/credentials/business-central/C-NWITMCRTD6.jpg" alt="New Items Created" width="700" />
 
 Click on **Continue** button.
 
@@ -371,7 +372,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New Items Created example configuration" width="700" />
 
 -------------------------
 
@@ -413,7 +414,7 @@ Click on **Continue**, then **Run** node.
 **Items Updated** trigger is used to fetch updated item records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-ITMSUPDT7.jpg" width="700" />
+<img src="/img/credentials/business-central/C-ITMSUPDT7.jpg" alt="Items Updated" width="700" />
 
 Click on **Continue** button.
 
@@ -433,7 +434,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="Items Updated example configuration" width="700" />
 
 -------------------------
 
@@ -475,7 +476,7 @@ Click on **Continue**, then **Run** node.
 **Opportunities Created** trigger is used to fetch newly created opportunity records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-OPPRTNTCRTD8.jpg" width="700" />
+<img src="/img/credentials/business-central/C-OPPRTNTCRTD8.jpg" alt="Opportunities Created" width="700" />
 
 Click on **Continue** button.
 
@@ -495,7 +496,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="Opportunities Created example configuration" width="700" />
 
 -------------------------
 
@@ -533,7 +534,7 @@ Click on **Continue**, then **Run** node.
 **New SalesOrders Created** trigger is used to fetch newly created sales order records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-NWSLSORDRCRTD9.jpg" width="700" />
+<img src="/img/credentials/business-central/C-NWSLSORDRCRTD9.jpg" alt="New SalesOrders Created" width="700" />
 
 Click on **Continue** button.
 
@@ -553,7 +554,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New SalesOrders Created example configuration" width="700" />
 
 -------------------------
 
@@ -731,7 +732,7 @@ Click on **Continue**, then **Run** node.
 **New Sales Invoices Created** trigger is used to fetch newly created sales invoice records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\NWSLSINVCCRTD10.jpg" width="700" />
+<img src="/img/credentials/business-central/NWSLSINVCCRTD10.jpg" alt="New Sales Invoices Created" width="700" />
 
 Click on **Continue** button.
 
@@ -751,7 +752,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New Sales Invoices Created example configuration" width="700" />
 
 -------------------------
 
@@ -860,7 +861,7 @@ Click on **Continue**, then **Run** node.
 **New Sales Shipment Created** trigger is used to fetch newly created sales shipment records from Shopify based on a specified time and limit.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-NWSLSSHPMNTCRTD11.jpg" width="700" />
+<img src="/img/credentials/business-central/C-NWSLSSHPMNTCRTD11.jpg" alt="New Sales Shipment Created" width="700" />
 
 Click on **Continue** button.
 
@@ -880,7 +881,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCSTMRCRTD2.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCSTMRCRTD2.jpg" alt="New Sales Shipment Created example configuration" width="700" />
 
 -------------------------
 
@@ -996,7 +997,7 @@ Click on **Continue**, then **Run** node.
 **Create a New Customer** action is used to create a new customer record with personal and contact details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-AC-CRTNWCSTMR1.jpg" width="700" />
+<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR1.jpg" alt="Create a New Customer" width="700" />
 
 Click on **Continue** button.
 
@@ -1027,8 +1028,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\C-AC-CRTNWCSTMR2.jpg" width="700" />
-<img src="\img\credentials\business-central\C-AC-CRTNWCSTMR3.jpg" width="700" />
+<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR2.jpg" alt="Create a New Customer example configuration 1" width="700" />
+<img src="/img/credentials/business-central/C-AC-CRTNWCSTMR3.jpg" alt="Create a New Customer example configuration 2" width="700" />
 
 -------------------------
 
@@ -1076,7 +1077,7 @@ Click on **Continue**, then **Run** node.
 **Update a Customer** action is used to modify an existing customer record with updated personal and contact details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-AC-UPDTCSTMR4.jpg" width="700" />
+<img src="/img/credentials/business-central/C-AC-UPDTCSTMR4.jpg" alt="Update a Customer" width="700" />
 
 Click on **Continue** button.
 
@@ -1103,7 +1104,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-UPDTCSTMR5.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-UPDTCSTMR5.jpg" alt="Update a Customer example configuration" width="700" />
 
 -------------------------
 
@@ -1151,7 +1152,7 @@ Click on **Continue**, then **Run** node.
 **Get Customer by Email** action is used to retrieve customer details using the customer's email address.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-AC-GTCSTMRbyEML6.jpg" width="700" />
+<img src="/img/credentials/business-central/C-AC-GTCSTMRbyEML6.jpg" alt="Get Customer by Email" width="700" />
 
 Click on **Continue** button.
 
@@ -1170,7 +1171,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-GTCSTMRbyEML7.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-GTCSTMRbyEML7.jpg" alt="Get Customer by Email example configuration" width="700" />
 
 -------------------------
 
@@ -1219,7 +1220,7 @@ Click on **Continue**, then **Run** node.
 **Create a New Contact** action is used to create a new contact record with personal, company, and communication details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\business-central\C-AC-NWCMPNYCRTD9.jpg" width="700" />
+<img src="/img/credentials/business-central/C-AC-NWCMPNYCRTD9.jpg" alt="Create a New Contact" width="700" />
 
 Click on **Continue** button.
 
@@ -1253,8 +1254,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\business-central\AC-NWCMPNYCRTD10.jpg" width="700" />
-<img src="\img\credentials\business-central\AC-NWCMPNYCRTD11.jpg" width="700" />
+<img src="/img/credentials/business-central/AC-NWCMPNYCRTD10.jpg" alt="Create a New Contact example configuration 1" width="700" />
+<img src="/img/credentials/business-central/AC-NWCMPNYCRTD11.jpg" alt="Create a New Contact example configuration 2" width="700" />
 
 -------------------------
 
@@ -1293,56 +1294,6 @@ Click on **Continue**, then **Run** node.
 ```
 -------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Support
 
-Need help? Contact our support team at hello@appse.ai
+Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)

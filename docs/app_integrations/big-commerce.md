@@ -1,6 +1,7 @@
 ---
 title: "BigCommerce"
-slug : /app-integrations/bigcommerce
+slug: /app-integrations/bigcommerce
+description: Step-by-step guide to set up  BigCommerce credentials and automate e-commerce workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -114,7 +115,7 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 #### Select Credentials and Trigger Event
 
-<img src="\img\credentials\big-commerce\C-NWCUSTMRCRTD1.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-NWCUSTMRCRTD1.jpg" alt="New Customer Created" width="700" />
 
 Click on **Continue** button
 
@@ -135,7 +136,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="\img\credentials\big-commerce\AC-CRTNWCUSTMR2.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCUSTMR2.jpg" alt="New Customer Created example configuration" width="700" />
 
 ---------------
 
@@ -180,7 +181,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Trigger Event
 
-<img src="\img\credentials\big-commerce\C-CUSTMRUPDT3.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-CUSTMRUPDT3.jpg" alt="Customers Update" width="700" />
 
 Click on **Continue** button
 
@@ -201,7 +202,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="\img\credentials\big-commerce\AC-CRTNWCUSTMR2.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCUSTMR2.jpg" alt="Customers Update example configuration" width="700" />
 
 ---------------
 
@@ -246,7 +247,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Trigger Event
 
-<img src="\img\credentials\big-commerce\C-PRDTUPDT4.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-PRDTUPDT4.jpg" alt="Products Updated" width="700" />
 
 Click on **Continue** button
 
@@ -267,7 +268,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="\img\credentials\big-commerce\AC-CRTNWCUSTMR2.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCUSTMR2.jpg" alt="Products Updated example configuration" width="700" />
 
 ---------------
 
@@ -365,7 +366,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Trigger Event
 
-<img src="\img\credentials\big-commerce\C-NWORDCRTD5.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-NWORDCRTD5.jpg" alt="New Orders Created" width="700" />
 
 Click on **Continue** button
 
@@ -386,7 +387,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="\img\credentials\big-commerce\AC-CRTNWCUSTMR2.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCUSTMR2.jpg" alt="New Orders Created example configuration" width="700" />
 
 ---------------
 
@@ -521,7 +522,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Events
 
-<img src="\img\credentials\big-commerce\C-CRTNWCTSMR11.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-CRTNWCTSMR11.jpg" alt="Create a New Customer" width="700" />
 
 Click on **Continue** button
 
@@ -560,9 +561,9 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="\img\credentials\big-commerce\AC-CRTNWCSTMR12.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-CRTNWCSTMR13.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-CRTNWCSTMR14.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCSTMR12.jpg" alt="Create a New Customer example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCSTMR13.jpg" alt="Create a New Customer example configuration 2" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTNWCSTMR14.jpg" alt="Create a New Customer example configuration 3" width="700" />
 
 -----------------------
 
@@ -629,7 +630,7 @@ Click on **Continue**, then **Run** node
 **Update an Existing Customer** action is used to modify an existing customer record in Shopify with updated contact details, company information, and tax settings.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-UPDTCUSTMR15.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-UPDTCUSTMR15.jpg" alt="Update an Existing Customer" width="700" />
 
 Click on **Continue** button.
 
@@ -656,8 +657,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-UPDTCUSTMR16.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-UPDTCUSTMR17.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTCUSTMR16.jpg" alt="Update an Existing Customer example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTCUSTMR17.jpg" alt="Update an Existing Customer example configuration 2" width="700" />
 
 -------------------------
 
@@ -709,7 +710,7 @@ Click on **Continue**, then **Run** node.
 **Get Customer Addresses by Customer Id** action is used to retrieve all saved addresses associated with an existing customer in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTCUSTMRADDRSbyCUSTMRID18.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTCUSTMRADDRSbyCUSTMRID18.jpg" alt="Get Customer Addresses by Customer Id" width="700" />
 
 Click on **Continue** button.
 
@@ -728,7 +729,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTCUSTMRADDRSbyCUSTMRID19.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTCUSTMRADDRSbyCUSTMRID19.jpg" alt="Get Customer Addresses by Customer Id example configuration" width="700" />
 
 -------------------------
 
@@ -768,7 +769,7 @@ Click on **Continue**, then **Run** node.
 **Get Customers by Email** action is used to retrieve customer details in Shopify using the customer's email address.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTCUSTMRbyEML20.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTCUSTMRbyEML20.jpg" alt="Get Customers by Email" width="700" />
 
 Click on **Continue** button.
 
@@ -787,7 +788,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTCUSTMRbyEML21.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTCUSTMRbyEML21.jpg" alt="Get Customers by Email example configuration" width="700" />
 
 -------------------------
 
@@ -831,7 +832,7 @@ Click on **Continue**, then **Run** node.
 **Get Customer Addresses** action is used to retrieve all saved addresses associated with an existing customer in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTCUSTMRADDRSbyCUSTMRID18.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTCUSTMRADDRSbyCUSTMRID18.jpg" alt="Get Customer Addresses" width="700" />
 
 Click on **Continue** button.
 
@@ -850,7 +851,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTCUSTMRADDRSES23.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTCUSTMRADDRSES23.jpg" alt="Get Customer Addresses example configuration" width="700" />
 
 -------------------------
 
@@ -901,7 +902,7 @@ Click on **Continue**, then **Run** node.
 **Update Customer Addresses** action is used to modify an existing customer address in Shopify with updated contact and location details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-UPDTADRES24.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-UPDTADRES24.jpg" alt="Update Customer Addresses" width="700" />
 
 Click on **Continue** button.
 
@@ -930,8 +931,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-UPDTADRES25.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-UPDTADRES26.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTADRES25.jpg" alt="Update Customer Addresses example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTADRES26.jpg" alt="Update Customer Addresses example configuration 2" width="700" />
 
 -------------------------
 
@@ -972,7 +973,7 @@ Click on **Continue**, then **Run** node.
 **Create a New Product** action is used to create a new product in Shopify with pricing, dimensions, inventory, and visibility settings.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-CRTPRDT27.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-CRTPRDT27.jpg" alt="Create a New Product" width="700" />
 
 Click on **Continue** button.
 
@@ -1007,8 +1008,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-CRTPRDT28.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-CRTPRDT29.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTPRDT28.jpg" alt="Create a New Product example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTPRDT29.jpg" alt="Create a New Product example configuration 2" width="700" />
 
 -------------------------
 
@@ -1146,7 +1147,7 @@ Click on **Continue**, then **Run** node.
 **Update Product** action is used to modify an existing product in Shopify with updated product details, pricing, dimensions, and feature settings.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-UPDTPRDT30.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-UPDTPRDT30.jpg" alt="Update Product" width="700" />
 
 Click on **Continue** button.
 
@@ -1178,8 +1179,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-UPDTPRDT31.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-UPDTPRDT32.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTPRDT31.jpg" alt="Update Product example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTPRDT32.jpg" alt="Update Product example configuration 2" width="700" />
 
 -------------------------
 
@@ -1279,7 +1280,7 @@ Click on **Continue**, then **Run** node.
 **Update Inventory Level** action is used to modify the available inventory quantity for an existing product in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-UPDTINVNTRYLVL33.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-UPDTINVNTRYLVL33.jpg" alt="Update Inventory Level" width="700" />
 
 Click on **Continue** button.
 
@@ -1299,7 +1300,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-UPDTINVNTRYLVL34.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTINVNTRYLVL34.jpg" alt="Update Inventory Level example configuration" width="700" />
 
 -------------------------
 
@@ -1401,7 +1402,7 @@ Click on **Continue**, then **Run** node.
 **Get Product by SKU** action is used to retrieve product details in Shopify using the product SKU (Stock Keeping Unit).
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTPRDTbySKU35.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTPRDTbySKU35.jpg" alt="Get Product by SKU" width="700" />
 
 Click on **Continue** button.
 
@@ -1420,7 +1421,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTPRDTbySKU36.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTPRDTbySKU36.jpg" alt="Get Product by SKU example configuration" width="700" />
 
 -------------------------
 
@@ -1519,7 +1520,7 @@ Click on **Continue**, then **Run** node.
 **Get Order by ID** action is used to retrieve order details in Shopify using the unique order identifier.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTORDbyORDRID37.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTORDbyORDRID37.jpg" alt="Get Order by ID" width="700" />
 
 Click on **Continue** button.
 
@@ -1538,7 +1539,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTORDbyORDRID38.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTORDbyORDRID38.jpg" alt="Get Order by ID example configuration" width="700" />
 
 -------------------------
 
@@ -1665,7 +1666,7 @@ Click on **Continue**, then **Run** node.
 **Update Order** action is used to modify an existing order in Shopify with updated status, customer, payment, and message details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-UPDTORD39.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-UPDTORD39.jpg" alt="Update Order" width="700" />
 
 Click on **Continue** button.
 
@@ -1690,7 +1691,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-UPDTORD40.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-UPDTORD40.jpg" alt="Update Order example configuration" width="700" />
 
 -------------------------
 
@@ -1817,7 +1818,7 @@ Click on **Continue**, then **Run** node.
 **Get Order Products** action is used to retrieve all products associated with a specific order in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTORDRPRDTbyORDRId41.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTORDRPRDTbyORDRId41.jpg" alt="Get Order Products" width="700" />
 
 Click on **Continue** button.
 
@@ -1836,7 +1837,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTORDRPRDTbyORDRId42.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTORDRPRDTbyORDRId42.jpg" alt="Get Order Products example configuration" width="700" />
 
 -------------------------
 
@@ -1930,7 +1931,7 @@ Click on **Continue**, then **Run** node.
 **Get Order Shipping Addresses** action is used to retrieve shipping address details associated with a specific order in Shopify.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-GTADDRSbyORDRID43.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-GTADDRSbyORDRID43.jpg" alt="Get Order Shipping Addresses" width="700" />
 
 Click on **Continue** button.
 
@@ -1949,7 +1950,7 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-GTADDRSbyORDRID44.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-GTADDRSbyORDRID44.jpg" alt="Get Order Shipping Addresses example configuration" width="700" />
 
 -------------------------
 
@@ -2012,7 +2013,7 @@ Click on **Continue**, then **Run** node.
 **Create Order Fulfillment** action is used to create a fulfillment for an existing order in Shopify with item quantities, tracking, shipping, and delivery details.
 
 #### Select Credentials and Action Events
-<img src="\img\credentials\big-commerce\C-CRTORDFUFLMNT45.jpg" width="700" />
+<img src="/img/credentials/big-commerce/C-CRTORDFUFLMNT45.jpg" alt="Create Order Fulfillment" width="700" />
 
 Click on **Continue** button.
 
@@ -2042,8 +2043,8 @@ Click on **Continue**, then **Run** node.
 -------------------------
 
 #### Example Configuration
-<img src="\img\credentials\big-commerce\AC-CRTORDFUFLMNT46.jpg" width="700" />
-<img src="\img\credentials\big-commerce\AC-CRTORDFUFLMNT47.jpg" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTORDFUFLMNT46.jpg" alt="Create Order Fulfillment example configuration 1" width="700" />
+<img src="/img/credentials/big-commerce/AC-CRTORDFUFLMNT47.jpg" alt="Create Order Fulfillment example configuration 2" width="700" />
 
 -------------------------
 
@@ -2113,5 +2114,6 @@ Click on **Continue**, then **Run** node.
 </TabItem>
 </Tabs>
 
-### Need Help?
-If you’re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+## Support
+
+Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
