@@ -93,7 +93,7 @@ Enter your Microsoft work or school email and click **Next** to continue.
 
 Enter your password and click **Sign In** to continue.
 
-<img src="/img/credentials/dynamics-365-customer-insights/click-sign-in-365-bussiness-central.png" alt="Enter password" width="700"/>
+<img src="/img/credentials/dynamics-365-customer-insights/click-sign-in-365-business-central.png" alt="Enter password" width="700"/>
 
 
 
@@ -115,7 +115,7 @@ The following tables outline the available triggers and actions for Microsoft Dy
 | **On Journey Updated** | Activates when an existing customer journey is modified. |
  
 
- 
+  
 ### Actions
  
 | Action Name | Category | Description |
