@@ -1,15 +1,13 @@
 ---
 title: Microsoft Dynamics 365 Customer Insights - Journeys
-description: Step-by-step guide to set up Microsoft Dynamics 365 Customer Insights - Journeys credentials for appse.ai integration
+description: Step-by-step guide to set up Microsoft Dynamics 365 Customer Insights - Journeys credentials for appse ai integration
 slug: /app-integrations/microsoft-dynamics-365-ci-journeys/
 ---
+
 
 **Microsoft Dynamics 365 Customer Insights - Journeys** is a powerful marketing automation platform from Microsoft that helps organizations orchestrate real-time, personalized customer journeys across all touchpoints. It enables businesses to manage contacts, leads, segments, email campaigns, and customer interactions within the Microsoft ecosystem.
 
 This guide walks you through the process of adding **Microsoft Dynamics 365 Customer Insights - Journeys credentials** within appse ai, enabling secure integration to fetch and post data in your Dynamics 365 CI Journeys environment.
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ---
 
@@ -26,11 +24,16 @@ import TabItem from '@theme/TabItem';
 
 ## Setup Credential
 
-Follow the steps below to quickly set up your Microsoft Dynamics 365 Customer Insights - Journeys credential.
+### Required Fields
 
-## Step-by-Step Guide
+| Field | Description |
+|---|---|
+| **Connection Name** | A name to identify this connection |
+| **Environment URL** | Your Dynamics 365 CI Journeys environment URL |
 
-To get started with Microsoft Dynamics 365 Customer Insights - Journeys, you need to set credentials for it. Go to the credential page of appse.ai.
+### Step-by-Step Guide
+
+To get started with Microsoft Dynamics 365 Customer Insights - Journeys, you need to set credentials for it. Go to the credential page of appse ai.
 
 Click on **Add credentials**, search for Microsoft Dynamics 365 Customer Insights - Journeys.
 
@@ -65,7 +68,9 @@ Environment URL: https://orgXXXXX.crm8.dynamics.com
 
 <img src="/img/credentials/dynamics-365-customer-insights/copy-url-365-journey.png" alt="Copy Environment URL from Power Platform Admin Center" width="700"/>
 
-> ℹ️ The Environment URL format is always: `https://orgXXXXX.crm8.dynamics.com`
+:::note
+The Environment URL format is always: `https://orgXXXXX.crm8.dynamics.com`
+:::
 
 
 ### Step 2. Authorize Our App & Connect
@@ -126,4 +131,4 @@ The following tables outline the available triggers and actions for Microsoft Dy
 
 ## Support
 
-Need help? Contact our support team at hello@appse.ai
+Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
