@@ -1,24 +1,8 @@
 ---
 title: "Dynamics 365 Business Central oData Rest"
 slug: /app-integrations/dynamics365businesscentralodata
+description: Step-by-step guide to set up Dynamics 365 Business Central OData REST credentials and automate business workflows in appse ai.
 ---
-
-<style>{`
-div[class*='language-json'] {
-  max-width: 100%;
-  overflow: auto;
-}
-
-div[class*='language-json'] pre {
-  max-height: 24rem;
-  overflow: auto;
-}
-
-div[class*='language-json'] code {
-  white-space: pre;
-  word-break: normal;
-}
-`}</style>
 
 Dynamics 365 Business Central is an all-in-one business management solution designed to help organizations streamline their financials, operations, and customer relationships. With appse ai, you can easily connect your Dynamics 365 Business Central account, automate business processes, and integrate data seamlessly across your workflows, enhancing efficiency and accuracy in your operations.
 
@@ -52,10 +36,10 @@ You’ll need to provide:
 #### 2. Locate Your Tenant ID
 
 - Go to the [Azure Portal](https://portal.azure.com).
-  <img src="/img/credentials/business-central-odata/business-central-cred-azure-dashboard.png" alt="APPSeAI Business Central Azure Dashboard" width="700"/>
+  <img src="/img/credentials/business-central-odata/business-central-cred-azure-dashboard.png" alt="appse ai Business Central Azure Dashboard" width="700"/>
 
 - Search for **Microsoft Entra ID** → **Overview**.
-  <img src="/img/credentials/business-central-odata/business-central-cred-tenant-id.png" alt="APPSeAI Business Central Tenant ID" width="700"/>
+  <img src="/img/credentials/business-central-odata/business-central-cred-tenant-id.png" alt="appse ai Business Central Tenant ID" width="700"/>
 
 - Copy the **Tenant ID** from the overview page.
 
@@ -68,16 +52,16 @@ You’ll need to provide:
 - Log in to your [Business Central](https://www.microsoft.com/en-in/dynamics-365/products/business-central/sign-in) account.
 
 - Click on the **Search** icon → Search "Companies" → Click on Companies.
-  <img src="/img/credentials/business-central-odata/business-central-company-id-1.png" alt="APPSeAI Business Central Companies Search" width="700"/>
+  <img src="/img/credentials/business-central-odata/business-central-company-id-1.png" alt="appse ai Business Central Companies Search" width="700"/>
 
 - Select Your Company Name from the list.
-  <img src="/img/credentials/business-central-odata/business-central-company-id-2.png" alt="APPSeAI Business Central Select Company name" width="700"/>
+  <img src="/img/credentials/business-central-odata/business-central-company-id-2.png" alt="appse ai Business Central Select Company name" width="700"/>
 
 > **Example**: `CRONUS IN`
 
 - Copy **Company Name** and paste it in the credential form → Click on Save and Authorize.
 
-<img src="/img/credentials/business-central-odata/save-cred.png" alt="APPSeAI Business Central Microsoft Login" width="700"/>
+<img src="/img/credentials/business-central-odata/save-cred.png" alt="appse ai Business Central Save and Authorize credential form" width="700"/>
 
 ---
 
@@ -85,7 +69,7 @@ You’ll need to provide:
 
 - You will be showcased a pop-up that prompts you to login to your Business Central account using your Microsoft account credentials.
 
-<img src="/img/credentials/business-central-odata/business-central-cred-microsoft-login.png" alt="APPSeAI Business Central Microsoft Login" width="700"/>
+<img src="/img/credentials/business-central-odata/business-central-cred-microsoft-login.png" alt="appse ai Business Central Microsoft Login" width="700"/>
 
 - If you followed all the steps correctly, your Business Central credential should be connected to our platform.
 
@@ -202,42 +186,44 @@ For using appse ai actions, make sure to publish these pages:
 
 Here is a list of the available actions for Business Central oData Rest:
 
-## Item Ledger Entry Actions
+### Item Ledger Entry Actions
 
-### Get Item Ledger Entries by Location Code
+#### Get Item Ledger Entries by Location Code
 
 Get Item Ledger Entries by Location Code action is used to retrieve item ledger entries based on the specified location code.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-GTITMLDGERbyLOCTNCOD1.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-GTITMLDGERbyLOCTNCOD1.jpg" alt="Business Central Get Item Ledger Entries by Location Code action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
 | Location Code | Specify the location code to fetch item ledger entries. (e.g., `"BLUE"`) |
 | Limit | Specify the maximum number of records to return. (e.g., `"1"`) |
 
-> **Note:** `Location Code` and `Limit` are mandatory fields.
+:::note
+`Location Code` and `Limit` are mandatory fields.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-GTITMLDGERbyLOCTNCOD2.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-GTITMLDGERbyLOCTNCOD2.jpg" alt="Business Central Get Item Ledger Entries by Location Code example configuration" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -299,7 +285,7 @@ Click on **Continue**, then **Run** node.
 ```
 ------------------------------
 
-## ShipToAddress Actions
+### ShipToAddress Actions
 
 #### Get Customer Ship-to-Addresses
 
@@ -307,33 +293,35 @@ Get Customer Ship-to-Addresses action is used to retrieve ship-to address detail
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-GTCUSTMRSHP2ADRS3.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-GTCUSTMRSHP2ADRS3.jpg" alt="Business Central Get Customer Ship-to-Addresses action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
 | Customer No | Specify the customer number to fetch ship-to address details. (e.g., `"10000"`) |
 
-> **Note:** `Customer No` is a mandatory field.
+:::note
+`Customer No` is a mandatory field.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-GTCUSTMRSHP2ADRS4.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-GTCUSTMRSHP2ADRS4.jpg" alt="Business Central Get Customer Ship-to-Addresses example configuration" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -647,21 +635,21 @@ Click on **Continue**, then **Run** node.
 ```
 ----------------------------------
 
-### Create Customer Ship to Address
+#### Create Customer Ship to Address
 
 Create Customer Ship to Address action is used to create a new ship-to address for a specific customer with address and contact details.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-CRTCUSTMRAdRS5.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-CRTCUSTMRAdRS5.jpg" alt="Business Central Create Customer Ship to Address action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
@@ -675,20 +663,22 @@ Click on **Continue** button.
 | Country/Region Code | Specify the country or region code. (e.g., `"IN"`) |
 | Phone No | Contact phone number. (e.g., `"9876567898"`) |
 
-> **Note:** `Customer No`, `Ship-to Code`, and `Name` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::note
+`Customer No`, `Ship-to Code`, and `Name` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-CRTCUSTMRAdRS6.jpg" width="700" />
-<img src="\img\credentials\business-central-odata\AC-CRTCUSTMRAdRS7.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-CRTCUSTMRAdRS6.jpg" alt="Business Central Create Customer Ship to Address example configuration part 1" width="700" />
+<img src="/img/credentials/business-central-odata/AC-CRTCUSTMRAdRS7.jpg" alt="Business Central Create Customer Ship to Address example configuration part 2" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -731,23 +721,23 @@ Click on **Continue**, then **Run** node.
 ```
 -----------------------------
 
-## Item Journal Transaction
+### Item Journal Transaction
 
-### Create Item Journal Entry
+#### Create Item Journal Entry
 
 Create Item Journal Entry action is used to create a new item journal entry with inventory adjustment details.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-CRTITMJURNLENTRY8.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-CRTITMJURNLENTRY8.jpg" alt="Business Central Create Item Journal Entry action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
@@ -757,19 +747,21 @@ Click on **Continue** button.
 | Item No | Specify the item number. (e.g., `"1012"`) |
 | Quantity | Enter the quantity for the journal entry. (e.g., `"1500"`) |
 
-> **Note:** `Journal Template Name`, `Journal Batch Name`, `Entry Type`, `Item No`, and `Quantity` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::note
+`Journal Template Name`, `Journal Batch Name`, `Entry Type`, `Item No`, and `Quantity` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-CRTITMJURNLENTRY9.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-CRTITMJURNLENTRY9.jpg" alt="Business Central Create Item Journal Entry example configuration" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -831,23 +823,23 @@ Click on **Continue**, then **Run** node.
 ```
 ----------------------
 
-## Customer Actions
+### Customer Actions
 
-### Update Customer
+#### Update Customer
 
 Update Customer action is used to modify existing customer details including address, contact, and sales information.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-UPDTCUSTMR10.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-UPDTCUSTMR10.jpg" alt="Business Central Update Customer action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
@@ -864,20 +856,22 @@ Click on **Continue** button.
 | Salesperson Code | Specify the salesperson code. (e.g., `"BC"`) |
 | Blocked | Select the blocked status from available options: `All`, `Invoice`, `Ship`, or `None`. (e.g., `"None"`) |
 
-> **Note:** `Customer No` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::note
+`Customer No` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-UPDTCUSTMR11.jpg" width="700" />
-<img src="\img\credentials\business-central-odata\AC-UPDTCUSTMR12.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTCUSTMR11.jpg" alt="Business Central Update Customer example configuration part 1" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTCUSTMR12.jpg" alt="Business Central Update Customer example configuration part 2" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1022,41 +1016,43 @@ Click on **Continue**, then **Run** node.
 ```
 --------------------
 
-## Posted Sales Shipment Actions
+### Posted Sales Shipment Actions
 
-### Get Posted Sales Shipment by No.
+#### Get Posted Sales Shipment by No.
 
 Get Posted Sales Shipment by No. action is used to retrieve details of a posted sales shipment using the shipment number.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-GTPSTDSLSSHIPMT13.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-GTPSTDSLSSHIPMT13.jpg" alt="Business Central Get Posted Sales Shipment by No action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
 | Shipment No | Specify the posted sales shipment number. (e.g., `"102001"`) |
 
-> **Note:** `Shipment No` is mandatory field.
+:::note
+`Shipment No` is mandatory field.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-GTPSTDSLSSHIPMT14.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-GTPSTDSLSSHIPMT14.jpg" alt="Business Central Get Posted Sales Shipment by No example configuration" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1149,23 +1145,23 @@ Click on **Continue**, then **Run** node.
 ```
 ------------------------------
 
-## Item Action
+### Item Action
 
-### Update Item
+#### Update Item
 
 Update Item action is used to modify existing item details including description, pricing, unit measures, posting groups, and inventory settings.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-UPDTITEM15.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-UPDTITEM15.jpg" alt="Business Central Update Item action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
@@ -1182,20 +1178,22 @@ Click on **Continue** button.
 | Blocked (True or False) | Set to `True` to block the item from transactions, otherwise `False`. Example: `False` |
 | Include Inventory (True or False) | Set to `True` to include the item in inventory calculations. Example: `True` |
 
-> **Note:** `Item No (Identifier)` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::note
+`Item No (Identifier)` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-UPDTITEM16.jpg" width="700" />
-<img src="\img\credentials\business-central-odata\AC-UPDTITEM17.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTITEM16.jpg" alt="Business Central Update Item example configuration part 1" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTITEM17.jpg" alt="Business Central Update Item example configuration part 2" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1383,26 +1381,24 @@ Click on **Continue**, then **Run** node.
 ```
 -------------------------
 
-## Generic Actions
+### Generic Actions
 
-### Search Record
+#### Search Record
 
 Search Record action is used to retrieve records from a specified object using filter criteria and record limits.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-SRCHRCRDS19.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-SRCHRCRDS19.jpg" alt="Business Central Search Record action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
-| Field | Description |
-|------|-------------|
 | Field | Description |
 |------|-------------|
 | Object Name | Select the Business Central object/entity to search records from using the searchable dropdown. Supported objects include: `Posted Sales Shipment`, `Posted Sales Shipment Lines`, `Sales Prices`, `ShipToAddress`, `Items`, `Customers`, `Sales Quote`, `Sales Lines`, `Item Ledger Entries`, `Contacts`, `Sales Order`, `Shipments`, `Item Journal`, `Item variants`, `Customer ledger Entries`, `Posted Sales Invoice`, `Sales Order Archives Lines`, `Sales Invoice`, `Sales Invoice Lines`, and `Cash Receipt Journals`. |
@@ -1410,19 +1406,21 @@ Click on **Continue** button.
 | Limit of records | Define the maximum number of records to fetch. Example: `10` |
 | Select fields to fetch | Specify the fields to retrieve from the selected object as comma-separated values. Example: `id,number,displayName` |
 
-> **Note:** `Object Name`, `Filter Value`, and `Limit of records` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::note
+`Object Name`, `Filter Value`, and `Limit of records` are mandatory fields. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-SRCHRCRDS20.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-SRCHRCRDS20.jpg" alt="Business Central Search Record example configuration" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1435,23 +1433,23 @@ Click on **Continue**, then **Run** node.
 ```
 -----------------------------
 
-## SalesOrder Actions
+### SalesOrder Actions
 
-### Update Sales Order
+#### Update Sales Order
 
 Update Sales Order action is used to modify an existing sales order with shipment, delivery, payment, location, and customer address details.
 
 -----------------------------
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\business-central-odata\C-AC-UPDTSLSORDR21.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/C-AC-UPDTSLSORDR21.jpg" alt="Business Central Update Sales Order action selection" width="700" />
 
 Click on **Continue** button.
 
 -----------------------------
 
-#### Configuration
+##### Configuration
 
 | Field | Description |
 |------|-------------|
@@ -1469,20 +1467,22 @@ Click on **Continue** button.
 | Sell-to Country / Region Code | Specify the sell-to country or region code. (e.g., `"IN"`) |
 | Shortcut Dimension 2 Code | Specify the shortcut dimension 2 code. (e.g., `"SMALL"`) |
 
-> **Note:** `Sales Order No` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::note
+`Sales Order No` is mandatory field. All other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -----------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\business-central-odata\AC-UPDTSLSORDR22.jpg" width="700" />
-<img src="\img\credentials\business-central-odata\AC-UPDTSLSORDR23.jpg" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTSLSORDR22.jpg" alt="Business Central Update Sales Order example configuration part 1" width="700" />
+<img src="/img/credentials/business-central-odata/AC-UPDTSLSORDR23.jpg" alt="Business Central Update Sales Order example configuration part 2" width="700" />
 
 -----------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1644,4 +1644,4 @@ Click on **Continue**, then **Run** node.
 
 ## Support
 
-Need help? Contact our support team at hello@appse.ai
+Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
