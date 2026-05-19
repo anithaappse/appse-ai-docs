@@ -1,6 +1,7 @@
 ---
 title: "Shopify"
-slug : /app-integrations/shopify/
+slug: /app-integrations/shopify/
+description: Step-by-step guide to set up Shopify credentials and automate e-commerce workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,66 +27,66 @@ You'll be asked to fill in the following details:
 
 First things first - Log in to your [Shopify account](https://accounts.shopify.com/select?rid=539d146c-195f-4011-97ab-fe776d9c0e58). Then follow the Step-by-step guide.
 
-## Step-by-Step Guide
+### Step-by-Step Guide
 
 ### Find your Store Subdomain
 
-<img src="\img\credentials\shopify\settings.png" alt="appse ai Shopify Settings" width="700"/>
+<img src="/img/credentials/shopify/settings.png" alt="appse ai Shopify Settings" width="700"/>
 
 Go to settings, and under your store name, you will find your Shopify store subdomain.
 
 
-<img src="\img\credentials\shopify\store-id.png" alt="appse ai shopify store id" width="700"/>
+<img src="/img/credentials/shopify/store-id.png" alt="appse ai shopify store id" width="700"/>
 
 > `For example`: If your Shopify Subdomain looks like "5bazzn-ja.myshopify.com", you only need to paste 5bazzn-ja in the credential form.
 
 ### Find your Admin API access token
 
-<img src="\img\credentials\shopify\develop-apps.png" alt="appse ai shopify develop apps" width="700"/>
+<img src="/img/credentials/shopify/develop-apps.png" alt="appse ai shopify develop apps" width="700"/>
 
 In the settings section, navigate to "Apps and Sales Channels" and then "Develop Apps".
 
 #### Enable Custom Legacy app button
 
-<img src="\img\credentials\shopify\allow-legacy-custom-app-development.png" alt="appse ai allow custom legacy apps shopify" width="400"/>
+<img src="/img/credentials/shopify/allow-legacy-custom-app-development.png" alt="appse ai allow custom legacy apps shopify" width="400"/>
 
-<img src="\img\credentials\shopify\allow-legacy-custom-app-development-2.png" alt="appse ai allow custom legacy app development shopify 2" width="400"/>
+<img src="/img/credentials/shopify/allow-legacy-custom-app-development-2.png" alt="appse ai allow custom legacy app development shopify 2" width="400"/>
 
 Click on "Allow custom legacy app development" then click on "Allow custom app development".
 
-<img src="\img\credentials\shopify\allow-legacy-custom-app-development-3.png" alt="appse ai allow custom legacy app development shopify 3" width="400"/>
+<img src="/img/credentials/shopify/allow-legacy-custom-app-development-3.png" alt="appse ai allow custom legacy app development shopify 3" width="400"/>
 
-<img src="\img\credentials\shopify\create-legacy-app.png" alt="appse ai shopify create legacy app" width="400"/>
+<img src="/img/credentials/shopify/create-legacy-app.png" alt="appse ai shopify create legacy app" width="400"/>
 
 You should see a "Create a custom legacy app" button, click on it.
 
 ### Create app
 
-<img src="\img\credentials\shopify\create-app-name.png" alt="appse ai shopify create app name" width="700"/>
+<img src="/img/credentials/shopify/create-app-name.png" alt="appse ai shopify create app name" width="700"/>
 
 Set up a name for your custom app and click on the "Create app" button.
 
 ### Configure Scopes
 
-<img src="\img\credentials\shopify\choose-scopes-button.png" alt="appse ai shopify choose scopes button" width="700"/>
+<img src="/img/credentials/shopify/choose-scopes-button.png" alt="appse ai shopify choose scopes button" width="700"/>
 
 Click on Configure Admin API scopes and tick off the scopes mentioned below:
 
 `read_all_orders`  `read_customers`  `write_customers`  `read_fulfillments`  `write_fulfillments`  `read_inventory`  `write_inventory`  `read_locations`  `write_locations`  `read_orders`  `write_orders`  `read_products`  `write_products`  `read_publications`  `write_publications`  `read_discounts`  `write_discounts`  `read_shipping`  `write_shipping`
 
-<img src="\img\credentials\shopify\choose-scopes.png" alt="appse ai shopify choose scopes" width="700"/>
+<img src="/img/credentials/shopify/choose-scopes.png" alt="appse ai shopify choose scopes" width="700"/>
 
 Once you have all the scopes selected, click "Save".
 
 ### Install App
 
-<img src="\img\credentials\shopify\install-app.png" alt="appse ai shopify install app" width="700"/>
+<img src="/img/credentials/shopify/install-app.png" alt="appse ai shopify install app" width="700"/>
 
 Return to the Overview tab and click on the "Install" button.
 
 ### Find Admin API Access token
 
-<img src="\img\credentials\shopify\admin-api-access-token.png" alt="appse ai shopify admin api access token" width="700"/>
+<img src="/img/credentials/shopify/admin-api-access-token.png" alt="appse ai shopify admin api access token" width="700"/>
 
 In the API credentials tab, you will have your Admin API Access Token.
 
@@ -95,7 +96,7 @@ Click on the "reveal token once" button. Copy the token and store it somewhere s
 
 ### Add the fields to appse ai
 
-<img src="\img\credentials\shopify\Configuration.jpg" width="700" />
+<img src="/img/credentials/shopify/Configuration.jpg" alt="Shopify credential configuration fields" width="700" />
 
 Add Store Subdomain and Admin API access token in appse ai. And click on the "save" button.
 
@@ -132,36 +133,37 @@ Every application has a pre-defined set of triggers and actions that allow users
 - [New Return Created](#new-return-created)
 - [New Abandoned Checkout](#new-abandoned-checkout)
 
-### New Company Created
+#### New Company Created
 
-**New Company Created** trigger is activated whenever a new company is created in the Shopify. It helps capture newly added company records for automation and workflow processing.
+New Company Created trigger is activated whenever a new company is created in the Shopify. It helps capture newly added company records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NCMPNYC1.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NCMPNYC1.jpg" alt="Shopify New Company Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
+<img src="/img/credentials/shopify/TC-NCMPNYC2.jpg" alt="Shopify New Company Created trigger example configuration" width="700" />
 
-Click on **Continue** , then **Run** the node.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -293,36 +295,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Customer Created
+#### New Customer Created
 
-**New Customer Created** trigger is activated whenever a new customer is created in the Shopify. It helps capture newly added customer records for automation and workflow processing.
+New Customer Created trigger is activated whenever a new customer is created in the Shopify. It helps capture newly added customer records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NCUSTMRC3.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NCUSTMRC3.jpg" alt="Shopify New Customer Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -390,36 +392,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### Customer Updated
+#### Customer Updated
 
-**Customer Updated** trigger is activated whenever a customer is updated in the Shopify. It helps capture modified customer records for automation and workflow processing.
+Customer Updated trigger is activated whenever a customer is updated in the Shopify. It helps capture modified customer records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CUSTMRU4.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CUSTMRU4.jpg" alt="Shopify Customer Updated trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch updated items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -488,36 +490,36 @@ Click on **Continue** , then **Run** the node.
 ----------------
 
 
-### New Company Location Created
+#### New Company Location Created
 
-**New Company Location Created** trigger is activated whenever a new company location is created in the Shopify. It helps capture newly added company location records for automation and workflow processing.
+New Company Location Created trigger is activated whenever a new company location is created in the Shopify. It helps capture newly added company location records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CMPNYLOCTINC5.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CMPNYLOCTINC5.jpg" alt="Shopify New Company Location Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -589,36 +591,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Product Created
+#### New Product Created
 
-**New Product Created** trigger is activated whenever a new product is created in the Shopify. It helps capture newly added product records for automation and workflow processing.
+New Product Created trigger is activated whenever a new product is created in the Shopify. It helps capture newly added product records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NPRDTC6.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NPRDTC6.jpg" alt="Shopify New Product Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -697,36 +699,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### Products Updated
+#### Products Updated
 
-**Products Updated** trigger is activated whenever a product is updated in the Shopify. It helps capture modified product records for automation and workflow processing.
+Products Updated trigger is activated whenever a product is updated in the Shopify. It helps capture modified product records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-PRDCTU7.jpg" width="700" />
+<img src="/img/credentials/shopify/C-PRDCTU7.jpg" alt="Shopify Products Updated trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch updated items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -805,36 +807,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Order Created
+#### New Order Created
 
-**New Order Created** trigger is activated whenever a new order is created in the Shopify. It helps capture newly added order records for automation and workflow processing.
+New Order Created trigger is activated whenever a new order is created in the Shopify. It helps capture newly added order records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NORDC8.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NORDC8.jpg" alt="Shopify New Order Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1005,36 +1007,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### Orders Cancelled
+#### Orders Cancelled
 
-**Orders Cancelled** trigger is activated whenever an order is cancelled in the Shopify. It helps capture cancelled order records for automation and workflow processing.
+Orders Cancelled trigger is activated whenever an order is cancelled in the Shopify. It helps capture cancelled order records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-ORDCANCLD9.jpg" width="700" />
+<img src="/img/credentials/shopify/C-ORDCANCLD9.jpg" alt="Shopify Orders Cancelled trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch cancelled items from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1235,36 +1237,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Refund Created
+#### New Refund Created
 
-**New Refund Created** trigger is activated whenever a new refund is created in the Shopify. It helps capture newly created refund records for automation and workflow processing.
+New Refund Created trigger is activated whenever a new refund is created in the Shopify. It helps capture newly created refund records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NRFNDC10.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NRFNDC10.jpg" alt="Shopify New Refund Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created refunds from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1485,36 +1487,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Return Created
+#### New Return Created
 
-**New Return Created** trigger is activated whenever a new return is created in the Shopify. It helps capture newly created return records for automation and workflow processing.
+New Return Created trigger is activated whenever a new return is created in the Shopify. It helps capture newly created return records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NRRTNC11.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NRRTNC11.jpg" alt="Shopify New Return Created trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly created returns from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1759,36 +1761,36 @@ Click on **Continue** , then **Run** the node.
 ```
 ----------------
 
-### New Abandoned Checkout
+#### New Abandoned Checkout
 
-**New Abandoned Checkout** trigger is activated whenever a new abandoned checkout is created in the Shopify. It helps capture newly created abandoned checkout records for automation and workflow processing.
+New Abandoned Checkout trigger is activated whenever a new abandoned checkout is created in the Shopify. It helps capture newly created abandoned checkout records for automation and workflow processing.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-NABNDNCHKOUT12.jpg" width="700" />
+<img src="/img/credentials/shopify/C-NABNDNCHKOUT12.jpg" alt="Shopify New Abandoned Checkout trigger configuration" width="700" />
 
 Click on **Continue** button
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | Fetch data since | Select the date and time to fetch newly abandoned checkouts from that point onward . (e.g., 27/03/2026 06:51) |
 | Limit | Set the maximum number of items to retrieve per run. (e.g., 10) |
 
+Click on **Continue** , then **Run** the node.
+
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\TC-NCMPNYC2.jpg" width="700" />
-
-Click on **Continue** , then **Run** the node.
+> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1834,21 +1836,21 @@ Click on **Continue** , then **Run** the node.
 
 ## Actions
 
-## Customer Action
+### Customer Action
 
-### Get Customer by Email
+#### Get Customer by Email
 
-**Get Customer by Email** action retrieves customer (business partner) details using the email address. It helps in quickly identifying customer records based on contact information.
+Get Customer by Email action retrieves customer (business partner) details using the email address. It helps in quickly identifying customer records based on contact information.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GCMPNYbyEMAIL1.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GCMPNYbyEMAIL1.jpg" alt="Shopify Get Customer by Email action configuration" width="700"  />
 
 Click on **Continue** button
 
 -----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -1860,13 +1862,13 @@ Click on **Continue**, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GCUSTMRbyEmail2.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GCUSTMRbyEmail2.jpg" alt="Shopify Get Customer by Email action example configuration" width="700"  />
 
 ------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1934,19 +1936,19 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-### Update Customer
+#### Update Customer
 
-The **Update Customer** action is used to modify an existing customer's details such as contact information, personal details, and address.
+The Update Customer action is used to modify an existing customer's details such as contact information, personal details, and address.
 
-#### Select Credentials and action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UCUSTMR11.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UCUSTMR11.jpg" alt="Shopify Update Customer action configuration" width="700"  />
 
 Click on **Continue** button
 
 -----------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -1971,14 +1973,14 @@ Click on **Continue**, then **Run** node
 
 -------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UCUSTMR12.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-UCUSTMR13.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UCUSTMR12.jpg" alt="Shopify Update Customer action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-UCUSTMR13.jpg" alt="Shopify Update Customer action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2053,19 +2055,19 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-### Create a Customer
+#### Create a Customer
 
-**Create a Customer** action is used to create a new customer record with basic contact details and address information.
+Create a Customer action is used to create a new customer record with basic contact details and address information.
 
-#### Select Credential and Action Event
+##### Select Credential and Action Events
 
-<img src="\img\credentials\shopify\C-CRTCUSTMR14.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTCUSTMR14.jpg" alt="Shopify Create Customer action configuration" width="700"  />
 
 Click on **Continue** button
 
 --------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2091,14 +2093,14 @@ Click on **Continue**, then **Run** node
 
 -------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTCUSTMR15.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-CRTCUSTMR16.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTCUSTMR15.jpg" alt="Shopify Create Customer action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-CRTCUSTMR16.jpg" alt="Shopify Create Customer action example configuration" width="700"  />
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2156,21 +2158,21 @@ Click on **Continue**, then **Run** node
 ```
 ---------------
 
-## Companies Action
+### Companies Action
 
-### Create Company
+#### Create Company
 
-**Create Company** action is used to create a new company record in the system. It helps manage organizations and associate customers or contacts under a company.
+Create Company action is used to create a new company record in the system. It helps manage organizations and associate customers or contacts under a company.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CCMPNY19.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CCMPNY19.jpg" alt="Shopify Create Company action configuration" width="700"  />
 
 Click on **Continue** button
 
 ---------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2182,13 +2184,13 @@ Click on **Continue**, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CCMPNY20.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CCMPNY20.jpg" alt="Shopify Create Company action example configuration" width="700"  />
 
 -------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2215,19 +2217,19 @@ Click on **Continue**, then **Run** node
 ```
 -----------------
 
-### Create Company Location
+#### Create Company Location
 
-**Create Company Location** action is used to add a new location for a company, including shipping address and related details. This helps manage multiple locations under a single company.
+Create Company Location action is used to add a new location for a company, including shipping address and related details. This helps manage multiple locations under a single company.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Event
 
-<img src="\img\credentials\shopify\C-CCMPNYLCTON21.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CCMPNYLCTON21.jpg" alt="Shopify Create Company Location action configuration" width="700"  />
 
 Click on **Continue** button
 
 -----------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2253,14 +2255,14 @@ Click on **Continue**, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CCMPNYLCTON22.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-CCMPNYLCTON23.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CCMPNYLCTON22.jpg" alt="Shopify Create Company Location action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-CCMPNYLCTON23.jpg" alt="Shopify Create Company Location action example configuration" width="700"  />
 
 -------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2303,19 +2305,19 @@ Click on **Continue**, then **Run** node
 ```
 ----------
 
-### Create Company Contact
+#### Create Company Contact
 
-**Create Company Contact** action is used to create a contact person associated with a company. It helps manage company-level contacts with their communication and role details.
+Create Company Contact action is used to create a contact person associated with a company. It helps manage company-level contacts with their communication and role details.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Event
 
-<img src="\img\credentials\shopify\C-CCMPNYCNTCT17.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CCMPNYCNTCT17.jpg" alt="Shopify Create Company Contact action configuration" width="700"  />
 
 Click on **Continue** button
 
 --------------------
 
-#### Configuration Field
+##### Configuration Field
 
 | Field | Description |
 |------|-------------|
@@ -2334,13 +2336,13 @@ Click on **Continue**, then **Run** node
 
 ---------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CCMPNYCNTCTN18.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CCMPNYCNTCTN18.jpg" alt="Shopify Create Company Contact action example configuration" width="700"  />
 
 -------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2363,19 +2365,19 @@ Click on **Continue**, then **Run** node
 ]
 ```
 --------------
-### Get Company Contact by ID
+#### Get Company Contact by ID
 
-**Get Company Contact by ID** action retrieves details of a specific company contact using its unique identifier.
+Get Company Contact by ID action retrieves details of a specific company contact using its unique identifier.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Event
 
-<img src="\img\credentials\shopify\C-GCMPNYCNTCTbyID24.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GCMPNYCNTCTbyID24.jpg" alt="Shopify Get Company Contact by ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 ----------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2387,13 +2389,13 @@ Click on **Continue**, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GCMPNYCNTCTbyID25.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GCMPNYCNTCTbyID25.jpg" alt="Shopify Get Company Contact by ID action example configuration" width="700"  />
 
 ---------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2424,19 +2426,19 @@ Click on **Continue**, then **Run** node
 ```
 -----------
 
-### Get Company by Company ID
+#### Get Company by Company ID
 
-**Get Company by Company ID** action retrieves detailed information of a specific company using its unique identifier.
+Get Company by Company ID action retrieves detailed information of a specific company using its unique identifier.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GCMPNYbyCMPNYID26.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GCMPNYbyCMPNYID26.jpg" alt="Shopify Get Company by Company ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2448,13 +2450,13 @@ Click on **Continue**, then **Run** node
 
 -------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GCMPNYbyCMPNYID27.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GCMPNYbyCMPNYID27.jpg" alt="Shopify Get Company by Company ID action example configuration" width="700"  />
 
 ------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2552,19 +2554,19 @@ Click on **Continue**, then **Run** node
 ```
 ---------------
 
-### Get Locations by Company ID
+#### Get Locations by Company ID
 
-**Get Locations by Company ID** action retrieves all locations associated with a specific company. It helps in managing and viewing multiple company locations.
+Get Locations by Company ID action retrieves all locations associated with a specific company. It helps in managing and viewing multiple company locations.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GLCTONbyCMPNYID-29.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GLCTONbyCMPNYID-29.jpg" alt="Shopify Get Locations by Company ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 ---------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2577,13 +2579,13 @@ Click on **Continue**, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GLCTONbyCMPNYID30.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GLCTONbyCMPNYID30.jpg" alt="Shopify Get Locations by Company ID action example configuration" width="700"  />
 
 -----------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2608,19 +2610,19 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-### Get Company Payment Terms
+#### Get Company Payment Terms
 
-**Get Company Payment Terms** action retrieves the payment terms configured for a specific company. It helps identify billing schedules, due dates, and payment conditions.
+Get Company Payment Terms action retrieves the payment terms configured for a specific company. It helps identify billing schedules, due dates, and payment conditions.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GCMPNYPYMNTTERM31.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GCMPNYPYMNTTERM31.jpg" alt="Shopify Get Company Payment Terms action configuration" width="700"  />
 
 Click on **Continue** button
 
 ------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2632,13 +2634,13 @@ Click on **Continue**, then **Run** node
 
 ------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GCMPNYPYMNTTERM32.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GCMPNYPYMNTTERM32.jpg" alt="Shopify Get Company Payment Terms action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2670,19 +2672,19 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-### Get Company by External ID
+#### Get Company by External ID
 
-The **Get Company by External ID** action retrieves company details using an external identifier mapped to the company record.
+Get Company by External ID action retrieves company details using an external identifier mapped to the company record.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GCMPNYETRNLID33.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GCMPNYETRNLID33.jpg" alt="Shopify Get Company by External ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 ------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2694,13 +2696,13 @@ Click on **Continue**, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GCMPNYEXTRNLID34.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GCMPNYEXTRNLID34.jpg" alt="Shopify Get Company by External ID action example configuration" width="700"  />
 
 ----------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2747,21 +2749,21 @@ Click on **Continue**, then **Run** node
 ```
 ------------------
 
-## Products Action
+### Products Action
 
-### Create Product
+#### Create Product
 
-**Create Product** action is used to create a new product record in the Shopify with basic product details.
+Create Product action is used to create a new product record in the Shopify with basic product details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CPRDT35.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CPRDT35.jpg" alt="Shopify Create Product action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2770,13 +2772,13 @@ Click on **Continue** button
 
 > **Note:** Title is required to create the product. Additional details such as variants, pricing, and images can be added later.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CPRDT36.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CPRDT36.jpg" alt="Shopify Create Product action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2836,19 +2838,19 @@ Click on **Continue** button
 ]
 ```
 
-### Update Product
+#### Update Product
 
-**Update Product** action is used to update an existing product record in Shopify using the product ID and modified product details.
+Update Product action is used to update an existing product record in Shopify using the product ID and modified product details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UPRDT37.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UPRDT37.jpg" alt="Shopify Update Product action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2859,13 +2861,13 @@ Title | Enter the updated product title. (e.g., "OnePlus 13R - Updated") |
 
 > **Note:** Product ID is required to update a product. Any field left empty will remain unchanged in Shopify.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UPRDT38.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPRDT38.jpg" alt="Shopify Update Product action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2916,19 +2918,19 @@ Title | Enter the updated product title. (e.g., "OnePlus 13R - Updated") |
 ]
 ```
 
-### Publish a Product
+#### Publish a Product
 
-**Publish a Product** action is used to publish an existing Shopify product to a selected sales channel or publication.
+Publish a Product action is used to publish an existing Shopify product to a selected sales channel or publication.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-PBLSHPRDT39.jpg" width="700" />
+<img src="/img/credentials/shopify/C-PBLSHPRDT39.jpg" alt="Shopify Publish Product action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2937,13 +2939,13 @@ Click on **Continue** button
 
 > **Note:** Product ID and Publication ID are required. If the product is already published in that channel, the action may return no changes.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-PBLSHPRDT40.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-PBLSHPRDT40.jpg" alt="Shopify Publish Product action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2961,19 +2963,19 @@ Click on **Continue** button
 ]
 ```
 
-### Get Product by default variant sku
+#### Get Product by default variant sku
 
-**Get Product by default variant sku** action is used to fetch product details in Shopify using the default variant SKU.
+Get Product by default variant sku action is used to fetch product details in Shopify using the default variant SKU.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GPRDTbySKU41.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GPRDTbySKU41.jpg" alt="Shopify Get Product by SKU action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2981,13 +2983,13 @@ Click on **Continue** button
 
 > **Note:** Default Variant SKU is required. If no product matches the SKU, the response may return an empty result.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GPRDTbySKU42.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GPRDTbySKU42.jpg" alt="Shopify Get Product by SKU action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3039,21 +3041,21 @@ Click on **Continue** button
 ]
 ```
 
-## Product Variants Action
+### Product Variants Action
 
-### Update Product Variants
+#### Update Product Variants
 
-**Update Product Variants** action is used to update an existing product variant in Shopify using the variant ID and modified variant details.
+Update Product Variants action is used to update an existing product variant in Shopify using the variant ID and modified variant details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UPRDTVRNT43.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UPRDTVRNT43.jpg" alt="Shopify Update Product Variant action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3064,13 +3066,13 @@ Click on **Continue** button
 
 > **Note:** Variant ID is required. Only the provided optional fields are updated; other values remain unchanged. In this example, `Tracked` is selected as `TRUE`.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UPRDTVRNT44.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPRDTVRNT44.jpg" alt="Shopify Update Product Variant action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3097,21 +3099,21 @@ Click on **Continue** button
 ]
 ```
 
-## Inventory Action
+### Inventory Action
 
-### Activate Inventory Location
+#### Activate Inventory Location
 
-**Activate Inventory Location** action is used to activate a specific inventory location in Shopify using the location ID, enabling it to track and manage inventory.
+Activate Inventory Location action is used to activate a specific inventory location in Shopify using the location ID, enabling it to track and manage inventory.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-ACTVATINVTRYLCATN45.jpg" width="700" />
+<img src="/img/credentials/shopify/C-ACTVATINVTRYLCATN45.jpg" alt="Shopify Activate Inventory Location action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3122,13 +3124,13 @@ Location ID | Enter the Shopify location ID to activate. (e.g., "gid://shopify/L
 
 > **Note:** All fields are required. In this example, `Activate` is set to `TRUE` to enable the inventory location.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-ACTVTINVTRYLCTON46.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-ACTVTINVTRYLCTON46.jpg" alt="Shopify Activate Inventory Location action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3157,19 +3159,19 @@ Location ID | Enter the Shopify location ID to activate. (e.g., "gid://shopify/L
 ```
 ------------
 
-### Update Product Inventory
+#### Update Product Inventory
 
-**Update Product Inventory** action is used to update inventory quantities for a specific product variant at a designated location in Shopify.
+Update Product Inventory action is used to update inventory quantities for a specific product variant at a designated location in Shopify.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UPDTQNTY47.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UPDTQNTY47.jpg" alt="Shopify Update Quantity action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3183,13 +3185,13 @@ Inventory Item ID | Enter the Shopify inventory item ID. (e.g., "gid://shopify/I
 
 > **Note:** All fields are required. `Quantities` supports multiple items; in this example, one item is configured. `Ignore Compare Quantity` is set to `TRUE` and inventory is set to `250` at the specified location.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UPDTQNTY48.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPDTQNTY48.jpg" alt="Shopify Update Quantity action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3224,21 +3226,21 @@ Inventory Item ID | Enter the Shopify inventory item ID. (e.g., "gid://shopify/I
 ```
 ---------------
 
-## Locations Actions
+### Locations Actions
 
-### Get List of Locations
+#### Get List of Locations
 
-**Get List of Locations** action is used to retrieve a list of inventory locations configured in your Shopify store.
+Get List of Locations action is used to retrieve a list of inventory locations configured in your Shopify store.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTLSTLCTONS49.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTLSTLCTONS49.jpg" alt="Shopify Get List of Locations action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3246,13 +3248,13 @@ Click on **Continue** button
 
 > **Note:** `Limit` controls how many locations are returned in the response. In this example, up to 10 locations will be retrieved.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTLSTLCTONS50.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTLSTLCTONS50.jpg" alt="Shopify Get List of Locations action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3299,21 +3301,21 @@ Click on **Continue** button
 ```
 --------------
 
-## Price List Actions
+### Price List Actions
 
-### Create Price List
+#### Create Price List
 
-**Create Price List** action is used to create a custom price list in Shopify with currency and adjustment rules for targeted customers.
+Create Price List action is used to create a custom price list in Shopify with currency and adjustment rules for targeted customers.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTPRCELST51.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTPRCELST51.jpg" alt="Shopify Create Price List action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3326,13 +3328,13 @@ Click on **Continue** button
 
 > **Note:** All fields are required. In this example, prices are increased by 10% using `PERCENTAGE_INCREASE`.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTPRCELST52.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTPRCELST52.jpg" alt="Shopify Get Price List action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3354,19 +3356,19 @@ Click on **Continue** button
 ```
 --------------
 
-### Add Fixed Prices to Price List
+#### Add Fixed Prices to Price List
 
-**Add Fixed Prices to Price List** action is used to add fixed variant pricing to an existing Shopify price list.
+Add Fixed Prices to Price List action is used to add fixed variant pricing to an existing Shopify price list.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTADDFXPRCLST53.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTADDFXPRCLST53.jpg" alt="Shopify Get Add Fixed Price List action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3378,13 +3380,13 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
 
 > **Note:** All fields are required. In this example, one fixed price item is added for the specified variant with amount `150` in `USD`.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC_GTADDFXPRCLST54.jpg" width="700" />
+<img src="/img/credentials/shopify/AC_GTADDFXPRCLST54.jpg" alt="Shopify Get Add Fixed Price List action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3402,19 +3404,19 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
 ```
 --------------
 
-### Update Price List Fixed Prices
+#### Update Price List Fixed Prices
 
-**Update Price List Fixed Prices** action is used to update fixed prices in an existing Shopify price list by adding new prices and optionally removing variant prices.
+Update Price List Fixed Prices action is used to update fixed prices in an existing Shopify price list by adding new prices and optionally removing variant prices.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UPDTFXDPRCLST55.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UPDTFXDPRCLST55.jpg" alt="Shopify Update Fixed Price List action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3428,14 +3430,14 @@ Variant ID | Enter the variant identifier to remove fixed pricing from the price
 
 > **Note:** `Price List ID` and `Prices to Add` item fields are required for adding/updating prices. `Variant IDs to Delete` is optional and can be used in the same request.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UPDTFXDPRCLST56.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-UPDTFXDPRCLST57.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPDTFXDPRCLST56.jpg" alt="Shopify Update Fixed Price List action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-UPDTFXDPRCLST57.jpg" alt="Shopify Update Fixed Price List action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3454,19 +3456,19 @@ Variant ID | Enter the variant identifier to remove fixed pricing from the price
 ```
 --------------
 
-### Delete Price List Fixed Prices
+#### Delete Price List Fixed Prices
 
-**Delete Price List Fixed Prices** action is used to delete fixed prices for one or more variants from an existing Shopify price list.
+Delete Price List Fixed Prices action is used to delete fixed prices for one or more variants from an existing Shopify price list.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-DLTFXDPRCLIST58.jpg" width="700" />
+<img src="/img/credentials/shopify/C-DLTFXDPRCLIST58.jpg" alt="Shopify Delete Fixed Price List action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3476,13 +3478,13 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
 
 > **Note:** `Price List ID` and at least one `Variant ID` are required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-DLTFXDPRCLIST59.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-DLTFXDPRCLIST59.jpg" alt="Shopify Delete Fixed Price List action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3501,21 +3503,21 @@ Variant ID | Enter the Shopify variant ID. (e.g., "gid://shopify/ProductVariant/
 ```
 --------------
 
-## Markets Actions
+### Markets Actions
 
-### Create Market
+#### Create Market
 
-**Create Market** action is used to create a new market in Shopify.
+Create Market action is used to create a new market in Shopify.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTMRKT60.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTMRKT60.jpg" alt="Shopify Create Market action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3523,13 +3525,13 @@ Click on **Continue** button
 
 > **Note:** `Market Name` is required to create a market.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTMRKT61.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTMRKT61.jpg" alt="Shopify Create Market action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3559,19 +3561,19 @@ Click on **Continue** button
 ```
 --------------
 
-### Get List of Markets
+#### Get List of Markets
 
-**Get List of Markets** action is used to fetch the list of markets from Shopify.
+Get List of Markets action is used to fetch the list of markets from Shopify.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTLSTALLMRKT62.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTLSTALLMRKT62.jpg" alt="Shopify Get List of Markets action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3579,13 +3581,13 @@ Click on **Continue** button
 
 > **Note:** `Limit` controls how many market records are returned.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTLSTALLMRKT63.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTLSTALLMRKT63.jpg" alt="Shopify Get List of Markets action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3645,21 +3647,21 @@ Click on **Continue** button
 ```
 --------------
 
-## Discount Action
+### Discount Action
 
-### Create Discount Code
+#### Create Discount Code
 
-**Create Discount Code** action is used to create a new discount code in Shopify with customer and item eligibility settings.
+Create Discount Code action is used to create a new discount code in Shopify with customer and item eligibility settings.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTDISC64.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTDISC64.jpg" alt="Shopify Create Discount action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3675,14 +3677,14 @@ Percentage | Enter the discount percentage value. (e.g., "1") |
 
 > **Note:** `Title`, `Discount Code`, and `Starts At` are required. `Customer Selection` and `Discount Items` both default to `All` when set to `True`.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTDISC65.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-CRTDISC66.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTDISC65.jpg" alt="Shopify Create Discount action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-CRTDISC66.jpg" alt="Shopify Create Discount action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3724,21 +3726,21 @@ Percentage | Enter the discount percentage value. (e.g., "1") |
 ```
 --------------
 
-## Orders Action
+### Orders Action
 
-### Get Order by Order ID
+#### Get Order by Order ID
 
-**Get Order by Order ID** action is used to retrieve order details in Shopify using a specific order identifier.
+Get Order by Order ID action is used to retrieve order details in Shopify using a specific order identifier.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTORDbyORDID67.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTORDbyORDID67.jpg" alt="Shopify Get Order by Order ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3746,13 +3748,13 @@ Click on **Continue** button
 
 > **Note:** `Order Id` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTORDbyORDID68.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTORDbyORDID68.jpg" alt="Shopify Get Order by Order ID action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3952,19 +3954,19 @@ Click on **Continue** button
 ```
 --------------
 
-### Get Transactions by Order Id
+#### Get Transactions by Order Id
 
-**Get Transactions by Order Id** action is used to retrieve transaction details for a specific Shopify order.
+Get Transactions by Order Id action is used to retrieve transaction details for a specific Shopify order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTTRNSTONbyORDID69.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTTRNSTONbyORDID69.jpg" alt="Shopify Get Transactions by Order ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3972,13 +3974,13 @@ Click on **Continue** button
 
 > **Note:** `Order ID` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTTRANSCTONbyORDID70.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTTRANSCTONbyORDID70.jpg" alt="Shopify Get Transactions by Order ID action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4035,19 +4037,19 @@ Click on **Continue** button
 ```
 --------------
 
-### Create Order Risk Assessment
+#### Create Order Risk Assessment
 
-**Create Order Risk Assessment** action is used to create a risk assessment for a specific Shopify order.
+Create Order Risk Assessment action is used to create a risk assessment for a specific Shopify order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTRSKASSMNT71.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTRSKASSMNT71.jpg" alt="Shopify Create Risk Assessment action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4060,13 +4062,13 @@ Description | Enter the description for item (e.g., "Billing Address region is R
 
 > **Note:** `Order ID`, `Risk Level`, `Risk Facts`, `Risk Fact`, `Description`, and `Sentiment` are required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTRSKASSMNT72.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTRSKASSMNT72.jpg" alt="Shopify Create Risk Assessment action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4105,19 +4107,19 @@ Description | Enter the description for item (e.g., "Billing Address region is R
 ```
 --------------
 
-### Get Order Risk details by OrderId
+#### Get Order Risk details by OrderId
 
-**Get Order Risk details by OrderId** action is used to retrieve risk assessment details for a specific Shopify order.
+Get Order Risk details by OrderId action is used to retrieve risk assessment details for a specific Shopify order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTRSKASSMNTbyORDID73.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTRSKASSMNTbyORDID73.jpg" alt="Shopify Get Risk Assessment by Order ID action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4125,13 +4127,13 @@ Click on **Continue** button
 
 > **Note:** `Order Id` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTRSKASSMNTbyORDID74.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTRSKASSMNTbyORDID74.jpg" alt="Shopify Get Risk Assessment by Order ID action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4221,13 +4223,13 @@ Click on **Continue** button
 ```
 --------------
 
-### Update Order
+#### Update Order
 
-**Update Order** action is used to modify an existing Shopify order by updating purchase order details and shipping address information.
+Update Order action is used to modify an existing Shopify order by updating purchase order details and shipping address information.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-UPDTORD93.jpg" width="700" />
+<img src="/img/credentials/shopify/C-UPDTORD93.jpg" alt="Shopify Update Order action configuration" width="700"  />
 
 Click on **Continue** button
 
@@ -4258,14 +4260,14 @@ Click on **Continue**, then **Run** node
 
 ---------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-UPDTORD94.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-UPDTORD95.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPDTORD94.jpg" alt="Shopify Update Order action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-UPDTORD95.jpg" alt="Shopify Update Order action example configuration" width="700"  />
 
 ----------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4303,21 +4305,21 @@ Click on **Continue**, then **Run** node
 ```
 -----------------
 
-## Fulfillment Action
+### Fulfillment Action
 
-### Create Order Fulfillment
+#### Create Order Fulfillment
 
-**Create Order Fulfillment** action is used to create a fulfillment for a specific Shopify fulfillment order.
+Create Order Fulfillment action is used to create a fulfillment for a specific Shopify fulfillment order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTORDFULFLMT75.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTORDFULFLMT75.jpg" alt="Shopify Create Order Fulfillment action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4331,14 +4333,14 @@ Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
 
 > **Note:** `Fulfillment Input`, `Line Items by Fulfillment Order`, `Fulfillment Order ID`, `Line Item ID`, and `Quantity` are required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTORDFULFILMT76.jpg" width="700" />
-<img src="\img\credentials\shopify\AC-CRTORDFULFILMT77.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTORDFULFILMT76.jpg" alt="Shopify Create Order Fulfillment action example configuration" width="700"  />
+<img src="/img/credentials/shopify/AC-CRTORDFULFILMT77.jpg" alt="Shopify Create Order Fulfillment action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4392,19 +4394,19 @@ Tracking Number (Optional) | Enter the tracking number. (e.g., "TRACK-123") |
 ```
 --------------
 
-### Get Fulfillment Orders by OrderID
+#### Get Fulfillment Orders by OrderID
 
-**Get Fulfillment Orders by OrderID** action is used to retrieve fulfillment orders for a specific Shopify order.
+Get Fulfillment Orders by OrderID action is used to retrieve fulfillment orders for a specific Shopify order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTORDRFULMT78.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTORDRFULMT78.jpg" alt="Shopify Get Order Fulfillment action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4412,13 +4414,13 @@ Click on **Continue** button
 
 > **Note:** `OrderID` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTORDRFULMT79.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTORDRFULMT79.jpg" alt="Shopify Get Order Fulfillment action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4500,21 +4502,21 @@ Click on **Continue** button
 ```
 --------------
 
-## Payment Terms Templates Action
+### Payment Terms Templates Action
 
-### Get Payment Term Templates by Type
+#### Get Payment Term Templates by Type
 
-**Get Payment Term Templates by Type** action is used to retrieve payment term templates in Shopify based on the selected payment term type.
+Get Payment Term Templates by Type action is used to retrieve payment term templates in Shopify based on the selected payment term type.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTPAYMNTTERMbyTYPE80.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTPAYMNTTERMbyTYPE80.jpg" alt="Shopify Get Payment Term by Type action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4522,13 +4524,13 @@ Click on **Continue** button
 
 > **Note:** `Payment Term Type` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTPAYMNTTERMbyTYPE81.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTPAYMNTTERMbyTYPE81.jpg" alt="Shopify Get Payment Term by Type action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4584,21 +4586,21 @@ Click on **Continue** button
 ```
 --------------
 
-## Refund Action
+### Refund Action
 
-### Create Refund
+#### Create Refund
 
-**Create Refund** action is used to create a refund for an existing Shopify order.
+Create Refund action is used to create a refund for an existing Shopify order.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTREFND82.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTREFND82.jpg" alt="Shopify Create Refund action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4610,13 +4612,13 @@ Click on **Continue** button
 
 > **Note:** `Refund Input` and `Order ID` are required. For line item refunds, `Line Item ID` and `Quantity` are required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTREFND83.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTREFND83.jpg" alt="Shopify Create Refund action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4651,21 +4653,21 @@ Click on **Continue** button
 ```
 --------------
 
-## PriceLists Action
+### PriceLists Action
 
-### Get Price List by Catalog ID
+#### Get Price List by Catalog ID
 
-**Get Price List by Catalog ID** action is used to retrieve price list details associated with a specific Shopify catalog.
+Get Price List by Catalog ID action is used to retrieve price list details associated with a specific Shopify catalog.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-GTPRCLSTbyCATLOG84.jpg" width="700" />
+<img src="/img/credentials/shopify/C-GTPRCLSTbyCATLOG84.jpg" alt="Shopify Get Price List by Catalog action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4673,13 +4675,13 @@ Click on **Continue** button
 
 > **Note:** `Catalog ID` is required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-GTPRCLSTbyCATLOG85.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-GTPRCLSTbyCATLOG85.jpg" alt="Shopify Get Price List by Catalog action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4717,21 +4719,21 @@ Click on **Continue** button
 ```
 --------------
 
-## Catalog Action
+### Catalog Action
 
-### Create Catalog
+#### Create Catalog
 
-**Create Catalog** action is used to create a catalog in Shopify with status and context settings.
+Create Catalog action is used to create a catalog in Shopify with status and context settings.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-CRTCATLOG86.jpg" width="700" />
+<img src="/img/credentials/shopify/C-CRTCATLOG86.jpg" alt="Shopify Create Catalog action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4743,13 +4745,13 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 
 > **Note:** `Title`, `Status`, and `Context` are required.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-CRTCATLOG87.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-CRTCATLOG87.jpg" alt="Shopify Create Catalog action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4767,18 +4769,18 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 ```
 --------------
 
-### Update Catalog Context
+#### Update Catalog Context
 
-**Update Catalog Context** action is used to update the context of an existing catalog in Shopify, including company location associations.
+Update Catalog Context action is used to update the context of an existing catalog in Shopify, including company location associations.
 
-#### Select Credentials and Action Events
-<img src="\img\credentials\shopify\C-UPDTCATLOG88.jpg" width="700" />
+##### Select Credentials and Action Events
+<img src="/img/credentials/shopify/C-UPDTCATLOG88.jpg" alt="Shopify Update Catalog action configuration" width="700"  />
 
 Click on **Continue** button
 
 -------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4789,17 +4791,17 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 
 > **Note:** `Catalog ID` is required.
 
-#### Example Configuration
+##### Example Configuration
  1. Remove
-<img src="\img\credentials\shopify\AC-UPDTCATLOG89.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-UPDTCATLOG89.jpg" alt="Shopify Update Catalog action example configuration" width="700"  />
 
  2. Add
 
- <img src="\img\credentials\shopify\AC-UPDTCATLOG90.jpg" width="700" />
+ <img src="/img/credentials/shopify/AC-UPDTCATLOG90.jpg" alt="Shopify Update Catalog action example configuration" width="700"  />
 
 --------------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -4816,21 +4818,21 @@ Company Location ID | Enter the company location ID. (e.g., "gid://shopify/Compa
 ```
 --------------
 
-## MetaFields Action
+### MetaFields Action
 
-### Add and Update MetaFields
+#### Add and Update MetaFields
 
-**Add and Update Metafields** action is used to create or update metafields for a Shopify resource such as a product, order, customer, or collection. Metafields help store custom data against records.
+Add and Update Metafields action is used to create or update metafields for a Shopify resource such as a product, order, customer, or collection. Metafields help store custom data against records.
 
-#### Select Credentials and Action Event
+##### Select Credentials and Action Events
 
-<img src="\img\credentials\shopify\C-AD&UDMETAFLDS91.jpg" width="700" />
+<img src="/img/credentials/shopify/C-AD&UDMETAFLDS91.jpg" alt="Shopify Add Update Metafields action configuration" width="700"  />
 
 Click on **Continue** button.
 
 -------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4846,13 +4848,13 @@ Click on **Continue**, then **Run** node
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="\img\credentials\shopify\AC-AD&UDMETAFLDS92.jpg" width="700" />
+<img src="/img/credentials/shopify/AC-AD&UDMETAFLDS92.jpg" alt="Shopify Add Update Metafields action example configuration" width="700"  />
 
 --------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4874,4 +4876,8 @@ Click on **Continue**, then **Run** node
 
 </Tabs>
 
-Need help? Contact our support team at hello@appse.ai
+## Support
+
+Need help? Contact our support team at
+[hello@appse.ai](mailto:hello@appse.ai)
+
