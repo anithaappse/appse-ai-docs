@@ -1,7 +1,6 @@
 ---
 title: "WooCommerce"
-slug: /app-integrations/woocommerce
-description: Step-by-step guide to set up WooCommerce credentials and automate e-commerce workflows in appse ai.
+slug : /app-integrations/woocommerce
 ---
 
 WooCommerce is a flexible eCommerce platform built for WordPress that helps businesses create and manage online stores with ease. With appse ai, you can seamlessly connect WooCommerce to your workflows, automating processes like order management, product updates, customer synchronization, and inventory tracking to improve operational efficiency and deliver a better commerce experience.
@@ -83,8 +82,6 @@ Once you've filled in the necessary fields, click `Save` to store and verify you
 
 Every application has a pre-defined set of triggers and actions that allow users to perform application-specific activities within the platform. Here is the current WooCommerce trigger and action set available in the platform.
 
-> **Note:** Configuration screenshots for WooCommerce triggers and actions are coming soon. The available trigger and action options are listed below.
-
 ### Triggers
 
 - New Orders Created
@@ -95,13 +92,13 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 ### Actions
 
-#### Customers Actions
+> Customers Actions
 
 - Create Customer
 - Update Customer
 - Get customers by email
 
-#### Products Actions
+> Products Actions
 
 - Create Product
 - Update Product
@@ -109,6 +106,6 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 ---
 
-## Support
+## Need Help?
 
-If you’re unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
+If you’re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
