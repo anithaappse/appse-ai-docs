@@ -1,6 +1,7 @@
 ---
 title: "Netsuite"
-slug : /app-integrations/netsuite
+slug: /app-integrations/netsuite
+description: Step-by-step guide to set up NetSuite credentials and automate ERP workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -111,7 +112,7 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 #### Select Credentials and Trigger Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -130,7 +131,7 @@ Click on **Continue** button
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------
 
@@ -163,7 +164,7 @@ Click on **Continue** button
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -224,7 +225,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -242,7 +243,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -262,7 +263,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -280,7 +281,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -300,7 +301,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -320,7 +321,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -342,7 +343,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -362,7 +363,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -406,7 +407,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -424,7 +425,7 @@ Click on **Continue**, then **Run** node
 
 #### Select Credentials and Action Event
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 Click on **Continue** button
 
@@ -446,7 +447,7 @@ Click on **Continue**, then **Run** node
 
 #### Example Configuration
 
-<img src="" width="700" />
+> **Note:** Configuration screenshot coming soon.
 
 -------------------
 
@@ -463,6 +464,6 @@ Click on **Continue**, then **Run** node
 </Tabs>
 
 
-## Need Help?
+## Support
 
-If you’re unsure about any field or face connection issues, reach out to our support team at hello@appse.ai
+If you're unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
