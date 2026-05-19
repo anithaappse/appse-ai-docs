@@ -1,7 +1,7 @@
 ---
 title: "BigCommerce"
 slug: /app-integrations/bigcommerce
-description: Step-by-step guide to set up  BigCommerce credentials and automate e-commerce workflows in appse ai.
+description: Step-by-step guide to set up BigCommerce credentials and automate e-commerce workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';

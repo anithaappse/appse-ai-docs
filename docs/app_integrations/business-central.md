@@ -89,7 +89,7 @@ Once you've filled in the necessary fields, click **"Save"** to store and verify
 
 ### New Customer Created
 
-**New Customer Created** trigger is used to fetch newly created customer records from Shopify based on a specified time and limit.
+**New Customer Created** trigger is used to fetch newly created customer records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-NWCSTMRCRTD1.jpg" alt="New Customer Created" width="700" />
@@ -156,7 +156,7 @@ Click on **Continue**, then **Run** node.
 
 ### Customer Update
 
-**Customer Update** trigger is used to fetch updated customer records from Shopify based on a specified time and limit.
+**Customer Update** trigger is used to fetch updated customer records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-CSTMRUPDT3.jpg" alt="Customer Update" width="700" />
@@ -223,7 +223,7 @@ Click on **Continue**, then **Run** node.
 
 ### New Contacts Created
 
-**New Contacts Created** trigger is used to fetch newly created contact records from Shopify based on a specified time and limit.
+**New Contacts Created** trigger is used to fetch newly created contact records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-NWCNTCTCRTD4.jpg" alt="New Contacts Created" width="700" />
@@ -286,7 +286,7 @@ Click on **Continue**, then **Run** node.
 
 ### Contacts Updated
 
-**Contacts Updated** trigger is used to fetch updated contact records from Shopify based on a specified time and limit.
+**Contacts Updated** trigger is used to fetch updated contact records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-CONTCTUPDT5.jpg" alt="Contacts Updated" width="700" />
@@ -349,7 +349,7 @@ Click on **Continue**, then **Run** node.
 
 ### New Items Created
 
-**New Items Created** trigger is used to fetch newly created item records from Shopify based on a specified time and limit.
+**New Items Created** trigger is used to fetch newly created item records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-NWITMCRTD6.jpg" alt="New Items Created" width="700" />
@@ -411,7 +411,7 @@ Click on **Continue**, then **Run** node.
 
 ### Items Updated
 
-**Items Updated** trigger is used to fetch updated item records from Shopify based on a specified time and limit.
+**Items Updated** trigger is used to fetch updated item records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-ITMSUPDT7.jpg" alt="Items Updated" width="700" />
@@ -473,7 +473,7 @@ Click on **Continue**, then **Run** node.
 
 ### Opportunities Created
 
-**Opportunities Created** trigger is used to fetch newly created opportunity records from Shopify based on a specified time and limit.
+**Opportunities Created** trigger is used to fetch newly created opportunity records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-OPPRTNTCRTD8.jpg" alt="Opportunities Created" width="700" />
@@ -531,7 +531,7 @@ Click on **Continue**, then **Run** node.
 
 ### New SalesOrders Created
 
-**New SalesOrders Created** trigger is used to fetch newly created sales order records from Shopify based on a specified time and limit.
+**New SalesOrders Created** trigger is used to fetch newly created sales order records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-NWSLSORDRCRTD9.jpg" alt="New SalesOrders Created" width="700" />
@@ -729,7 +729,7 @@ Click on **Continue**, then **Run** node.
 
 ### New Sales Invoices Created
 
-**New Sales Invoices Created** trigger is used to fetch newly created sales invoice records from Shopify based on a specified time and limit.
+**New Sales Invoices Created** trigger is used to fetch newly created sales invoice records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/NWSLSINVCCRTD10.jpg" alt="New Sales Invoices Created" width="700" />
@@ -858,7 +858,7 @@ Click on **Continue**, then **Run** node.
 
 ### New Sales Shipment Created
 
-**New Sales Shipment Created** trigger is used to fetch newly created sales shipment records from Shopify based on a specified time and limit.
+**New Sales Shipment Created** trigger is used to fetch newly created sales shipment records from Business Central based on a specified time and limit.
 
 #### Select Credentials and Action Events
 <img src="/img/credentials/business-central/C-NWSLSSHPMNTCRTD11.jpg" alt="New Sales Shipment Created" width="700" />

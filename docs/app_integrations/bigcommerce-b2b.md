@@ -1,7 +1,7 @@
 ---
 title: "BigCommerce B2B"
 slug: /app-integrations/bigcommerceb2b
-description: Step-by-step guide to set up  BigCommerce B2B credentials and automate wholesale and B2B workflows in appse ai.
+description: Step-by-step guide to set up BigCommerce B2B credentials and automate wholesale workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -117,20 +117,20 @@ Every application has a pre-defined set of triggers and actions that allow users
 <Tabs>
   <TabItem value="triggers" label="Triggers">
 
-## Triggers
+### Triggers
 
-### New Companies Created
+#### New Companies Created
 
 New Companies Created trigger is used to fetch newly created company records from BigCommerce B2B based on a specified time and limit.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-NWCUSTMRCRTD1.jpg" alt="New Companies Created" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -143,12 +143,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" alt="New Companies Created Example" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -181,18 +181,18 @@ Click on **Continue**, then **Run** node.
 ```
 -------------------------
 
-### New Users Created
+#### New Users Created
 
 New Users Created trigger is used to fetch newly created user records from BigCommerce B2B based on a specified time and limit.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-NWUSRSCRTD3.jpg" alt="New Users Created" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -205,12 +205,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" alt="New Users Created Example" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -240,18 +240,18 @@ Click on **Continue**, then **Run** node.
 ```
 ---------------------------
 
-### New Quotes Created
+#### New Quotes Created
 
 New Quotes Created trigger is used to fetch newly created quote records from BigCommerce B2B based on a specified time and limit.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-NWQOTSCRTD5.jpg" alt="New Quotes Created" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -264,12 +264,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" alt="New Quotes Created example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -306,18 +306,18 @@ Click on **Continue**, then **Run** node.
 ```
 --------------------
 
-### New B2B Orders Created
+#### New B2B Orders Created
 
 New B2B Orders Created trigger is used to fetch newly created B2B order records from BigCommerce B2B based on a specified time and limit.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-NWB2BORDSCRTD6.jpg" alt="New B2B Orders Created" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -330,12 +330,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-NWCUSTMRCRTD2.jpg" alt="New B2B Orders Created example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -374,20 +374,20 @@ Click on **Continue**, then **Run** node.
 
 ## Actions
 
-## Company Actions
+### Company Actions
 
-### Create Company
+#### Create Company
 
 Create Company action is used to create a new company in BigCommerce B2B with admin details and address information.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-CRTNWCMPNY7.jpg" alt="Create Company" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -412,13 +412,13 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-CRTNWCMPNY8.jpg" alt="Create Company example configuration 1" width="700" />
 <img src="/img/credentials/bigcommerce-b2b/AC-CRTNWCMPNY9.jpg" alt="Create Company example configuration 2" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -437,18 +437,18 @@ Click on **Continue**, then **Run** node.
 ```
 ------------------------
 
-### Update Company
+#### Update Company
 
 Update Company action is used to modify an existing company’s details in BigCommerce B2B including company information and address details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-UPDTCMPNY10.jpg" alt="Update Company" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -470,13 +470,13 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNY11.jpg" alt="Update Company example configuration 1" width="700" />
 <img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNY12.jpg" alt="Update Company example configuration 2" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -493,18 +493,18 @@ Click on **Continue**, then **Run** node.
 ```
 -----------------------
 
-### Get Company by ID
+#### Get Company by ID
 
 Get Company by ID action is used to retrieve company details in BigCommerce B2B using the unique company identifier.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTCMPNYbyID13.jpg" alt="Get Company by ID" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -516,12 +516,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTCMPNYbyID14.jpg" alt="Get Company by ID example configuration" width="700" />
 
 ------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -561,20 +561,20 @@ Click on **Continue**, then **Run** node.
 ```
 -------------------------
 
-## User Actions
+### User Actions
 
-### Create User
+#### Create User
 
 Create User action is used to create a new user associated with a company in BigCommerce B2B with role and contact details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-CRTUSR15.jpg" alt="Create User" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -592,12 +592,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-CRTUSR16.jpg" alt="Create User example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -615,18 +615,18 @@ Click on **Continue**, then **Run** node.
 ```
 --------------------------
 
-### Update User
+#### Update User
 
 Update User action is used to modify an existing user’s details in BigCommerce B2B such as name, contact information, and role.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-UPDTUSR17.jpg" alt="Update User" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -644,12 +644,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-UPDTUSR18.jpg" alt="Update User example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -687,18 +687,18 @@ Click on **Continue**, then **Run** node.
 ```
 ---------------------------
 
-### Get User by Email
+#### Get User by Email
 
 Get User by Email action is used to retrieve user details in BigCommerce B2B using the user's email address.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTUSRbyEML19.jpg" alt="Get User by Email" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -710,12 +710,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTUSRbyEML20.jpg" alt="Get User by Email example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -745,18 +745,18 @@ Click on **Continue**, then **Run** node.
 ```
 --------------------
 
-### Get User by ID
+#### Get User by ID
 
 Get User by ID action is used to retrieve user details in BigCommerce B2B using the unique user identifier.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTUSRbyUSRID21.jpg" alt="Get User by ID" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -768,12 +768,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTUSRbyUSRID22.jpg" alt="Get User by ID example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -810,18 +810,18 @@ Click on **Continue**, then **Run** node.
 ```
 ---------------------------
 
-### Get Company Users
+#### Get Company Users
 
 Get Company Users action is used to retrieve all users associated with a specific company in BigCommerce B2B.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTCMPNYUSR23.jpg" alt="Get Company Users" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -835,12 +835,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTCMPNYUSR24.jpg" alt="Get Company Users example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -892,20 +892,20 @@ Click on **Continue**, then **Run** node.
 ```
 ---------------------------
 
-## Company Address Action
+### Company Address Action
 
-### Get Company Addresses
+#### Get Company Addresses
 
 Get Company Addresses action is used to retrieve all addresses associated with a specific company in BigCommerce B2B.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTCMPNYADDRSbyCMPNYID30.jpg" alt="Get Company Addresses" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -919,12 +919,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTCMPNYADDRSbyCMPNYID31.jpg" alt="Get Company Addresses example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -954,18 +954,18 @@ Click on **Continue**, then **Run** node.
 -----------------------
 
 
-### Update Company Address
+#### Update Company Address
 
 Update Company Address action is used to modify an existing company address in BigCommerce B2B with updated contact and location details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-UPDTCMPNYADRS32.jpg" alt="Update Company Address" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -990,13 +990,13 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNYADRS33.jpg" alt="Update Company Address example configuration 1" width="700" />
 <img src="/img/credentials/bigcommerce-b2b/AC-UPDTCMPNYADRS34.jpg" alt="Update Company Address example configuration 2" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1013,20 +1013,20 @@ Click on **Continue**, then **Run** node.
 ```
 -------------------
 
-## Order Action
+### Order Action
 
-### Get Orders by BC Order Id
+#### Get Orders by BC Order Id
 
 Get Orders by BC Order Id action is used to retrieve order details in BigCommerce B2B using the BigCommerce order identifier.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 <img src="/img/credentials/bigcommerce-b2b/C-GTORDRbyBCODRID35.jpg" alt="Get Orders by BC Order Id" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -1038,12 +1038,12 @@ Click on **Continue**, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 <img src="/img/credentials/bigcommerce-b2b/AC-GTORDRbyBCODRID36.jpg" alt="Get Orders by BC Order Id example configuration" width="700" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -1099,6 +1099,5 @@ Click on **Continue**, then **Run** node.
 
 </div>
 
-### Support
-
+## Support
 Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
