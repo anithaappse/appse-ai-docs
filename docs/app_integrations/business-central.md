@@ -36,10 +36,10 @@ You’ll need to provide:
 #### 2. Locate Your Tenant ID
 
 - Go to the [Azure Portal](https://portal.azure.com).
-  <img src="/img/credentials/business-central/business-central-cred-azure-dashboard.png" alt="APPSeAI Business Central Azure Dashboard" width="700"/>
+  <img src="/img/credentials/business-central/business-central-cred-azure-dashboard.png" alt="Business Central Azure dashboard screen" width="700"/>
 
 - Search for **Microsoft Entra ID** → **Overview**.
-  <img src="/img/credentials/business-central/business-central-cred-tenant-id.png" alt="APPSeAI Business Central Tenant ID" width="700"/>
+  <img src="/img/credentials/business-central/business-central-cred-tenant-id.png" alt="Business Central tenant ID screen" width="700"/>
 
 - Copy the **Tenant ID** from the overview page.
 
@@ -52,15 +52,15 @@ You’ll need to provide:
 - Log in to your [Business Central](https://www.microsoft.com/en-in/dynamics-365/products/business-central/sign-in) account.
 
 - Click on the **Search** icon → Search "Companies" → Click on Companies.
-  <img src="/img/credentials/business-central/business-central-company-id-1.png" alt="APPSeAI Business Central Companies Search" width="700"/>
+  <img src="/img/credentials/business-central/business-central-company-id-1.png" alt="Business Central companies search screen" width="700"/>
 
 - Select Your Company Name from the list.
-  <img src="/img/credentials/business-central/business-central-company-id-2.png" alt="APPSeAI Business Central Select Company name" width="700"/>
+  <img src="/img/credentials/business-central/business-central-company-id-2.png" alt="Business Central company selection screen" width="700"/>
 
 > **Example**: `CRONUS USA, Inc.`
 
 - Press Ctrl+Alt+F1 → A Side Panel titled **Page Inspection** will open → Click on Table Fields → Under **Id (8000, GUID)** field, you will find the **Company ID** → Copy this and paste it in the credential form → Click on Save and Authorize.
-  <img src="/img/credentials/business-central/business-central-company-id-3.png" alt="APPSeAI Business Central Find Company ID" width="700"/>
+  <img src="/img/credentials/business-central/business-central-company-id-3.png" alt="Business Central company ID screen" width="700"/>
 
 ---
 
@@ -68,7 +68,7 @@ You’ll need to provide:
 
 - You will be showcased a pop-up that prompts you to login to your Business Central account using your Microsoft account credentials.
 
-<img src="/img/credentials/business-central/business-central-cred-microsoft-login.png" alt="APPSeAI Business Central Microsoft Login" width="700"/>
+<img src="/img/credentials/business-central/business-central-cred-microsoft-login.png" alt="Business Central Microsoft login screen" width="700"/>
 
 - If you followed all the steps correctly, your Business Central credential should be connected to our platform.
 
