@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SAP Business One"
 slug: /app-integrations/sap-b1
 description: Step-by-step guide to set up SAP Business One credentials and automate business workflows in appse ai.
@@ -60,7 +60,9 @@ Copy the **Schema Name**, this is your `Database Name`
 
 <img src="/img/credentials/sap-b1/sap-b1-cred-db-name2.png" alt="SAP B1 Step-by-Step Guide step 4 of 5 screenshot" />
 
-> **Note**: Depending on your setup, you might see `https://insync.pro` instead of `https://10.0.2.68`. Either can be used as your Host URL input.
+:::note
+Depending on your setup, you might see `https://insync.pro` instead of `https://10.0.2.68`. Either can be used as your Host URL input.
+:::
 
 #### 4. Get Your Username and Password
 <img src="/img/credentials/sap-b1/sap-b1-credentials.png" alt="SAP B1 Step-by-Step Guide step 5 of 5 screenshot" width="602" height="306" />
@@ -119,7 +121,9 @@ Use these links to open the matching trigger directly in the Trigger tab:
 **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.
 It captures the item details and passes them to the next step for further processing.
 
-> **Note:** This is a trigger node, so it does not take any input data.
+:::note
+This is a trigger node, so it does not take any input data.
+:::
 
 ------------------
 
@@ -166,7 +170,9 @@ Click on **Continue** button, then **Run** the node.
 **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
 
 
-> **Note:** The trigger executes only after the item update is successfully saved. All relevant details (such as item ID, updated fields, and timestamps) are included in the output payload.
+:::note
+The trigger executes only after the item update is successfully saved. All relevant details (such as item ID, updated fields, and timestamps) are included in the output payload.
+:::
 
 ---------------------
 
@@ -189,9 +195,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -246,7 +250,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.    
 
-> **Note:** The trigger executes only after the order is fully created and confirmed in the system. All relevant order fields (such as order ID, customer details, and items) are included in the output payload.
+:::note
+The trigger executes only after the order is fully created and confirmed in the system. All relevant order fields (such as order ID, customer details, and items) are included in the output payload.
+:::
 
 --------
 
@@ -270,10 +276,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -294,7 +297,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
 
-> **Note:** The trigger executes only after the quotation is successfully created. All relevant quotation details (such as quotation ID, customer information, pricing, and items) are included in the output payload.
+:::note
+The trigger executes only after the quotation is successfully created. All relevant quotation details (such as quotation ID, customer information, pricing, and items) are included in the output payload.
+:::
 
 ------
 
@@ -318,9 +323,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -345,7 +348,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Business Partner Created Trigger** initiates a workflow whenever a new business partner is added to the SAP Business One. It captures partner details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
+:::note
+The trigger executes only after the business partner is successfully created. All relevant details (such as partner ID, name, contact information, and address) are included in the output payload.
+:::
 
 -------------------
 
@@ -369,10 +374,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -390,7 +392,9 @@ Click on **Continue** button, then **Run** the node.
 **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
 
 
-> **Note:** The trigger executes only after the business partner update is successfully saved. All relevant details (such as partner ID, modified fields, contact information, and timestamps) are included in the output payload.
+:::note
+The trigger executes only after the business partner update is successfully saved. All relevant details (such as partner ID, modified fields, contact information, and timestamps) are included in the output payload.
+:::
 
 -----
 
@@ -414,10 +418,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 
 ```json
 [
@@ -437,7 +438,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New AR Invoices Created Trigger** initiates a workflow whenever a new Accounts Receivable (AR) invoice is created in the SAP Business One. It captures invoice details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the AR invoice is successfully created. All relevant invoice details (such as invoice ID, customer information, amount, due date, and line items) are included in the output payload.
+:::note
+The trigger executes only after the AR invoice is successfully created. All relevant invoice details (such as invoice ID, customer information, amount, due date, and line items) are included in the output payload.
+:::
 
 --------
 
@@ -462,10 +465,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -484,7 +484,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Credit Note Created Trigger** initiates a workflow whenever a new credit note is generated in the SAP Business One. It captures credit note details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the credit note is successfully created. All relevant details (such as credit note ID, customer information, amount, and related invoice details) are included in the output payload.
+:::note
+The trigger executes only after the credit note is successfully created. All relevant details (such as credit note ID, customer information, amount, and related invoice details) are included in the output payload.
+:::
 
 -------
 
@@ -508,10 +510,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -530,7 +529,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Delivery Notes Created Trigger** initiates a workflow whenever a new delivery note is created in the SAP Business One. It captures delivery details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the delivery note is successfully created. All relevant details (such as delivery note ID, customer information, shipment details, and items) are included in the output payload.
+:::note
+The trigger executes only after the delivery note is successfully created. All relevant details (such as delivery note ID, customer information, shipment details, and items) are included in the output payload.
+:::
 
 -------
 
@@ -554,10 +555,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -581,7 +579,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Incoming Payments Created Trigger** initiates a workflow whenever a new incoming payment is recorded in the SAP Business One. It captures payment details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the incoming payment is successfully created. All relevant details (such as payment ID, customer information, amount, payment method, and associated invoices) are included in the output payload.
+:::note
+The trigger executes only after the incoming payment is successfully created. All relevant details (such as payment ID, customer information, amount, payment method, and associated invoices) are included in the output payload.
+:::
 
 -------
 
@@ -605,10 +605,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -627,7 +624,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Service Calls Created Trigger** initiates a workflow whenever a new service call is logged in the SAP Business One. It captures service request details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the service call is successfully created. All relevant details (such as service call ID, customer information, issue description, and priority) are included in the output payload.
+:::note
+The trigger executes only after the service call is successfully created. All relevant details (such as service call ID, customer information, issue description, and priority) are included in the output payload.
+:::
 
 -------
 
@@ -651,10 +650,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -673,7 +669,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Returns Created Trigger** initiates a workflow whenever a new return request is created in the SAP Business One. It captures return details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the return is successfully created. All relevant details (such as return ID, customer information, returned items, and reason for return) are included in the output payload.
+:::note
+The trigger executes only after the return is successfully created. All relevant details (such as return ID, customer information, returned items, and reason for return) are included in the output payload.
+:::
 
 -------
 
@@ -697,10 +695,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -724,7 +719,9 @@ Click on **Continue** button, then **Run** the node.
 
 **New Activities Created Trigger** initiates a workflow whenever a new activity is logged in the SAP Business One. It captures activity details and passes them as structured data to subsequent workflow steps.
 
-> **Note:** The trigger executes only after the activity is successfully created. All relevant details (such as activity ID, type, associated entity, and timestamps) are included in the output payload.
+:::note
+The trigger executes only after the activity is successfully created. All relevant details (such as activity ID, type, associated entity, and timestamps) are included in the output payload.
+:::
 
 --------
 
@@ -748,10 +745,7 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
-
-
-##### Result
+**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
 ```json
 [
   {
@@ -773,7 +767,9 @@ Click on **Continue** button, then **Run** the node.
 
 Actions are commonly used to **create, update, retrieve, or delete records**, **send notifications**, **integrate with external systems**, or **transform data** within workflows.
 
-> **Note:** Each action requires proper configuration of inputs and may produce output data that can be referenced in later steps of the workflow.
+:::note
+Each action requires proper configuration of inputs and may produce output data that can be referenced in later steps of the workflow.
+:::
 
 Use these links to open the matching action section directly in the Action tab:
 
@@ -810,7 +806,9 @@ Use these links to open the matching action section directly in the Action tab:
 
 This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
 
-> **Note:** If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+:::
 
 -------
 
@@ -880,7 +878,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup partner information**, **validate existing records**, **avoid duplicates**, or **fetch customer/vendor details** in workflows.
 
-> **Note:** If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple records match the provided email address, the system may return the first matching result or a list of records based on configuration. If no match is found, the output will be empty or null.
+:::
 
 ------
 
@@ -956,7 +956,9 @@ Click on the **Continue** button, then **Run** the node.
 **Create New Business Partner with CardCode** action creates a new business partner in the SAP using a unique CardCode. It allows you to configure mandatory and optional details, which are then stored and passed as structured data for further workflow steps.
 This action is commonly used to **onboard new customers or vendors**, **store contact and address information**.
 
-> **Note:** CardCode must be unique. Optional fields can be configured based on business requirements, and missing optional values will not block the creation process.
+:::note
+CardCode must be unique. Optional fields can be configured based on business requirements, and missing optional values will not block the creation process.
+:::
 
 --------------------
 
@@ -1058,7 +1060,9 @@ Click on the **Continue** button, then **Run** the node.
 
 **Create New Business Partner (Without CardCode)** action creates a new business partner in the SAP without requiring a CardCode. The SAP automatically generates a unique CardCode upon successful creation.
 
-> **Note:** The CardCode is auto-generated by the system. Optional fields can be configured as needed, and leaving them empty will not prevent the creation of the business partner.
+:::note
+The CardCode is auto-generated by the system. Optional fields can be configured as needed, and leaving them empty will not prevent the creation of the business partner.
+:::
 
 ##### Select the Credential and Action Event
    <img src="/img/credentials/sap-b1/SAP-C-CNBWOUTCC24.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 1 of 5 screenshot" />
@@ -1123,7 +1127,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **maintain accurate partner records**, **update contact and address information**, and **sync changes across SAP**.
 
-> **Note:** Only the fields provided in the configuration will be updated. Fields left empty will remain unchanged in the existing business partner record.
+:::note
+Only the fields provided in the configuration will be updated. Fields left empty will remain unchanged in the existing business partner record.
+:::
 
 ##### Select the Credential and Action Event
    <img src="/img/credentials/sap-b1/SAP-C-UBP29.jpg" width="700"  alt="SAP B1 Update a businesspartner step 1 of 5 screenshot" />
@@ -1190,7 +1196,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup item information**, **validate product records**, **fetch inventory details**.
 
-> **Note:** If the provided ItemCode does not exist, the output will be empty or null.
+:::note
+If the provided ItemCode does not exist, the output will be empty or null.
+:::
 
 ##### Select the Credential and Action Event
    <img src="/img/credentials/sap-b1/SAP-C-GIC35.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode step 1 of 2 screenshot" />
@@ -1234,7 +1242,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **add new products**, **manage inventory**.
 
-> **Note:** If ItemCode is not provided, SAP may not generate Item. Optional fields can be configured as needed without blocking item creation.
+:::note
+If ItemCode is not provided, SAP may not generate Item. Optional fields can be configured as needed without blocking item creation.
+:::
 
 ##### Select the Credential and Action Event
    <img src="/img/credentials/sap-b1/SAP-C-CNI38.jpg" width="700"  alt="SAP B1 Create a New Item step 1 of 6 screenshot" />
@@ -1269,7 +1279,9 @@ Click on the **Continue** button.
 | BarCode | Unique barcode identifier for the item (e.g., "8901234567890"). |
 | VatLiable | Indicates if VAT is applicable to the item.(e.g., "Yes or No")|
 
-> **Note:** These fields are optional and can be configured based on business requirements.
+:::note
+These fields are optional and can be configured based on business requirements.
+:::
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -1305,7 +1317,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **maintain accurate product data**, **update pricing and availability**, and **sync item details across SAP**.
 
-> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
+:::note
+Only the fields provided will be updated. Fields left empty will remain unchanged.
+:::
 
 ##### Select the Credential and Action Event
    <img src="/img/credentials/sap-b1/ItemUpdate_C.jpg" width="700"  alt="SAP B1 Update an Item step 1 of 3 screenshot" />
@@ -1330,7 +1344,9 @@ Item Name | Name of the item. (e.g., "Laptop Pro 15") |
 | Default Warehouse | Defines the default warehouse for the item. (e.g., "WH-01") |
 | Item Price | Defines the price of the item. (e.g., "65000") |
 
-> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
+:::note
+Only the fields provided will be updated. Fields left empty will remain unchanged.
+:::
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -1360,7 +1376,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup quotation details**, **track customer-specific references**, **validate records**, or **fetch quotation data for further processing**.
 
-> **Note:** If multiple quotations match the provided reference number, the SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple quotations match the provided reference number, the SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETQTbyNumAtCard51.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no step 1 of 2 screenshot" />
@@ -1403,7 +1421,9 @@ Click on the **Continue** button, then **Run** the node.
 
 **Create New Quotation** action creates a new sales quotation in the SAP using customer and item details. It captures all configured data and stores it as a structured document for further processing.
 
-> **Note:** Mandatory fields must be provided to create a quotation. Optional fields can be configured as needed without blocking the process.
+:::note
+Mandatory fields must be provided to create a quotation. Optional fields can be configured as needed without blocking the process.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-NQTC54.jpg" width="700"  alt="SAP B1 Create a new quotation step 1 of 6 screenshot" />
@@ -1484,7 +1504,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **modify quotation details**, **update pricing or items**, and **maintain accurate sales records**.
 
-> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged in the quotation.
+:::note
+Only the fields provided will be updated. Fields left empty will remain unchanged in the quotation.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-UQT61.jpg" width="700"  alt="SAP B1 Update quotation step 1 of 6 screenshot" />
@@ -1551,7 +1573,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **update customer-specific references**, **align documents with external systems**, or **correct quotation details**.
 
-> **Note:** Only the `NumAtCard` field will be updated for the specified quotation. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+:::note
+Only the `NumAtCard` field will be updated for the specified quotation. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-UQTbyNumAtCard68.jpg" width="700"  alt="SAP B1 Update quotation customer reference no step 1 of 2 screenshot" />
@@ -1597,7 +1621,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup sales order details**, **track customer-specific references**, **validate records**, or **fetch order data for further processing**.
 
-> **Note:** If multiple sales orders match the provided reference number, SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple sales orders match the provided reference number, SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETSObyCRno71.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no step 1 of 2 screenshot" />
@@ -1639,7 +1665,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **track item demand**, **analyze order history**, **monitor sales activity**, or **fetch related orders for processing**.
 
-> **Note:** The result will include only up to the specified size limit. If no matching records are found, the output will be empty.
+:::note
+The result will include only up to the specified size limit. If no matching records are found, the output will be empty.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETSOLbyIC74.jpg" width="700"  alt="SAP B1 Get order list by item code step 1 of 2 screenshot" />
@@ -1684,7 +1712,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **create customer orders**, **manage sales transactions**.
 
-> **Note:** Mandatory fields must be provided to create a sales order. Optional fields can be configured as needed without blocking the process.
+:::note
+Mandatory fields must be provided to create a sales order. Optional fields can be configured as needed without blocking the process.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CNO77.jpg" width="700"  alt="SAP B1 Create a new sales order step 1 of 5 screenshot" />
@@ -1763,7 +1793,9 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 This action is commonly used to **create service orders or quotations**, **manage service-based transactions**, and **track customer service activities**.
 
-> **Note:** Mandatory fields must be provided to create the service document. Optional fields can be configured as needed.
+:::note
+Mandatory fields must be provided to create the service document. Optional fields can be configured as needed.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CS83.jpg" width="700"  alt="SAP B1 Create a Service step 1 of 4 screenshot" />
@@ -1824,7 +1856,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **update order details**, **modify pricing or items**, and **maintain accurate sales records**.
 
-> **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged in the existing order.
+:::note
+Only the fields provided will be updated. Fields left empty will remain unchanged in the existing order.
+:::
 
 ------
 
@@ -1898,7 +1932,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **update customer-specific references**, **align orders with external systems**, or **correct sales order details**.
 
-> **Note:** Only the `NumAtCard` field will be updated for the specified sales order. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+:::note
+Only the `NumAtCard` field will be updated for the specified sales order. Ensure the correct DocEntry is provided to avoid updating the wrong record.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-USOCRno95.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no step 1 of 2 screenshot" />
@@ -1939,7 +1975,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **void incorrect orders**, **handle order cancellations**, or **stop further processing of an order**.
 
-> **Note:** Once a sales order is cancelled, it cannot be reactivated. Ensure the correct DocEntry is provided before performing this action.
+:::note
+Once a sales order is cancelled, it cannot be reactivated. Ensure the correct DocEntry is provided before performing this action.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CSO98.jpg" width="700"  alt="SAP B1 Cancel a Sales Order step 1 of 2 screenshot" />
@@ -1984,7 +2022,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup invoice details**, **validate financial records**, **track billing information**, or **fetch invoice data for further processing**.
 
-> **Note:** If the provided DocEntry does not exist, the output will be empty or null.
+:::note
+If the provided DocEntry does not exist, the output will be empty or null.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETbyDocEntry113.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry step 1 of 2 screenshot" />
@@ -2031,7 +2071,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **track invoices generated from orders**, **validate billing against sales orders**, or **fetch related financial documents for processing**.
 
-> **Note:** If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the SAP may return one or a list based on configuration.
+:::note
+If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the SAP may return one or a list based on configuration.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETbyODRDocEntry110.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry step 1 of 2 screenshot" />
@@ -2080,7 +2122,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **lookup invoice details**, **track customer-specific references**, **validate billing records**, or **fetch invoice data for further processing**.
 
-> **Note:** If multiple invoices match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple invoices match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GETINVbyNumAtCard107.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard step 1 of 2 screenshot" />
@@ -2122,7 +2166,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **generate invoices**, **bill customers**, and **manage financial transactions**.
 
-> **Note:** Mandatory fields must be provided to create an invoice. Optional fields can be configured as needed without blocking the process.
+:::note
+Mandatory fields must be provided to create an invoice. Optional fields can be configured as needed without blocking the process.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CNINV102.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 1 of 4 screenshot" />
@@ -2202,7 +2248,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **process product returns**, **adjust inventory**, and **manage refund or replacement workflows**.
 
-> **Note:** Mandatory fields must be provided to create a return document. Optional fields can be configured as needed.
+:::note
+Mandatory fields must be provided to create a return document. Optional fields can be configured as needed.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CRETURN107.jpg" width="700"  alt="SAP B1 Create Returns step 1 of 4 screenshot" />
@@ -2544,7 +2592,9 @@ Click on the **Continue** button, then **Run** the node.
 
 This action is commonly used to **convert currencies**, **calculate financial values**, or **fetch historical exchange rates**.
 
-> **Note:** If no date is provided, the system may return the latest available exchange rate.
+:::note
+If no date is provided, the system may return the latest available exchange rate.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GCRNCYRATE147.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate step 1 of 2 screenshot" />
@@ -2586,7 +2636,9 @@ Click on the **Continue** button, then **Run** the node.
 
 **Set Currency Rate** action is used to define or update the exchange rate for a specific currency on a given date. This is useful for maintaining accurate financial records and currency conversions.
 
-> **Note:** Ensure the exchange rate is accurate, as it impacts financial transactions and reporting.
+:::note
+Ensure the exchange rate is accurate, as it impacts financial transactions and reporting.
+:::
 
 --------------
 
@@ -2637,7 +2689,9 @@ Click on the **Continue** button, then **Run** the node.
 
 **Create Sales Tax Code** action is used to define a new tax code in the SAP. It helps manage taxation rules for sales and purchasing transactions.
 
-> **Note:** Tax configurations should be set carefully as they directly impact financial calculations and compliance.
+:::note
+Tax configurations should be set carefully as they directly impact financial calculations and compliance.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-CSLSTAXCODE234.jpg" width="700"  alt="SAP B1 Create Sales Tax Code step 1 of 2 screenshot" />
@@ -2759,7 +2813,9 @@ Click on the **Continue** button.
 | Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
 | FA Debit | Indicates if applicable for fixed asset debit. (e.g., "No") |
 
-> **Note:** Only the provided fields will be updated. Ensure the correct Tax Code is used, as it directly impacts financial calculations and reporting.
+:::note
+Only the provided fields will be updated. Ensure the correct Tax Code is used, as it directly impacts financial calculations and reporting.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -2789,7 +2845,9 @@ Click on the **Continue** button, then **Run** node
 
 **Get Special Prices by Card Code** action retrieves all special pricing details configured for a specific business partner. It helps in identifying customer-specific pricing agreements and discounts.
 
-> **Note:** This action returns all special prices associated with the given Card Code, including item-level pricing and discounts if configured.
+:::note
+This action returns all special prices associated with the given Card Code, including item-level pricing and discounts if configured.
+:::
 
 ##### Select the Credential and Action Event
 <img src="/img/credentials/sap-b1/SAP-C-GSPRCbyCRDCDE153.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code step 1 of 2 screenshot" />
@@ -2933,7 +2991,9 @@ DocDate | Specify document date if different. (e.g., "2026-04-10") |
 | Additional Expenses (Optional)
  Additional Expenses | Extra charges such as handling or logistics. (e.g., "200") |
 
-> **Note:** Mandatory fields must be provided to create a return request. Optional fields can be configured based on business requirements.
+:::note
+Mandatory fields must be provided to create a return request. Optional fields can be configured based on business requirements.
+:::
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -3022,7 +3082,9 @@ Contact Person Code | Identifier of the contact person. (e.g., "134") |
 | Total Amount | Total estimated value of the opportunity. (e.g., "550") |
 | Remarks | Additional notes or comments. (e.g., "Demo Purpose") |
 
-> **Note:** Sales Opportunity Lines are required to track the progress and lifecycle of the opportunity. Optional fields can be configured as needed.
+:::note
+Sales Opportunity Lines are required to track the progress and lifecycle of the opportunity. Optional fields can be configured as needed.
+:::
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -3184,7 +3246,9 @@ Ship To Address |
 | BillToState | State (e.g., "TS") |
 | BillToAddressType | Address type |
 
-> **Note:** Mandatory fields must be provided to create a purchase order. Optional fields can be configured based on business requirements.
+:::note
+Mandatory fields must be provided to create a purchase order. Optional fields can be configured based on business requirements.
+:::
 
 Click on the **Continue** button, then **Run** the node.
 
@@ -3293,7 +3357,9 @@ BillToStreet | Billing street address e.g., ("Mark Spencer street")|
 | BillToState | State e.g., ("TS")|
 
 
-> **Note:** Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong purchase order.
+:::note
+Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong purchase order.
+:::
 
 Click on the **Continue** button., then **Run** the node
 
@@ -3346,7 +3412,9 @@ Credit Card | Specify the credit card type. (e.g., "1") |
 | Optional Fields
 Remarks | Add any additional notes related to the payment. (e.g., "Payment received via credit card") |
 
-> **Note:** Ensure credit card details are accurate and valid before processing the payment.
+:::note
+Ensure credit card details are accurate and valid before processing the payment.
+:::
 
 
 Click on the **Continue** button, then **Run** node
@@ -3428,7 +3496,9 @@ Cheque Bank Account | Enter the bank account linked to the cheque. (e.g., "_SYS0
 | Document Due Date | Specify the due date for the payment document. (e.g., "2026-04-17") |
 | Remarks | Add any additional notes. (e.g., "Cheque received from customer") |
 
-> **Note:** Ensure cheque details are accurate before processing to avoid payment discrepancies.
+:::note
+Ensure cheque details are accurate before processing to avoid payment discrepancies.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3495,7 +3565,9 @@ Click on the **Continue** button.
 | Remarks | Add any notes related to the payment. (e.g., "Demo Purpose") |
 | Journal Remarks | Enter journal-related remarks for accounting reference. (e.g., "Incoming Payments - ZC0001") |
 
-> **Note:** Ensure the correct cash account and amount are provided to maintain accurate financial records.
+:::note
+Ensure the correct cash account and amount are provided to maintain accurate financial records.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3581,7 +3653,9 @@ Item Code | Unique identifier of the item. (e.g., "DIET002") |
 | Additional Expenses (Optional)
 Additional Expenses | Extra charges such as freight or handling. (e.g., "250") |
 
-> **Note:** Mandatory fields must be provided to create a delivery note. Optional fields can be configured based on business requirements.
+:::note
+Mandatory fields must be provided to create a delivery note. Optional fields can be configured based on business requirements.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3692,7 +3766,9 @@ Contact Person Code | Identifier of the contact person. (e.g., "102") |
 | Additional Expenses (Optional)
 Additional Expenses | Extra charges such as freight or handling. (e.g., "200") |
 
-> **Note:** Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong delivery note.
+:::note
+Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong delivery note.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3734,7 +3810,9 @@ Click on the **Continue** button.
 |------|-------------|
 | Order DocEntry | Enter the internal document entry number of the sales order. (e.g., "1876") |
 
-> **Note:** If no delivery notes are linked to the provided Order DocEntry, the output will be empty or null. If multiple deliveries exist, the system may return one or a list based on configuration.
+:::note
+If no delivery notes are linked to the provided Order DocEntry, the output will be empty or null. If multiple deliveries exist, the system may return one or a list based on configuration.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3784,7 +3862,9 @@ Click on the **Continue** button.
 |------|-------------|
 | NumAtCard | Enter the customer reference number associated with the delivery. (e.g., "1564") |
 
-> **Note:** If multiple delivery notes match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
+:::note
+If multiple delivery notes match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3886,7 +3966,9 @@ Unit Price | Price per unit. (e.g., "100") |
 | Tax Code | Applicable tax code. (e.g., "NT") |
 | Discount Percentage | Discount applied. (e.g., "5") |
 
-> **Note:** Down payments are typically used for advance billing. Ensure correct customer and pricing details before creating the document.
+:::note
+Down payments are typically used for advance billing. Ensure correct customer and pricing details before creating the document.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -3949,7 +4031,9 @@ Click on the **Continue** button.
 | Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
 | Forecast View (Optional) | Defines how forecast is viewed. (e.g., "fvtDaily") |
 
-> **Note:** Forecast lines are essential for defining item-level predictions. Optional fields can be configured based on planning requirements.
+:::note
+Forecast lines are essential for defining item-level predictions. Optional fields can be configured based on planning requirements.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4010,7 +4094,9 @@ Click on the **Continue** button.
 | Quantity (Optional) | Updated forecasted quantity in Sales Forecast Lines. (e.g., "11") |
 | Warehouse (Optional) | Warehouse related to the forecast line. (e.g., "01") |
 
-> **Note:** Only the provided fields will be updated. Ensure the correct forecast Id is used to avoid modifying the wrong forecast data.
+:::note
+Only the provided fields will be updated. Ensure the correct forecast Id is used to avoid modifying the wrong forecast data.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4052,7 +4138,9 @@ Click on the **Continue** button.
 |------|-------------|
 | Id (Numerator) | Enter the unique identifier of the sales forecast. (e.g., "42") |
 
-> **Note:** If no forecast exists for the provided Id, the response will be empty or null.
+:::note
+If no forecast exists for the provided Id, the response will be empty or null.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4115,7 +4203,9 @@ Click on the **Continue** button.
 | Journal Remarks (Optional) | Enter accounting-related remarks. (e.g., "Incoming Payment") |
 | Cash Amount (Optional) | Enter the cash amount for the payment. (e.g., "600") |
 
-> **Note:** Draft payments can be reviewed and finalized later. Mandatory fields must be provided to create the draft successfully.
+:::note
+Draft payments can be reviewed and finalized later. Mandatory fields must be provided to create the draft successfully.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4179,7 +4269,9 @@ Click on the **Continue** button.
 |------|-------------|
 | DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
-> **Note:** If no draft exists for the provided DocEntry, the response will be empty or null.
+:::note
+If no draft exists for the provided DocEntry, the response will be empty or null.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4234,7 +4326,9 @@ Click on the **Continue** button.
 |------|-------------|
 | DocEntry | Enter the internal document entry number of the payment draft. (e.g., "30") |
 
-> **Note:** Once converted, the draft becomes a posted incoming payment and may no longer be editable as a draft. Ensure all details are verified before conversion.
+:::note
+Once converted, the draft becomes a posted incoming payment and may no longer be editable as a draft. Ensure all details are verified before conversion.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4288,7 +4382,9 @@ Click on the **Continue** button.
 | Contact Person Code (Optional) | Identifier of the contact person. (e.g., "4") |
 | Remarks (Optional) | Additional notes. (e.g., "Demo Purpose") |
 
-> **Note:** Blanket agreements are used for long-term contracts. Ensure correct pricing and quantities are defined before creating the agreement.
+:::note
+Blanket agreements are used for long-term contracts. Ensure correct pricing and quantities are defined before creating the agreement.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4357,7 +4453,9 @@ Click on the **Continue** button.
 | Unit Price (Optional) | Update the unit price. (e.g., "100") |
 | Line Discount (Optional) | Update the discount percentage. (e.g., "5") |
 
-> **Note:** Only the provided fields will be updated. Ensure the correct Agreement No and row number are used to avoid unintended changes.
+:::note
+Only the provided fields will be updated. Ensure the correct Agreement No and row number are used to avoid unintended changes.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4407,7 +4505,9 @@ Click on **Continue** button
 |------|-------------|
 | Serial Number | Enter the unique serial number of the item. (e.g., "SL-001") |
 
-> **Note:** If the provided serial number does not exist, the response will be empty or null.
+:::note
+If the provided serial number does not exist, the response will be empty or null.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4478,7 +4578,9 @@ Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL001"
 | Thursday Enabled | Enable service on Thursday (**Yes/No**). (e.g., "Yes") |
 | Friday Enabled | Enable service on Friday (**Yes/No**). (e.g., "Yes") |
 
-> **Note:** Ensure correct serial numbers and service dates are configured, as they define the validity and scope of the service contract.
+:::note
+Ensure correct serial numbers and service dates are configured, as they define the validity and scope of the service contract.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4585,7 +4687,9 @@ Click on the **Continue** button.
 |------|-------------|
 | Customer Code | Enter the customer code. (e.g., "ZC0001") |
 
-> **Note:** If no service contracts are found for the provided customer code, the response will be empty or null.
+:::note
+If no service contracts are found for the provided customer code, the response will be empty or null.
+:::
 
 Click on the **Continue** button, then **Run** node
 
@@ -4753,7 +4857,9 @@ Click on the **Continue** button.
 |------|-------------|
 | Contract ID  | Enter the unique identifier of the service contract to retrieve. Example: `5` |
 
-> **Note:** `Contract ID` is mandatory.
+:::note
+`Contract ID` is mandatory.
+:::
 
 Click on the **Continue** button, then **Run** node.
 
@@ -4866,7 +4972,9 @@ Click on the **Continue** button.
 Contact Employee Code | Identifier of the contact employee. (e.g., "4") |
 | Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL-002") |
 
-> **Note:** Ensure serial numbers are unique and correctly mapped to the customer for accurate tracking and service management.
+:::note
+Ensure serial numbers are unique and correctly mapped to the customer for accurate tracking and service management.
+:::
 
 Click on the **Continue** button, then **Run** node
 
